@@ -1,0 +1,161 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #f9fafb, #eaeff3);
+    color: #333;
+}
+
+header {
+    background: linear-gradient(to right, #3a506b, #5c768d); /* Professional gradient */
+    color: #f4f4f4;
+    text-align: center;
+    padding: 40px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header-container h1 {
+    margin: 0;
+    font-size: 2.7rem;
+    font-weight: bold;
+}
+
+.header-container p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    color: #dce3e9;
+}
+
+main {
+    padding: 20px;
+}
+
+/* Profile Section */
+.profile-section {
+    background: #ffffff;
+    margin: 20px auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    border: 1px solid #dce3e9;
+}
+
+.profile-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid #3a506b;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.profile-info {
+    max-width: 600px;
+    text-align: left;
+}
+
+.profile-info h2 {
+    color: #3a506b;
+    margin-bottom: 10px;
+    font-size: 1.8rem;
+}
+
+.profile-info p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+    color: #555;
+}
+
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 20px;
+    background: #3a506b;
+    color: #f4f4f4;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+.btn:hover {
+    background: #5c768d;
+    color: #eaeff3;
+}
+
+/* Experience Section */
+.experience-section {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.experience-section h2 {
+    color: #3a506b;
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+.experience-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.experience-card {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    text-align: left;
+    border: 1px solid #dce3e9;
+}
+
+.experience-card h3 {
+    color: #3a506b;
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+}
+
+.experience-card p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Back Button */
+.back-button {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.back-button .btn {
+    background: #5c768d;
+}
+
+.back-button .btn:hover {
+    background: #3a506b;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background: linear-gradient(to right, #5c768d, #3a506b);
+    color: #f4f4f4;
+    margin-top: 40px;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 0.9rem;
+}
