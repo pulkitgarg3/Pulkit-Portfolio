@@ -19,24 +19,29 @@ Here are some highlights from my portfolio:
 
 1. **[Impact of Energy Poverty on HDI](https://github.com/pulkitgarg3/Research-Project-Energy-Poverty-HDI)**  
    _Category_: Econometrics  
-   Explores the relationship between energy poverty and HDI through regression modeling and policy analysis.
+   Explores the relationship between energy poverty and HDI through regression modelling and policy analysis.
 
 2. **[Customer Churn Prediction Model](https://github.com/pulkitgarg3/Churn-Prediction-Model-)**  
    _Category_: Machine Learning  
    Predicts customer churn in the energy sector using Random Forest and feature engineering techniques.
 
-3. **[Stock Market Analysis](https://github.com/pulkitgarg3/Stock-Market-Analysis)**  
+3. **[Bike-Sharing-Demand-Forecasting](https://github.com/pulkitgarg3/Bike-Sharing-Demand-Forecasting)**  
+   _Category_: Time Series and Forecasting  
+   Predicts bike demand using time series analysis and forecasting using Meta Prophet.
+
+4. **[Stock Market Analysis](https://github.com/pulkitgarg3/Stock-Market-Analysis)**  
    _Category_: Python & Statistics  
    Developed trading strategies to analyze financial market trends and performance.
 
-4. **[Understanding Consumer Preferences for Green Packaging](https://github.com/pulkitgarg3/Eco-Packaging-Impact-MR-Project)**  
+5. **[Understanding Consumer Preferences for Green Packaging](https://github.com/pulkitgarg3/Eco-Packaging-Impact-MR-Project)**  
    _Category_: Marketing Research  
    Conducted a survey and analyzed responses using SPSS to provide actionable insights.
 
 ---
 
 ## 💻 Skills
-- **Technical Skills**: Python, Stata, SPSS, SQL, Econometrics, Power BI 
+- **Technical Skills**: Predictive Analytics, Econometrics, Time Series Analysis and Forecasting, Marketing Research
+- **Tools**: Power BI, Python, Stata, SPSS, SQL, Excel
 - **Soft Skills**: Leadership, Team Collaboration, Critical Thinking, Strategic Planning  
 
 ---
