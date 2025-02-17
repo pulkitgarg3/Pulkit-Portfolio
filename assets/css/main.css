@@ -4736,7 +4736,7 @@ input, select, textarea {
         text-align: center;
     }
 
-    footer section {
+     footer section {
         display: grid;
         grid-template-columns: 1fr; /* Stacks elements in one column */
         gap: 15px; /* Adds spacing between elements */
