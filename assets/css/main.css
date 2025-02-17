@@ -4737,22 +4737,21 @@ input, select, textarea {
     }
 
      footer section {
-        display: grid;
-        grid-template-columns: 1fr; /* Stacks elements in one column */
-        gap: 15px; /* Adds spacing between elements */
-        justify-content: center;
+        display: flex;
+        flex-direction: column; /* Forces items to stack */
+        align-items: center;
         text-align: center;
         width: 100%;
         padding: 10px;
+        gap: 10px;
     }
 
     footer section div {
+        width: 100%; /* Ensure full width */
         background: #f9f9f9;
-        padding: 20px;
+        padding: 15px;
         border-radius: 10px;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        width: 90%;
-        margin: 0 auto;
     }
 
     footer section h3 {
