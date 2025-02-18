@@ -4751,6 +4751,7 @@ input, select, textarea {
 	    margin: 20px auto;
 	    max-width: 1200px;
 	    padding: 10px;
+	    text-align: center;
 	}
 	
 	/* Mobile: Stack elements */
@@ -4765,7 +4766,23 @@ input, select, textarea {
 	    padding: 20px;
 	    border-radius: 10px;
 	    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	    display: flex;
+	    flex-direction: column;
+	    align-items: center; /* Ensures text is centered */
+	    justify-content: center;
 	    text-align: center;
+	}
+
+	.footer-item h3 {
+	    margin-bottom: 5px;
+	    font-size: 18px;
+	    color: #333;
+	}
+	
+	.footer-item p a {
+	    font-size: 16px;
+	    color: #0056b3;
+	    text-decoration: none;
 	}
 	
 	.social-links {
