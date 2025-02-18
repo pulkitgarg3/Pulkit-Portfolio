@@ -4744,11 +4744,11 @@ input, select, textarea {
 
 	/* Fix uneven spacing in the About Me section */
 	    .about-me {
-	        text-align: left; /* Justifies text for even spacing */
+	        text-align: justify; /* Justifies text for even spacing */
 		text-justify: inter-word;
 		font-size: 18px;
 	        line-height: 1.8; /* Adjusts line height for readability */
-	        margin: 0 10px; /* Ensures uniform spacing */
+	        margin-bottom: 10px; /* Ensures uniform spacing */
 		padding: 10px;
     	    }
 	}
