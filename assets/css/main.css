@@ -4691,9 +4691,9 @@ input, select, textarea {
 	/* Mobile-Friendly Design */
 	@media screen and (max-width: 768px) {
 	    #intro {
-	        padding: 20px 15px; /* Reduce top and bottom padding */
+	        padding: 10px 10px; /* Reduce top and bottom padding */
 	        text-align: center;
-		min-height: 70vh; /* Reduce height */
+		min-height: 60vh; /* Reduce height */
 	    }
 	
 	    .profile-container {
