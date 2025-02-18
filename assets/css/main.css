@@ -3841,17 +3841,19 @@ input, select, textarea {
 			padding: 0;
 		}
 			
-			.project-description {
-			    margin-bottom: 10px; /* Reduce gap between description & skills */
-			}
-			
-			.project-skills {
-			    margin-bottom: 20px; /* Increase gap between skills & button */
-			}
-			
-			.actions.special {
-			    margin-top: 25px; /* Add spacing above "View Project" button */
-			}
+		/* Adjust spacing between sections */
+		.project-description {
+		    margin-bottom: 10px; /* Reduce gap between description & skills */
+		}
+		
+		.project-skills {
+		    margin-bottom: 20px; /* Increase gap between skills & button */
+		}
+		
+		.actions.special {
+		    margin-top: 20px; /* Add spacing above "View Project" button */
+		}
+
 
 			#main > .posts > * {
 				-moz-flex-shrink: 1;
