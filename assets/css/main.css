@@ -4777,12 +4777,14 @@ input, select, textarea {
 	    margin-bottom: 5px;
 	    font-size: 18px;
 	    color: #333;
+	    justify-content: center;
 	}
 	
 	.footer-item p a {
 	    font-size: 16px;
 	    color: #0056b3;
 	    text-decoration: none;
+            justify-content: center;
 	}
 	
 	.social-links {
