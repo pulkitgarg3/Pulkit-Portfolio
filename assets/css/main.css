@@ -4783,6 +4783,9 @@ input, select, textarea {
 	.footer-item p a {
 	    font-size: 16px;
 	    color: #0056b3;
+	    list-style: none;
+	    padding: 0;
+	    display: flex;
 	    text-decoration: none;
             justify-content: center;
 	}
