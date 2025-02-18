@@ -3310,7 +3310,7 @@ input, select, textarea {
 		cursor: default;
 		text-align: center;
 		z-index: 1;
-		min-height: 90vh;
+		min-height: 80vh;
 	}
 
 		#intro input, #intro select, #intro textarea {
@@ -4729,11 +4729,13 @@ input, select, textarea {
 	
 	    .posts article {
 	        width: 100%;
-	        margin-bottom: 15px;
+	        margin-bottom: 20px;
 	    }
 	
 	    .actions.special {
 	        text-align: center;
+		margin-top: 15px;
+		    
 	    }
 	
 	    /* Mobile view - stack elements in the footer */
