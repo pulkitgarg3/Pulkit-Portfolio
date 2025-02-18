@@ -4691,8 +4691,9 @@ input, select, textarea {
 	/* Mobile-Friendly Design */
 	@media screen and (max-width: 768px) {
 	    #intro {
-	        padding: 30px 20px;
+	        padding: 15px 10px; /* Reduce top and bottom padding */
 	        text-align: center;
+		min-height: 75vh; /* Reduce height */
 	    }
 	
 	    .profile-container {
@@ -4729,12 +4730,12 @@ input, select, textarea {
 	
 	    .posts article {
 	        width: 100%;
-	        margin-bottom: 20px;
+	        margin-bottom: 10px;
 	    }
 	
 	    .actions.special {
 	        text-align: center;
-		margin-top: 15px;
+		margin-top: 20px;
 		    
 	    }
 	
