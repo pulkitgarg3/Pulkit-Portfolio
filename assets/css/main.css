@@ -4691,7 +4691,7 @@ input, select, textarea {
 	/* Mobile-Friendly Design */
 	@media screen and (max-width: 768px) {
 	    #intro {
-	        padding: 10px 10px; /* Reduce top and bottom padding */
+	        padding: 8px 10px; /* Reduce top and bottom padding */
 	        text-align: center;
 		min-height: 50vh; /* Reduce height */
 	    }
