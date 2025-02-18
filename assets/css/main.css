@@ -3799,7 +3799,7 @@ input, select, textarea {
 			@media screen and (max-width: 1280px) {
 
 				#main > .post {
-					padding: 4rem 4rem 4rem 4rem ;
+					padding: 2rem 4rem 4rem 4rem ;
 				}
 
 			}
