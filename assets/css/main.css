@@ -4693,7 +4693,7 @@ input, select, textarea {
 	    #intro {
 	        padding: 10px 10px; /* Reduce top and bottom padding */
 	        text-align: center;
-		min-height: 60vh; /* Reduce height */
+		min-height: 50vh; /* Reduce height */
 	    }
 	
 	    .profile-container {
