@@ -4751,6 +4751,24 @@ input, select, textarea {
 	        margin-bottom: 10px; /* Ensures uniform spacing */
 		padding: 10px;
     	    }
+	 /* 2. Ensure Project Category and Name are on Separate Lines */
+	    .project-title {
+	        display: flex;
+	        flex-direction: column;
+	    }
+	
+	    .project-category {
+	        font-size: 16px;
+	        font-weight: bold;
+	        color: #023b79; /* Distinct blue color */
+	        margin-bottom: 5px;
+	    }
+	
+	    .project-name {
+	        font-size: 18px;
+	        font-weight: bold;
+	        color: #333; /* Neutral dark gray */
+	    }
 	}
 	
 	/* Footer Styling */
