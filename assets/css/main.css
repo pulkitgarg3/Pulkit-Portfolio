@@ -4745,8 +4745,9 @@ input, select, textarea {
 	/* Fix uneven spacing in the About Me section */
 	    .about-me {
 	        text-align: center; /* Justifies text for even spacing */
+		text-justify: inter-word;
+		font-size: 18px;
 	        line-height: 1.8; /* Adjusts line height for readability */
-		word-spacing: 0.5px;
 	        margin: 0 10px; /* Ensures uniform spacing */
     	    }
 	}
