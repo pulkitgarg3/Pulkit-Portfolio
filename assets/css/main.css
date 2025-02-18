@@ -4749,6 +4749,7 @@ input, select, textarea {
 		font-size: 18px;
 	        line-height: 1.8; /* Adjusts line height for readability */
 	        margin: 0 10px; /* Ensures uniform spacing */
+		padding: 10px;
     	    }
 	}
 	
