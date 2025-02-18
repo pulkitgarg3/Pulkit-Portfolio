@@ -4743,7 +4743,7 @@ input, select, textarea {
 	    }
 
 	/* Fix uneven spacing in the About Me section */
-	    .project-name {
+	    .about-me {
 	        text-align: left; /* Justifies text for even spacing */
 	        line-height: 1.8; /* Adjusts line height for readability */
 		word-spacing: 0.5px;
