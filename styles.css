@@ -163,18 +163,17 @@ footer {
 /* Mobile-Friendly Design */
 @media screen and (max-width: 768px) {
     
-    /* Stack profile section elements */
+    /* Profile section should stack properly */
     .profile-section {
-        flex-direction: column;
-        align-items: center;
-        width: 100%; /* Ensure it doesn't overflow */
-        text-align: center;
+        width: auto; /* Prevents overflow */
+        max-width: 95%;
+        padding: 20px;
     }
 
     /* Ensure profile container is full width */
     .profile-container {
         flex-direction: column;
-        width: 90%; /* Reduce width for better spacing */
+        width: 100%;
         padding: 15px;
         text-align: center;
     }
@@ -183,34 +182,37 @@ footer {
     .profile-pic {
         width: 120px;
         height: 120px;
-        margin-bottom: 10px; /* Reduce spacing */
+        margin-bottom: 10px;
     }
 
     /* Adjust skills section */
     .skills-section {
-        width: 90%;
-        max-width: 100%; 
+        width: 100%;
+        max-width: 95%;
         text-align: center;
-        margin-bottom: 20px; /* Space between skills & profile */
+        margin-bottom: 20px;
     }
 
     /* Experience section - Stack cards */
     .experience-container {
         flex-direction: column;
-        align-items: center;
+        align-items: stretch; /* Ensures uniform card widths */
+        gap: 15px;
     }
 
     .experience-card {
-        width: 90%; /* Full width for better readability */
+        width: 95%; /* Full width for better readability */
         padding: 15px;
+        text-align: center;
     }
 
-    /* Ensure buttons are centered */
+    /* Ensure buttons are properly centered */
     .btn {
-        display: block;
-        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         margin: 10px auto;
-        width: fit-content;
+        width: 80%; /* Makes sure buttons are aligned */
     }
 
     /* Center the back button */
@@ -219,4 +221,3 @@ footer {
         margin-top: 20px;
     }
 }
-
