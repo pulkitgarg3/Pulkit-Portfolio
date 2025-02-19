@@ -213,6 +213,25 @@ footer {
         align-items: center;
         margin: 10px auto;
         width: 80%; /* Makes sure buttons are aligned */
+        max-width: 250px; /* Prevents oversized buttons */
+        padding: 12px 20px; /* Adjusts button padding */
+        font-size: 16px; /* Ensures text is readable */
+        text-align: center;
+    }
+
+    /* Fix "View Profile" button */
+    .actions.special {
+        display: flex;
+        justify-content: center;
+        margin-top: 15px; /* Adjusts spacing */
+    }
+
+    .actions.special .button {
+        width: 80%; /* Ensures the button is not too wide */
+        max-width: 250px; /* Prevents button from stretching */
+        padding: 12px 20px; /* Adjusts button padding */
+        font-size: 16px; /* Ensures text is readable */
+        text-align: center;
     }
 
     /* Center the back button */
