@@ -171,6 +171,7 @@ footer {
         padding: 20px;
     }
 
+
     /* Profile Container */
     .profile-container {
         width: 95%;
@@ -181,6 +182,7 @@ footer {
         border-radius: 8px;
     }
 
+    /* Profile Picture */
     .profile-pic {
         width: 110px;
         height: 110px;
@@ -214,7 +216,7 @@ footer {
         padding: 0;
     }
 
-    /* Work Experience: Full-Width Cards */
+   /* Work Experience: Full-Width Cards */
     .experience-container {
         display: flex;
         flex-direction: column;
