@@ -4767,6 +4767,7 @@ input, select, textarea {
 	        line-height: 1.8; /* Adjusts line height for readability */
 	        margin-bottom: 10px; /* Ensures uniform spacing */
 		padding: 10px;
+		hyphens: auto; /* New */
     	    }
 	 /* 2. Ensure Project Category and Name are on Separate Lines */
 	    .project-title {
@@ -4803,6 +4804,7 @@ input, select, textarea {
 	@media screen and (max-width: 768px) {
 	    .footer-grid {
 	        grid-template-columns: 1fr; /* Stacked layout */
+		 gap: 10px; /* Reduce gap */
 	    }
 	}
 	
