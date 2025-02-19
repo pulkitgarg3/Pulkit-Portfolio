@@ -161,16 +161,15 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
-    
-    /* Stack Everything Properly */
+
+    /* Stack Profile Section Properly */
     .profile-section {
         display: flex;
-        flex-direction: column; /* Stack elements properly */
+        flex-direction: column;
         align-items: center;
         width: 100%;
         padding: 20px;
     }
-
 
     /* Profile Container */
     .profile-container {
@@ -196,10 +195,13 @@ footer {
         padding: 0 10px;
     }
 
-    /* Move Skills Section Below Profile */
+    /* 🎯 1x2 Grid for Skills Section */
     .skills-section {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Two equal columns */
+        gap: 10px;
         width: 95%;
-        margin-top: 20px; /* Add spacing from profile card */
+        margin-top: 20px;
         text-align: center;
         padding: 15px;
         background: #f9f9f9;
@@ -207,22 +209,31 @@ footer {
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
-    .skills-section h3 {
-        font-size: 1.2rem;
+    .skills-box {
+        background: #ffffff;
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     }
 
-    .skills-section ul {
+    .skills-box h3 {
+        font-size: 1.1rem;
+        margin-bottom: 5px;
+    }
+
+    .skills-box ul {
         list-style-type: none;
         padding: 0;
+        font-size: 0.9rem;
     }
 
-   /* Work Experience: Full-Width Cards */
+    /* Work Experience: Full-Width Cards */
     .experience-container {
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 15px;
-        margin-top: 20px; /* Ensure spacing */
+        margin-top: 20px;
     }
 
     .experience-card {
