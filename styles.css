@@ -162,50 +162,24 @@ footer {
 
 @media screen and (max-width: 768px) {
 
-    /* Center Everything */
-    .profile-section {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    /* Make Sections Consistent */
+    .profile-section, .experience-section, .skills-section {
         width: 95%;
+        max-width: 95%;
         margin: 0 auto;
         padding: 20px;
     }
 
-    /* Profile Picture */
-    .profile-pic {
-        width: 140px;
-        height: 140px;
-        border-radius: 50%;
-        margin-bottom: 15px;
-    }
-
-    /* Name & Bio */
-    .profile-info h1 {
-        font-size: 1.8rem;
-        text-align: center;
-        margin-bottom: 5px;
-    }
-
-    .profile-info p {
-        text-align: center;
-        font-size: 1rem;
-        line-height: 1.6;
-        padding: 0 10px;
-    }
-
-    /* Skills Section - Two Columns */
+    /* Skills Section - Two Equal Columns */
     .skills-section {
-        width: 100%;
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
         text-align: center;
-        margin-bottom: 20px;
     }
 
     .skills-section h3 {
-        grid-column: span 2; /* Make section titles span full width */
+        grid-column: span 2;
         font-size: 1.2rem;
         text-align: center;
     }
@@ -215,7 +189,40 @@ footer {
         padding: 0;
     }
 
-    /* Experience Section - Cards Stack */
+    /* Profile Section */
+    .profile-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        background: #ffffff;
+    }
+
+    /* Profile Image */
+    .profile-pic {
+        width: 130px;
+        height: 130px;
+        border-radius: 50%;
+        margin-bottom: 10px;
+    }
+
+    /* Name & Bio */
+    .profile-info h1 {
+        font-size: 1.8rem;
+        margin-bottom: 5px;
+    }
+
+    .profile-info p {
+        font-size: 1rem;
+        line-height: 1.6;
+        padding: 0 10px;
+    }
+
+    /* Work Experience - Cards Expand to Full Width */
     .experience-container {
         display: flex;
         flex-direction: column;
@@ -225,11 +232,11 @@ footer {
 
     .experience-card {
         width: 100%;
-        padding: 15px;
+        padding: 20px;
+        text-align: center;
         background: #f9f9f9;
         border-radius: 10px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        text-align: center;
     }
 
     .experience-card h3 {
@@ -242,11 +249,11 @@ footer {
         line-height: 1.5;
     }
 
-    /* Center Buttons */
+    /* Buttons Centered */
     .btn {
         width: 90%;
-        text-align: center;
         display: block;
+        text-align: center;
         margin: 10px auto;
     }
 
