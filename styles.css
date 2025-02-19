@@ -165,7 +165,7 @@ footer {
     /* Stack Profile Section Properly */
     .profile-section {
         display: flex;
-        flex-direction: column;
+        flex-direction: column; /* Stack elements properly */
         align-items: center;
         width: 100%;
         padding: 20px;
@@ -227,13 +227,13 @@ footer {
         font-size: 0.9rem;
     }
 
-    /* Work Experience: Full-Width Cards */
+   /* Work Experience: Full-Width Cards */
     .experience-container {
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 15px;
-        margin-top: 20px;
+        margin-top: 20px; /* Ensure spacing */
     }
 
     .experience-card {
@@ -256,3 +256,4 @@ footer {
         font-size: 1rem;
     }
 }
+
