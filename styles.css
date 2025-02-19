@@ -161,70 +161,70 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
-
-    /* Make Sections Consistent */
-    .profile-section, .experience-section, .skills-section {
-        width: 95%;
-        max-width: 95%;
-        margin: 0 auto;
+    
+    /* Stack Everything Properly */
+    .profile-section {
+        display: flex;
+        flex-direction: column; /* Stack elements properly */
+        align-items: center;
+        width: 100%;
         padding: 20px;
     }
 
-    .skills-section {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 equal columns */
-    gap: 15px;
-    text-align: center;
-    align-items: center;
-    width: 95%;
-    margin: 0 auto;
-    }
-    
-    .skills-section h3 {
-        grid-column: span 2; /* Ensure heading spans both columns */
-        font-size: 1.2rem;
+    /* Profile Container */
+    .profile-container {
+        width: 95%;
+        padding: 20px;
         text-align: center;
-    }
-    
-    .skills-section ul {
-        list-style-type: none;
-        padding: 0;
+        background: #ffffff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
     }
 
-    .profile-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 95%;
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    background: #ffffff;
-    }
-    
     .profile-pic {
         width: 110px;
         height: 110px;
         border-radius: 50%;
         margin-bottom: 10px;
     }
-    
+
     .profile-info p {
         font-size: 1rem;
         line-height: 1.6;
         padding: 0 10px;
     }
 
-    .experience-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
+    /* Move Skills Section Below Profile */
+    .skills-section {
+        width: 95%;
+        margin-top: 20px; /* Add spacing from profile card */
+        text-align: center;
+        padding: 15px;
+        background: #f9f9f9;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
-    
+
+    .skills-section h3 {
+        font-size: 1.2rem;
+    }
+
+    .skills-section ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    /* Work Experience: Full-Width Cards */
+    .experience-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        margin-top: 20px; /* Ensure spacing */
+    }
+
     .experience-card {
-        width: 100%; /* Full width */
+        width: 100%;
         max-width: 95%;
         padding: 20px;
         text-align: center;
@@ -232,18 +232,9 @@ footer {
         border-radius: 10px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
-    
-    .experience-card h3 {
-        font-size: 1.2rem;
-        margin-bottom: 5px;
-    }
-    
-    .experience-card p {
-        font-size: 0.9rem;
-        line-height: 1.5;
-    }
 
-      .btn {
+    /* Center Download Resume Button */
+    .btn {
         width: 90%;
         display: block;
         text-align: center;
@@ -251,5 +242,4 @@ footer {
         padding: 12px 0;
         font-size: 1rem;
     }
-
 }
