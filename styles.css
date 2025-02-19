@@ -159,3 +159,64 @@ footer {
     box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
     font-size: 0.9rem;
 }
+
+/* Mobile-Friendly Design */
+@media screen and (max-width: 768px) {
+    
+    /* Stack profile section elements */
+    .profile-section {
+        flex-direction: column;
+        align-items: center;
+        width: 100%; /* Ensure it doesn't overflow */
+        text-align: center;
+    }
+
+    /* Ensure profile container is full width */
+    .profile-container {
+        flex-direction: column;
+        width: 90%; /* Reduce width for better spacing */
+        padding: 15px;
+        text-align: center;
+    }
+
+    /* Adjust profile picture */
+    .profile-pic {
+        width: 120px;
+        height: 120px;
+        margin-bottom: 10px; /* Reduce spacing */
+    }
+
+    /* Adjust skills section */
+    .skills-section {
+        width: 90%;
+        max-width: 100%; 
+        text-align: center;
+        margin-bottom: 20px; /* Space between skills & profile */
+    }
+
+    /* Experience section - Stack cards */
+    .experience-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .experience-card {
+        width: 90%; /* Full width for better readability */
+        padding: 15px;
+    }
+
+    /* Ensure buttons are centered */
+    .btn {
+        display: block;
+        text-align: center;
+        margin: 10px auto;
+        width: fit-content;
+    }
+
+    /* Center the back button */
+    .back-button {
+        text-align: center;
+        margin-top: 20px;
+    }
+}
+
