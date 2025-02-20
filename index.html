@@ -302,6 +302,21 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+		
+		<!-- Scroll Depth Tracking Script -->
+		<script>
+		  window.addEventListener('scroll', function() {
+		    let scrollDepth = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+
+		    if (scrollDepth > 50) {
+		      gtag('event', 'Scroll', { 'event_category': 'Engagement', 'event_label': '50% Depth' });
+		    }
+
+		    if (scrollDepth > 90) {
+		      gtag('event', 'Scroll', { 'event_category': 'Engagement', 'event_label': '90% Depth' });
+		    }
+		  });
+		</script>
 
 	</body>
 </html>
