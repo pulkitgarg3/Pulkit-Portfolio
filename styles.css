@@ -160,3 +160,79 @@ footer {
     font-size: 0.9rem;
 }
 
+/* Mobile-Friendly Design (Applies Only to Screens ≤ 768px) */
+@media screen and (max-width: 768px) {
+    
+    /* Stack Profile Page Elements */
+    .profile-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 95%;
+        padding: 20px;
+    }
+
+    /* Resize Profile Card */
+    .profile-container {
+        width: 95%;
+        padding: 20px;
+        text-align: center;
+        background: #ffffff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+    }
+
+    /* Profile Picture */
+    .profile-pic {
+        width: 110px;
+        height: 110px;
+        border-radius: 50%;
+        margin-bottom: 10px;
+    }
+
+    /* Centered Profile Text */
+    .profile-info p {
+        font-size: 1rem;
+        line-height: 1.6;
+        padding: 0 10px;
+    }
+
+    /* Move Skills Section Below Profile */
+    .skills-section {
+        width: 95%;
+        margin-top: 20px;
+        text-align: center;
+        padding: 15px;
+        background: #f9f9f9;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Two-Column Skills for Mobile */
+    .skills-section ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        padding: 0;
+    }
+
+    /* Work Experience Cards Full Width */
+    .experience-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        margin-top: 20px;
+    }
+
+    .experience-card {
+        width: 100%;
+        max-width: 95%;
+        padding: 20px;
+        text-align: center;
+        background: #f9f9f9;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+}
+
