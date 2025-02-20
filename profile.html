@@ -1,270 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Pulkit Garg</title>
-  <link rel="stylesheet" href="styles.css">
-  <style>
-    /* Desktop Styles – These remain unchanged */
-    body {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-
-    header {
-      width: 100%;
-      background-color: #f4f4f4;
-      text-align: center;
-      padding: 20px;
-    }
-
-    .profile-section {
-      display: flex;
-      justify-content: space-between; /* Desktop layout: side-by-side */
-      align-items: flex-start;
-      margin: 20px auto;
-      width: 250%; /* Desktop width */
-    }
-
-    .skills-section {
-      flex: 1;
-      max-width: 250px;
-      margin-right: 20px;
-      padding: 20px;
-      background-color: #f9f9f9;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      border-radius: 8px;
-    }
-
-    .skills-section h2 {
-      text-align: center;
-      margin-bottom: 10px;
-    }
-
-    .skills-section ul {
-      list-style-type: none;
-      padding: 0;
-    }
-
-    .skills-section ul li {
-      margin: 8px 0;
-      font-size: 14px;
-    }
-
-    .profile-container {
-      flex: 3;
-      display: flex;
-      text-align: center;
-      align-items: center;
-      padding: 20px;
-      background-color: #ffffff;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      border-radius: 8px;
-    }
-
-    .profile-pic {
-      border-radius: 50%;
-      width: 150px;
-      height: 150px;
-      margin-right: 20px;
-    }
-
-    .btn {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 10px 20px;
-      background-color: #023c7a;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 5px;
-    }
-
-    /* Mobile-Only Styles */
-    @media screen and (max-width: 768px) {
-      /* Stack all sections vertically */
-      .profile-section {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 95%;
-        margin: 0 auto;
-        padding: 20px;
-      }
-      
-      /* Profile Container – make it full width and centered */
-      .profile-container {
-        width: 95%;
-        padding: 20px;
-        text-align: center;
-        background: #ffffff;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        border-radius: 8px;
-        margin-bottom: 20px;
-      }
-      
-      /* Resize Profile Picture */
-      .profile-pic {
-        width: 120px;
-        height: 120px;
-        margin-bottom: 10px;
-      }
-      
-      /* Ensure Profile Info uses full width */
-      .profile-info {
-        width: 100%;
-        padding: 0 10px;
-      }
-      
-      /* About text – remove inline styling overrides by using class selector */
-      .about-me {
-        text-align: justify;
-        text-justify: inter-word;
-        line-height: 1.6;
-        font-size: 1rem;
-        margin-bottom: 10px;
-      }
-      
-      /* Skills Section becomes a 1x2 grid and moves below the profile container */
-      .skills-section {
-        width: 95%;
-        margin: 20px auto;
-        padding: 15px;
-        background: #f9f9f9;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 10px;
-        text-align: center;
-      }
-      
-      .skills-section h2 {
-        grid-column: span 2;
-        margin-bottom: 10px;
-        font-size: 1.4rem;
-      }
-      
-      .skills-section ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        font-size: 0.9rem;
-      }
-      
-      /* Work Experience: Stack cards vertically and widen */
-      .experience-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 15px;
-        margin-top: 20px;
-        width: 95%;
-      }
-      
-      .experience-card {
-        width: 100%;
-        padding: 20px;
-        text-align: center;
-        background: #f9f9f9;
-        border-radius: 10px;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-      }
-      
-      /* Center the Resume Download and Back buttons */
-      .btn {
-        width: 90%;
-        display: block;
-        text-align: center;
-        margin: 15px auto;
-        padding: 12px 0;
-        font-size: 1rem;
-      }
-    }
-  </style>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EYL3VQY1G6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-EYL3VQY1G6');
+      gtag('config', 'G-EYL3VQY1G6', { 'page_path': '/profile' });
+    </script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Pulkit Garg</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <div class="header-container">
-      <h1>Pulkit Garg</h1>
-      <p>Welcome to my professional profile! Discover my journey, skills, and aspirations.</p>
-    </div>
-  </header>
-  <main>
-    <section class="profile-section">
-      <!-- Desktop skills section remains here; Mobile styles will override it -->
-      <div class="skills-section">
-        <h2>Skills</h2>
-        <h3>Technical Skills</h3>
-        <ul>
-          <li>Python</li>
-          <li>Stata</li>
-          <li>SPSS</li>
-          <li>SQL</li>
-          <li>Power BI</li>
-          <li>Microsoft Excel</li>
-          <li>Econometrics</li>
-        </ul>
-        <h3>Soft Skills</h3>
-        <ul>
-          <li>Leadership</li>
-          <li>Team Collaboration</li>
-          <li>Strategic Planning</li>
-          <li>Time Management</li>
-          <li>Adaptability</li>
-        </ul>
-      </div>
-      <div class="profile-container">
-        <img src="images/Pulkit2.jpg" alt="Pulkit Garg" class="profile-pic">
-        <div class="profile-info">
-          <blockquote style="text-align: center; font-style: italic; margin-top: 15px;">
-            "Data has the power to change the world, but only if we use it with purpose."
-          </blockquote>
-          <p class="about-me">
-            Beyond my academic journey and professional projects, I am deeply passionate about sustainability, innovation, and the intersection of technology and human well-being. I aspire to contribute to solutions that address pressing global challenges, particularly in areas like climate change, resource optimization, and equitable development.
-          </p>
-          <p class="about-me">
-            My mission is to use data and strategy to drive meaningful change, whether it’s through empowering businesses, fostering sustainable practices, or enhancing quality of life. I believe in the power of collaboration, lifelong learning, and making an impact that transcends numbers.
-          </p>
+    <header>
+        <div class="header-container">
+            <h1>Pulkit Garg</h1>
+            <p>Welcome to my professional profile! Discover my journey, skills, and aspirations.</p>
         </div>
-        <a href="assets/Pulkit_Garg_CV.pdf" class="btn" download>Download My Resume</a>
-      </div>
-    </section>
-    <section class="experience-section">
-      <h2>Work Experience</h2>
-      <div class="experience-container">
-        <div class="experience-card">
-          <h3>Market Research Intern - ITC Ltd.</h3>
-          <p>
-            Contributed to improving the market presence of the Mom's Magic brand through strategic market research, competitor analysis, and customer insights.
-          </p>
-        </div>
-        <div class="experience-card">
-          <h3>Business Development Extern - Thematic</h3>
-          <p>
-            Gained insights into the creator economy and emerging business models, exploring the impact of digital ecosystems on marketing strategies.
-          </p>
-        </div>
-        <div class="experience-card">
-          <h3>5G Research & Development Intern - HFCL</h3>
-          <p>
-            Worked on innovative 5G solutions, including network optimization and telecommunications system analysis, contributing to the deployment of next-gen wireless technologies.
-          </p>
-        </div>
-      </div>
-    </section>
+    </header>
+    
+    <main>
+        <!-- Profile Section -->
+        <section class="profile-section">
+            <div class="profile-container">
+                <img src="images/Pulkit2.jpg" alt="Pulkit Garg" class="profile-pic">
+                <div class="profile-info">
+                    <blockquote style="text-align: center; font-style: italic; margin-top: 15px;">
+                        "Data has the power to change the world, but only if we use it with purpose."
+                    </blockquote>
+                    <p style="text-align: justify; line-height: 1.8;">
+                        Beyond my academic journey and professional projects, I am deeply passionate about sustainability, innovation, 
+                        and the intersection of technology and human well-being. I aspire to contribute to solutions that address pressing global 
+                        challenges, particularly in areas like climate change, resource optimization, and equitable development.
+                    </p>
+                    <p style="text-align: justify; line-height: 1.8;">
+                        My mission is to use data and strategy to drive meaningful change, whether it’s through empowering businesses, 
+                        fostering sustainable practices, or enhancing quality of life. I believe in the power of collaboration, lifelong learning, 
+                        and making an impact that transcends numbers.
+                    </p>
+                </div>
+            </div>
 
-    <!-- Back to Main Page Button -->
-    <div class="back-button container">
-      <a href="index.html" class="btn">Back to Main Page</a>
-    </div>
-  </main>
-  <footer>
-    <p>© 2025 Pulkit Garg. All Rights Reserved.</p>
-  </footer>
+            <!-- Resume Button -->
+            <a href="assets/Pulkit_Garg_CV.pdf" class="btn" download 
+               onclick="gtag('event', 'Resume Download', { 'event_category': 'Engagement', 'event_label': 'Resume' })">
+               Download My Resume
+            </a>
+        </section>
+
+        <!-- Skills Section (Now BELOW Profile Section) -->
+        <section class="skills-section">
+            <h2>Skills</h2>
+            <div class="skills-columns">
+                <div class="skills-column">
+                    <h3>Technical Skills</h3>
+                    <ul>
+                        <li>Python</li>
+                        <li>Stata</li>
+                        <li>SPSS</li>
+                        <li>SQL</li>
+                        <li>Power BI</li>
+                        <li>Microsoft Excel</li>
+                        <li>Econometrics</li>
+                    </ul>
+                </div>
+                <div class="skills-column">
+                    <h3>Soft Skills</h3>
+                    <ul>
+                        <li>Leadership</li>
+                        <li>Team Collaboration</li>
+                        <li>Strategic Planning</li>
+                        <li>Time Management</li>
+                        <li>Adaptability</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Work Experience Section -->
+        <section class="experience-section">
+            <h2>Work Experience</h2>
+            <div class="experience-container">
+                <div class="experience-card">
+                    <h3>Market Research Intern - ITC Ltd.</h3>
+                    <p>
+                        Contributed to improving the market presence of the Mom's Magic brand through strategic market research, 
+                        competitor analysis, and customer insights.
+                    </p>
+                </div>
+                <div class="experience-card">
+                    <h3>Business Development Extern - Thematic</h3>
+                    <p>
+                        Gained insights into the creator economy and emerging business models, exploring the impact of digital ecosystems 
+                        on marketing strategies.
+                    </p>
+                </div>
+                <div class="experience-card">
+                    <h3>5G Research & Development Intern - HFCL</h3>
+                    <p>
+                        Worked on innovative 5G solutions, including network optimization and telecommunications system analysis, 
+                        contributing to the deployment of next-gen wireless technologies.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Back to Main Page Button -->
+        <div class="back-button container">
+            <a href="index.html" class="btn">Back to Main Page</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 Pulkit Garg. All Rights Reserved.</p>
+    </footer>
 </body>
 </html>
