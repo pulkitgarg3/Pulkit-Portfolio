@@ -87,7 +87,9 @@
 										improve customer engagement, I thrive on solving real-world challenges using data and innovative thinking.
 										
 									  </p>	  
-									<a href="profile.html" class="button" style="margin-top: 5px;">View Profile</a>
+									<a href="profile.html" class="button" 
+										onclick="gtag('event', 'Click', { 'event_category': 'Navigation', 'event_label': 'View Profile' })" 
+										style="margin-top: 5px;">View Profile</a>
 								</header>
 								<a href="profile.html" class="image main"><img src="images/Pulkit.png" alt="" /></a>
 								<ul class="actions special" style="margin-bottom: 5px;">
@@ -115,7 +117,9 @@
 										<strong>Skills:</strong> Stata, Econometrics, Data Analysis, Policy Research, Regression Modelling
 									</div>
 									<ul class="actions special">
-										<li><a href="https://github.com/pulkitgarg3/Research-Project-Energy-Poverty-HDI" class="button">View Project</a></li>
+										<li><a href="https://github.com/pulkitgarg3/Research-Project-Energy-Poverty-HDI" class="button"
+											    onclick="gtag('event', 'Project Click', { 'event_category': 'Projects', 'event_label': 'Energy Poverty & HDI' })">
+											    View Project</a></li>
 									</ul>
 								</article>
 								<article>
@@ -138,7 +142,9 @@
 										<strong>Skills:</strong> Python (Pandas, Scikit-learn), Data Analysis, Machine Learning, Random Forest
 									</div>
 									<ul class="actions special">
-										<li><a href="https://github.com/pulkitgarg3/Customer-Churn-Prediction-Model" class="button">View Project</a></li>
+										<li><a href="https://github.com/pulkitgarg3/Customer-Churn-Prediction-Model" class="button"
+											    onclick="gtag('event', 'Project Click', { 'event_category': 'Projects', 'event_label': 'Customer Churn Prediction' })">
+											    View Project</a></li>
 									</ul>
 								</article>
 								<article>
@@ -160,7 +166,9 @@
 										<strong>Skills:</strong> Time Series Analysis, Meta Prophet, Python, Forecasting 
 									</div>
 									<ul class="actions special">
-										<li><a href="https://github.com/pulkitgarg3/Bike-Sharing-Demand-Forecasting" class="button">View Project</a></li>
+										<li><a href="https://github.com/pulkitgarg3/Bike-Sharing-Demand-Forecasting" class="button"
+											onclick="gtag('event', 'Project Click', { 'event_category': 'Projects', 'event_label': 'Bike Sharing Forecast' })">
+											View Project</a></li>
 									</ul>
 								</article>
 								<article>
@@ -182,7 +190,9 @@
 										<strong>Skills:</strong> Stata, Econometrics, Data Analysis, Regression Modelling
 									</div>
 									<ul class="actions special">
-										<li><a href="https://github.com/pulkitgarg3/IMR_Determinants_Econometric_Analysis" class="button">View Project</a></li>
+										<li><a href="https://github.com/pulkitgarg3/IMR_Determinants_Econometric_Analysis" class="button"
+											onclick="gtag('event', 'Project Click', { 'event_category': 'Projects', 'event_label': 'IMR & Econometrics' })">
+											View Project</a></li>
 									</ul>
 								</article>
 								<article>
@@ -206,7 +216,9 @@
 										<strong>Skills:</strong> Time Series Analysis, ARIMA, SARIMAX, ARCH/GARCH, Python, Stata
 									</div>
 									<ul class="actions special">
-										<li><a href="https://github.com/pulkitgarg3/GHG-Emission-Forecasting-India" class="button">View Project</a></li>
+										<li><a href="https://github.com/pulkitgarg3/GHG-Emission-Forecasting-India" class="button"
+											onclick="gtag('event', 'Project Click', { 'event_category': 'Projects', 'event_label': 'GHG Emissions Forecast' })">
+											View Project</a></li>
 									</ul>
 								</article>
 								<article>
@@ -227,7 +239,9 @@
 										<strong>Skills:</strong> Python (Pandas, Numpy, Matplotlib), Financial Analysis, Trading Strategy, Statistics
 									</div>
 									<ul class="actions special">
-										<li><a href="https://github.com/pulkitgarg3/Stock-Market-Analysis-Project" class="button">View Project</a></li>
+										<li><a href="https://github.com/pulkitgarg3/Stock-Market-Analysis-Project" class="button"
+											onclick="gtag('event', 'Project Click', { 'event_category': 'Projects', 'event_label': 'Stock Market Analysis' })">
+											View Project</a></li>
 									</ul>
 								</article>
 								<article>
@@ -248,7 +262,9 @@
 										<strong>Skills:</strong> SPSS, Survey Design, Consumer Behavior Analysis, Marketing Research
 									</div>
 									<ul class="actions special">
-								    	<li><a href="https://github.com/pulkitgarg3/Eco-Packaging-Impact-MR-Project" class="button">View Project</a></li>
+								    	<li><a href="https://github.com/pulkitgarg3/Eco-Packaging-Impact-MR-Project" class="button"
+										onclick="gtag('event', 'Project Click', { 'event_category': 'Projects', 'event_label': 'Green Packaging Research' })">
+										View Project</a></li>
 									</ul>
 								</article>	
 							</section>
@@ -275,12 +291,22 @@
 					        <div class="footer-item">
 					            <h3>Social</h3>
 					            <ul class="social-links">
-					                <li><a href="https://www.linkedin.com/in/pulkitgarg03/" class="icon brands fa-linkedin" 
-								    onclick="gtag('event', 'Click', { 'event_category': 'Social', 'event_label': 'LinkedIn' })" 
-									    style="color: #0056b3; text-decoration: none;"> LinkedIn</a></li>
-					                <li><a href="https://github.com/pulkitgarg3" class="icon brands fa-github" 
-								    onclick="gtag('event', 'Click', { 'event_category': 'Social', 'event_label': 'GitHub' })" 
-									    style="color: #0056b3; text-decoration: none;"> GitHub</a></li>
+					               <li>
+							  <a href="https://www.linkedin.com/in/pulkitgarg03/" class="icon brands fa-linkedin"
+							     style="color: #0056b3; text-decoration: none;"
+							     onclick="gtag('event', 'Click', { 'event_category': 'Social', 'event_label': 'LinkedIn' })">
+							     LinkedIn
+							  </a>
+							</li>
+							
+							<li>
+							  <a href="https://github.com/pulkitgarg3" class="icon brands fa-github"
+							     style="color: #0056b3; text-decoration: none;"
+							     onclick="gtag('event', 'Click', { 'event_category': 'Social', 'event_label': 'GitHub' })">
+							     GitHub
+							  </a>
+							</li>
+
 					            </ul>
 					        </div>
 					    </section>
@@ -303,18 +329,37 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 		
-		<!-- Scroll Depth Tracking Script -->
 		<script>
-		  window.addEventListener('scroll', function() {
-		    let scrollDepth = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
-
-		    if (scrollDepth > 50) {
-		      gtag('event', 'Scroll', { 'event_category': 'Engagement', 'event_label': '50% Depth' });
-		    }
-
-		    if (scrollDepth > 90) {
-		      gtag('event', 'Scroll', { 'event_category': 'Engagement', 'event_label': '90% Depth' });
-		    }
+		  window.addEventListener('DOMContentLoaded', function() {
+		    
+		    // Track Session Duration at multiple intervals
+		    setTimeout(() => gtag('event', 'Session Duration', { 'event_category': 'Engagement', 'event_label': '10 Seconds' }), 10000);
+		    setTimeout(() => gtag('event', 'Session Duration', { 'event_category': 'Engagement', 'event_label': '30 Seconds' }), 30000);
+		    setTimeout(() => gtag('event', 'Session Duration', { 'event_category': 'Engagement', 'event_label': '60 Seconds' }), 60000);
+		    setTimeout(() => gtag('event', 'Session Duration', { 'event_category': 'Engagement', 'event_label': '90 Seconds' }), 90000);
+		
+		    // Scroll Depth Tracking (fires only once per session)
+		    let fiftyScrolled = false;
+		    let ninetyScrolled = false;
+		
+		    window.addEventListener('scroll', function() {
+		      let scrollDepth = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+		
+		      if (scrollDepth > 50 && !fiftyScrolled) {
+		        gtag('event', 'Scroll', { 'event_category': 'Engagement', 'event_label': '50% Depth' });
+		        fiftyScrolled = true;
+		      }
+		
+		      if (scrollDepth > 90 && !ninetyScrolled) {
+		        gtag('event', 'Scroll', { 'event_category': 'Engagement', 'event_label': '90% Depth' });
+		        ninetyScrolled = true;
+		      }
+		    });
+		
+		    // Track Device Type
+		    let deviceType = /Mobi|Android/i.test(navigator.userAgent) ? 'Mobile' : 'Desktop';
+		    gtag('event', 'Device Type', { 'event_category': 'User', 'event_label': deviceType });
+		
 		  });
 		</script>
 
