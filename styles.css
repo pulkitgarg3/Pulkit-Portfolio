@@ -77,6 +77,7 @@ main {
     color: #555;
 }
 
+/* Button Styles */
 .btn {
     display: inline-block;
     text-decoration: none;
@@ -160,90 +161,108 @@ footer {
     font-size: 0.9rem;
 }
 
+/* ================== MOBILE RESPONSIVE CHANGES ================== */
 @media screen and (max-width: 768px) {
-  /* Overall Profile Section */
-  .profile-section {
-    width: 95%;
-    margin: 0 auto;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  /* Hide desktop skills on mobile */
+  .desktop-only {
+      display: none;
+  }
+  /* Show mobile-only skills section */
+  .mobile-only {
+      display: block;
+      width: 95%;
+      margin: 20px auto;
+      padding: 15px;
+      background: #f9f9f9;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
   }
   
+  /* Create a two-column grid for skills */
+  .mobile-only .skills-columns {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+  }
+
+  .mobile-only .skills-column {
+      text-align: left;
+  }
+
+  .mobile-only .skills-column h3 {
+      font-size: 1.1rem;
+      margin-bottom: 5px;
+  }
+
+  .mobile-only .skills-column ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      font-size: 0.9rem;
+  }
+
+  /* Profile Section (Mobile) */
+  .profile-section {
+      width: 95%;
+      margin: 0 auto;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+
   /* Profile Container (Profile Card) */
   .profile-container {
-    width: 100%;
-    padding: 15px;
-    text-align: center;
-    background: #ffffff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    margin-bottom: 20px;
+      width: 100%;
+      padding: 15px;
+      text-align: center;
+      background: #ffffff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      margin-bottom: 20px;
   }
-  
+
   /* Profile Picture */
   .profile-pic {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    margin-bottom: 10px;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      margin-bottom: 10px;
   }
-  
+
   /* Profile Info */
   .profile-info {
-    width: 100%;
-    padding: 0 10px;
+      width: 100%;
+      padding: 0 10px;
   }
-  
-  /* Skills Section as 1×2 Grid */
-  .skills-section {
-    width: 95%;
-    margin: 20px auto;
-    padding: 15px;
-    background: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-    text-align: center;
-  }
-  
-  /* Reset list styles inside Skills Section */
-  .skills-section ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    font-size: 0.9rem;
-  }
-  
+
   /* Work Experience Container */
   .experience-container {
-    width: 95%;
-    margin: 20px auto;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
+      width: 95%;
+      margin: 20px auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
   }
-  
+
   /* Work Experience Cards */
   .experience-card {
-    width: 100%;
-    padding: 20px;
-    text-align: center;
-    background: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      padding: 20px;
+      text-align: center;
+      background: #f9f9f9;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
-  
+
   /* Center Buttons */
   .btn {
-    width: 90%;
-    display: block;
-    text-align: center;
-    margin: 15px auto;
-    padding: 12px 0;
-    font-size: 1rem;
+      width: 90%;
+      display: block;
+      text-align: center;
+      margin: 15px auto;
+      padding: 12px 0;
+      font-size: 1rem;
   }
 }
