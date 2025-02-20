@@ -27,6 +27,7 @@
 		  gtag('js', new Date());
 		
 		  gtag('config', 'G-EYL3VQY1G6');
+		  gtag('config', 'G-EYL3VQY1G6', { 'page_path': '/profile' }); // Custom path tracking for profile page
 		</script>
 	</head>
 	<body class="is-preload">
@@ -59,8 +60,12 @@
 							
 						</ul>
 						<ul class="icons">
-							<li><a href="https://www.linkedin.com/in/pulkitgarg03/" class="icon brands fa-linkedin"><span class="label">linkedin</span></a></li>
-							<li><a href="https://github.com/pulkitgarg3" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+							<li><a href="https://www.linkedin.com/in/pulkitgarg03/" class="icon brands fa-linkedin"
+								    onclick="gtag('event', 'Click', { 'event_category': 'Social', 'event_label': 'LinkedIn' })">
+								    <span class="label">linkedin</span></a></li>
+							<li><a href="https://github.com/pulkitgarg3" class="icon brands fa-github" 
+								    onclick="gtag('event', 'Click', { 'event_category': 'Social', 'event_label': 'GitHub' })">
+								<span class="label">GitHub</span></a></li>
 						</ul>
 					</nav>
 
@@ -270,8 +275,12 @@
 					        <div class="footer-item">
 					            <h3>Social</h3>
 					            <ul class="social-links">
-					                <li><a href="https://www.linkedin.com/in/pulkitgarg03/" class="icon brands fa-linkedin" style="color: #0056b3; text-decoration: none;"> LinkedIn</a></li>
-					                <li><a href="https://github.com/pulkitgarg3" class="icon brands fa-github" style="color: #0056b3; text-decoration: none;"> GitHub</a></li>
+					                <li><a href="https://www.linkedin.com/in/pulkitgarg03/" class="icon brands fa-linkedin" 
+								    onclick="gtag('event', 'Click', { 'event_category': 'Social', 'event_label': 'LinkedIn' })" 
+									    style="color: #0056b3; text-decoration: none;"> LinkedIn</a></li>
+					                <li><a href="https://github.com/pulkitgarg3" class="icon brands fa-github" 
+								    onclick="gtag('event', 'Click', { 'event_category': 'Social', 'event_label': 'GitHub' })" 
+									    style="color: #0056b3; text-decoration: none;"> GitHub</a></li>
 					            </ul>
 					        </div>
 					    </section>
