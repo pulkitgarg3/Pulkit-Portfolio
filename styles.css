@@ -167,8 +167,8 @@ footer {
     .profile-section {
         width: 95%;
         max-width: 900px;
-        margin: 1 auto;
-        padding: 18px;
+        margin: 0 auto;
+        padding: 20px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -181,7 +181,7 @@ footer {
         text-align: center;
         background: #ffffff;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        border-radius: 7px;
+        border-radius: 8px;
         margin-bottom: 20px;
     }
 
@@ -220,7 +220,7 @@ footer {
 
     .skills-column {
         background: #f9f9f9;
-        width: 48%; /* Ensures both columns stay inside boundaries */
+        width: 60%; /* Ensures both columns stay inside boundaries */
         padding: 15px;
         border-radius: 8px;
         text-align: center;
