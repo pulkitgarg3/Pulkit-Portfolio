@@ -6,6 +6,7 @@ body {
     padding: 0;
     background: linear-gradient(to bottom, #f9fafb, #eaeff3);
     color: #333;
+    box-sizing: border-box;
 }
 
 header {
@@ -14,18 +15,6 @@ header {
     text-align: center;
     padding: 40px 0;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.header-container h1 {
-    margin: 0;
-    font-size: 2.7rem;
-    font-weight: bold;
-}
-
-.header-container p {
-    font-size: 1.2rem;
-    margin-top: 10px;
-    color: #dce3e9;
 }
 
 main {
@@ -50,6 +39,8 @@ main {
     justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
+    width: 95%;
+    margin: 0 auto;
 }
 
 .profile-pic {
@@ -66,35 +57,6 @@ main {
     text-align: left;
 }
 
-.profile-info h2 {
-    color: #3a506b;
-    margin-bottom: 10px;
-    font-size: 1.8rem;
-}
-
-.profile-info p {
-    margin-bottom: 20px;
-    line-height: 1.6;
-    color: #555;
-}
-
-.btn {
-    display: inline-block;
-    text-decoration: none;
-    padding: 10px 20px;
-    background: #3a506b;
-    color: #f4f4f4;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: all 0.3s;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
-}
-
-.btn:hover {
-    background: #5c768d;
-    color: #eaeff3;
-}
-
 /* Skills Section */
 .skills-section {
     width: 95%;
@@ -104,7 +66,6 @@ main {
     background: #ffffff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
     border: 1px solid #dce3e9;
 }
 
@@ -112,6 +73,7 @@ main {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
+    text-align: left;
 }
 
 .skills-column {
@@ -127,17 +89,13 @@ main {
     text-align: center;
 }
 
-.experience-section h2 {
-    color: #3a506b;
-    margin-bottom: 20px;
-    font-size: 2rem;
-}
-
 .experience-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
+    width: 95%;
+    margin: 0 auto;
 }
 
 .experience-card {
@@ -145,20 +103,9 @@ main {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-    width: 90%;
-    text-align: left;
+    width: 95%;
     border: 1px solid #dce3e9;
-}
-
-/* Footer */
-footer {
     text-align: center;
-    padding: 10px;
-    background: linear-gradient(to right, #5c768d, #3a506b);
-    color: #f4f4f4;
-    margin-top: 40px;
-    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
-    font-size: 0.9rem;
 }
 
 /* Mobile Styles */
@@ -175,52 +122,33 @@ footer {
 
     /* Profile Container */
     .profile-container {
-        width: 100%;
-        padding: 15px;
+        width: 95%;
         text-align: center;
-        background: #ffffff;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        border-radius: 8px;
-        margin-bottom: 20px;
-    }
-
-    /* Profile Picture */
-    .profile-pic {
-        width: 120px;
-        height: 120px;
-        border-radius: 50%;
-        margin-bottom: 10px;
-    }
-
-    /* Profile Info */
-    .profile-info {
-        width: 100%;
-        padding: 0 10px;
+        margin: 0 auto;
     }
 
     /* Skills Section */
     .skills-section {
         width: 95%;
+        margin: 20px auto;
         padding: 15px;
-        background: #ffffff;
         border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         text-align: center;
         border: 1px solid #dce3e9;
     }
 
-    /* Skills Columns */
     .skills-columns {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
         gap: 10px;
     }
 
     .skills-column {
-        background: #f9f9f9;
+        width: 48%;
         padding: 15px;
         border-radius: 8px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        text-align: center;
     }
 
     /* Work Experience */
@@ -232,23 +160,9 @@ footer {
         gap: 15px;
     }
 
-    /* Experience Cards */
     .experience-card {
         width: 100%;
         padding: 20px;
-        text-align: center;
-        background: #f9f9f9;
         border-radius: 10px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    /* Center Buttons */
-    .btn {
-        width: 90%;
-        display: block;
-        text-align: center;
-        margin: 15px auto;
-        padding: 12px 0;
-        font-size: 1rem;
     }
 }
