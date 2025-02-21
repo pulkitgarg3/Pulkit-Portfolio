@@ -166,6 +166,7 @@ footer {
     /* Profile Section */
     .profile-section {
         width: 95%;
+        max-width: 900px;
         margin: 0 auto;
         padding: 20px;
         display: flex;
@@ -175,7 +176,7 @@ footer {
 
     /* Profile Container */
     .profile-container {
-        width: 100%;
+        width: 95%;
         padding: 15px;
         text-align: center;
         background: #ffffff;
@@ -194,7 +195,7 @@ footer {
 
     /* Profile Info */
     .profile-info {
-        width: 100%;
+        width: 95%;
         padding: 0 10px;
     }
 
@@ -211,15 +212,19 @@ footer {
 
     /* Skills Columns */
     .skills-columns {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
         gap: 10px;
+        width: 100%;
     }
 
     .skills-column {
         background: #f9f9f9;
+        width: 48%; /* Ensures both columns stay inside boundaries */
         padding: 15px;
         border-radius: 8px;
+        text-align: center;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
 
@@ -234,7 +239,7 @@ footer {
 
     /* Experience Cards */
     .experience-card {
-        width: 100%;
+        width: 95%;
         padding: 20px;
         text-align: center;
         background: #f9f9f9;
