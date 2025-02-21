@@ -9,7 +9,7 @@ body {
 }
 
 header {
-    background: linear-gradient(to right, #3a506b, #5c768d); /* Professional gradient */
+    background: linear-gradient(to right, #3a506b, #5c768d);
     color: #f4f4f4;
     text-align: center;
     padding: 40px 0;
@@ -41,6 +41,7 @@ main {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
     max-width: 900px;
     border: 1px solid #dce3e9;
+    text-align: center;
 }
 
 .profile-container {
@@ -77,7 +78,6 @@ main {
     color: #555;
 }
 
-/* Button Styles */
 .btn {
     display: inline-block;
     text-decoration: none;
@@ -95,7 +95,33 @@ main {
     color: #eaeff3;
 }
 
-/* Experience Section */
+/* Skills Section */
+.skills-section {
+    width: 95%;
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border: 1px solid #dce3e9;
+}
+
+.skills-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.skills-column {
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Work Experience Section */
 .experience-section {
     margin-top: 40px;
     text-align: center;
@@ -119,35 +145,9 @@ main {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
-    max-width: 300px;
+    width: 90%;
     text-align: left;
     border: 1px solid #dce3e9;
-}
-
-.experience-card h3 {
-    color: #3a506b;
-    margin-bottom: 10px;
-    font-size: 1.4rem;
-}
-
-.experience-card p {
-    font-size: 0.9rem;
-    line-height: 1.6;
-    color: #555;
-}
-
-/* Back Button */
-.back-button {
-    text-align: center;
-    margin-top: 30px;
-}
-
-.back-button .btn {
-    background: #5c768d;
-}
-
-.back-button .btn:hover {
-    background: #3a506b;
 }
 
 /* Footer */
@@ -161,110 +161,94 @@ footer {
     font-size: 0.9rem;
 }
 
-/* ================== MOBILE RESPONSIVE CHANGES ================== */
+/* Mobile Styles */
 @media screen and (max-width: 768px) {
-  /* Hide desktop skills on mobile */
-  .desktop-only {
-      display: none;
-  }
+    /* Profile Section */
+    .profile-section {
+        width: 95%;
+        margin: 0 auto;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 
-    /* Profile Section (Mobile) */
-  .profile-section {
-      width: 95%;
-      margin: 0 auto;
-      padding: 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-  }
+    /* Profile Container */
+    .profile-container {
+        width: 100%;
+        padding: 15px;
+        text-align: center;
+        background: #ffffff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        margin-bottom: 20px;
+    }
 
-  /* Profile Container (Profile Card) */
-  .profile-container {
-      width: 100%;
-      padding: 15px;
-      text-align: center;
-      background: #ffffff;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      border-radius: 8px;
-      margin-bottom: 20px;
-  }
+    /* Profile Picture */
+    .profile-pic {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        margin-bottom: 10px;
+    }
 
-  /* Profile Picture */
-  .profile-pic {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      margin-bottom: 10px;
-  }
+    /* Profile Info */
+    .profile-info {
+        width: 100%;
+        padding: 0 10px;
+    }
 
-  /* Profile Info */
-  .profile-info {
-      width: 100%;
-      padding: 0 10px;
-  }
-    
-  /* Show mobile-only skills section */
-  .mobile-only {
-      display: block;
-      width: 95%;
-      margin: 20px auto;
-      padding: 15px;
-      background: #f9f9f9;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      text-align: center;
-  }
-  
-  /* Create a two-column grid for skills */
-  .mobile-only .skills-columns {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 10px;
-  }
+    /* Skills Section */
+    .skills-section {
+        width: 95%;
+        padding: 15px;
+        background: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        border: 1px solid #dce3e9;
+    }
 
-  .mobile-only .skills-column {
-      text-align: left;
-  }
+    /* Skills Columns */
+    .skills-columns {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
 
-  .mobile-only .skills-column h3 {
-      font-size: 1.1rem;
-      margin-bottom: 5px;
-  }
+    .skills-column {
+        background: #f9f9f9;
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
 
-  .mobile-only .skills-column ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      font-size: 0.9rem;
-  }
+    /* Work Experience */
+    .experience-container {
+        width: 95%;
+        margin: 20px auto;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
 
+    /* Experience Cards */
+    .experience-card {
+        width: 100%;
+        padding: 20px;
+        text-align: center;
+        background: #f9f9f9;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
 
-  /* Work Experience Container */
-  .experience-container {
-      width: 95%;
-      margin: 20px auto;
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-  }
-
-  /* Work Experience Cards */
-  .experience-card {
-      width: 100%;
-      padding: 20px;
-      text-align: center;
-      background: #f9f9f9;
-      border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-
-  /* Center Buttons */
-  .btn {
-      width: 90%;
-      display: block;
-      text-align: center;
-      margin: 15px auto;
-      padding: 12px 0;
-      font-size: 1rem;
-  }
+    /* Center Buttons */
+    .btn {
+        width: 90%;
+        display: block;
+        text-align: center;
+        margin: 15px auto;
+        padding: 12px 0;
+        font-size: 1rem;
+    }
 }
