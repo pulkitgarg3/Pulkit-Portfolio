@@ -169,7 +169,7 @@ footer {
     #intro {
         padding: 40px 20px 20px 20px !important;
         height: auto !important;
-        min-height: 0 !important;
+        min-height: unset !important;
         margin: 0 auto !important;
         display: flex;
         flex-direction: column;
