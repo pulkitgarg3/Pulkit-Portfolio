@@ -260,10 +260,12 @@ footer {
     #intro {
         padding: 40px 20px 20px 20px !important;
         height: auto !important;
-        min-height: unset !important;
+        min-height: 0 !important;
+        margin: 0 auto !important;
         display: flex;
         flex-direction: column;
         justify-content: center;
+        align-items: center;
     }
 
     #intro h1 {
