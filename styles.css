@@ -163,6 +163,29 @@ footer {
 
 /* Mobile Styles */
 @media screen and (max-width: 768px) {
+
+        
+    /* Fix for large top space in mobile view */
+    #intro {
+        padding: 40px 20px 20px 20px !important;
+        height: auto !important;
+        min-height: 0 !important;
+        margin: 0 auto !important;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #intro h1 {
+        font-size: 1.8rem !important;
+    }
+
+    #intro p {
+        font-size: 1rem !important;
+        line-height: 1.5;
+    }
+
     /* Profile Section */
     .profile-section {
         width: 95%;
@@ -255,26 +278,5 @@ footer {
         padding: 12px 0;
         font-size: 1rem;
     }
-    
-    /* Fix for large top space in mobile view */
-    #intro {
-        padding: 40px 20px 20px 20px !important;
-        height: auto !important;
-        min-height: 0 !important;
-        margin: 0 auto !important;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-
-    #intro h1 {
-        font-size: 1.8rem !important;
-    }
-
-    #intro p {
-        font-size: 1rem !important;
-        line-height: 1.4;
-    }
 
 }
