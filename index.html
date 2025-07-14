@@ -18,6 +18,23 @@
 				font-weight: bold;
 				color: #333; /* Neutral dark gray */
 			}
+			.filter-button {
+			  background-color: #e6e6e6;
+			  border: none;
+			  padding: 10px 18px;
+			  margin: 5px;
+			  font-size: 16px;
+			  cursor: pointer;
+			  border-radius: 6px;
+			  color: #023b79;
+			  font-weight: bold;
+			}
+			
+			.filter-button.active {
+			  background-color: #023b79;
+			  color: #fff;
+			}
+
 		</style>
 		<!-- Google tag (gtag.js) -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-EYL3VQY1G6"></script>
@@ -98,8 +115,15 @@
 							</article>
 
 						<!-- Posts -->
+							<!-- Project Filter Buttons -->
+							<div id="project-filter" style="text-align: center; margin-bottom: 20px;">
+							  <button class="filter-button active" onclick="filterProjects('all')">All</button>
+							  <button class="filter-button" onclick="filterProjects('powerbi')">Power BI</button>
+							  <button class="filter-button" onclick="filterProjects('python')">Python/ML</button>
+							  <button class="filter-button" onclick="filterProjects('research')">Research</button>
+							</div>
 							<section id="projects" class="posts" style="margin-top: 3px;">
-								<article>
+								<article data-category="research">
 									<header>
 										<span class="status-label">Completed</span>
 										<h3 class="project-title">
@@ -122,8 +146,8 @@
 											    View Project</a></li>
 									</ul>
 								</article>
-								<article>
-									
+								
+								<article data-category="python">
 									<header>
 										<span class="status-label">Completed</span>
 										<h3 class="project-title">
@@ -147,8 +171,8 @@
 											    View Project</a></li>
 									</ul>
 								</article>
-								<article>
-
+								
+								<article data-category="powerbi">
 									  <header>
 									    <span class="status-label">Completed</span>
 									    <h3 class="project-title">
@@ -175,8 +199,8 @@
 									    </ul>
 									  </div>
 									</article>
-									<article>
-
+								
+									<article data-category="research">
 									<header>
 										<span class="status-label">Completed</span>
 										<h3 class="project-title">
@@ -201,8 +225,8 @@
 											    View Project</a></li>
 									</ul>
 								</article>
-								<article>
-
+								
+								<article data-category="python">
 									<header>
 										<span class="status-label">Completed</span>
 										<h3 class="project-title">
@@ -225,8 +249,8 @@
 											View Project</a></li>
 									</ul>
 								</article>
-								<article>
-
+								
+								<article data-category="research">
 									<header>
 										<span class="status-label">Completed</span>
 										<h3 class="project-title">
@@ -249,8 +273,8 @@
 											View Project</a></li>
 									</ul>
 								</article>
-								<article>
-									
+								
+								<article data-category="python">
 									<header>
 										<span class="status-label">Completed</span>
 										<h3 class="project-title">
@@ -275,7 +299,8 @@
 											View Project</a></li>
 									</ul>
 								</article>
-								<article>
+								
+								<article data-category="python">
 									<header>
 										<span class="status-label">Completed</span>
 										<h3 class="project-title">
@@ -298,7 +323,8 @@
 											View Project</a></li>
 									</ul>
 								</article>
-								<article>
+								
+								<article data-category="Marketing">
 									<header>
 										<span class="status-label">Completed</span>
 										<h3 class="project-title">
@@ -415,6 +441,30 @@
 		    gtag('event', 'Device Type', { 'event_category': 'User', 'event_label': deviceType });
 		
 		  });
+		</script>
+		<script>
+		  function filterProjects(category) {
+		    const buttons = document.querySelectorAll('.filter-button');
+		    buttons.forEach(btn => btn.classList.remove('active'));
+		    
+		    const clicked = Array.from(buttons).find(btn =>
+		      btn.textContent.toLowerCase().includes(category));
+		    if (clicked) clicked.classList.add('active');
+		
+		    const projects = document.querySelectorAll('#projects article');
+		
+		    projects.forEach(project => {
+		      const projectCategory = project.getAttribute('data-category');
+		      if (category === 'all' || projectCategory === category) {
+		        project.style.display = 'block';
+		      } else {
+		        project.style.display = 'none';
+		      }
+		    });
+		  }
+		
+		  // Show all by default
+		  window.addEventListener('DOMContentLoaded', () => filterProjects('all'));
 		</script>
 
 	</body>
