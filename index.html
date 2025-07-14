@@ -19,20 +19,25 @@
 				color: #333; /* Neutral dark gray */
 			}
 			.filter-button {
-			  background-color: #e6e6e6;
-			  border: none;
-			  padding: 10px 18px;
-			  margin: 5px;
-			  font-size: 16px;
-			  cursor: pointer;
-			  border-radius: 6px;
-			  color: #023b79;
-			  font-weight: bold;
+			background: linear-gradient(to right, #f9fafb, #eaeff3);
+			border: 2px solid #3a506b;
+			color: #3a506b;
+			padding: 10px 20px;
+			margin: 8px;
+			border-radius: 8px;
+			cursor: pointer;
+			font-weight: bold;
+			box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+			transition: all 0.3s ease;
 			}
-			
+			.filter-button:hover {
+			background: #3a506b;
+			color: white;
+			}
 			.filter-button.active {
-			  background-color: #023b79;
-			  color: #fff;
+			background: #3a506b;
+			color: #ffffff;
+			box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
 			}
 
 		</style>
