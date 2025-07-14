@@ -19,26 +19,34 @@
 				color: #333; /* Neutral dark gray */
 			}
 			.filter-button {
-			justify-content: center;   /* Center horizontally */
-			align-items: center; 
-			background: linear-gradient(to right, #f9fafb, #eaeff3);
-			border: 2px solid #3a506b;
-			color: #3a506b;
-			padding: 10px 20px;
-			margin: 8px;
-			border-radius: 8px;
-			cursor: pointer;
-			font-weight: bold;
-			box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-			transition: all 0.3s ease;
+			  display: flex;                 /* 👈 Required for centering */
+			  justify-content: center;      /* Center text horizontally */
+			  align-items: center;          /* Center text vertically */
+			  height: 48px;                 /* Fixed height for consistency */
+			  min-width: 130px;             /* Optional: prevents buttons from being too small */
+			  padding: 0 20px;              /* Horizontal padding only */
+			  font-size: 16px;
+			  line-height: 1;               /* Prevents vertical misalignment */
+			  white-space: nowrap;          /* Stops wrapping on small text */
+			  background: linear-gradient(to right, #f9fafb, #eaeff3);
+			  border: 2px solid #3a506b;
+			  color: #3a506b;
+			  margin: 8px;
+			  border-radius: 8px;
+			  cursor: pointer;
+			  font-weight: bold;
+			  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+			  transition: all 0.3s ease;
 			}
 			.filter-button-container {
 			  display: flex;
-			  justify-content: center;  /* Horizontal centering */
-			  align-items: center;      /* Vertical centering */
-			  height: 100px;            /* Adjust height as needed */
+			  justify-content: center;   /* Align buttons in center horizontally */
+			  align-items: center;       /* Vertically center if needed */
+			  flex-wrap: wrap;           /* 👈 Allows responsive layout (stays horizontal unless screen too small) */
 			  margin-bottom: 30px;
+			  gap: 10px;                 /* Optional: cleaner spacing between buttons */
 			}
+
 			.filter-button:hover {
 			background: #3a506b;
 			color: white;
@@ -132,9 +140,10 @@
 							<!-- Project Filter Buttons -->
 							<div id="project-filter" style="text-align: center; margin-bottom: 20px;">
 							  <button class="filter-button active" onclick="filterProjects('all')">All</button>
-							  <button class="filter-button" onclick="filterProjects('powerbi')">Power BI</button>
 							  <button class="filter-button" onclick="filterProjects('python')">Python/ML</button>
 							  <button class="filter-button" onclick="filterProjects('research')">Research</button>
+							  <button class="filter-button" onclick="filterProjects('powerbi')">Power BI</button>
+							  <button class="filter-button" onclick="filterProjects('marketing')">Marketing</button>
 							</div>
 							<section id="projects" class="posts" style="margin-top: 3px;">
 								
@@ -343,7 +352,7 @@
 									</ul>
 								</article>
 								
-								<article data-category="Marketing">
+								<article data-category="marketing">
 									<header>
 										<span class="status-label">Completed</span>
 										<h3 class="project-title">
