@@ -164,7 +164,6 @@ footer {
 /* Mobile Styles */
 @media screen and (max-width: 768px) {
 
-        
     /* Fix for large top space in mobile view */
     #intro {
         padding: 40px 20px 20px 20px !important;
@@ -186,6 +185,8 @@ footer {
         line-height: 1.6;
         text-align: left !important;
         padding: 0 10px;
+        word-spacing: normal;
+        letter-spacing: normal;
     }
 
     }
