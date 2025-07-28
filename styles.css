@@ -182,8 +182,12 @@ footer {
     }
 
     #intro p {
-        font-size: 1rem !important;
-        line-height: 1.5;
+        font-size: 0.95rem !important;
+        line-height: 1.6;
+        text-align: left !important;
+        padding: 0 10px;
+    }
+
     }
 
     /* Profile Section */
