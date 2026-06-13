@@ -1,498 +1,1130 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<title>Pulkit's Portfolio</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<style>
-			.project-category {
-				font-size: 16px;
-				font-weight: bold;
-				color: #023b79; /* Distinct blue color */
-			}
-	
-			.project-name {
-				font-size: 18px;
-				font-weight: bold;
-				color: #333; /* Neutral dark gray */
-			}
-			.filter-button {
-			                  /* 👈 Required for centering */
-			  justify-content: center;      /* Center text horizontally */
-			  align-items: center;          /* Center text vertically */
-			  height: 48px;                 /* Fixed height for consistency */
-			  min-width: 130px;             /* Optional: prevents buttons from being too small */
-			  padding: 0 20px;              /* Horizontal padding only */
-			  font-size: 16px;
-			  line-height: 1;               /* Prevents vertical misalignment */
-			  white-space: nowrap;          /* Stops wrapping on small text */
-			  background: linear-gradient(to right, #f9fafb, #eaeff3);
-			  border: 2px solid #3a506b;
-			  color: #3a506b;
-			  margin: 8px;
-			  border-radius: 8px;
-			  cursor: pointer;
-			  font-weight: bold;
-			  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-			  transition: all 0.3s ease;
-			}
-			.filter-button-container {
-			  justify-content: center;   /* Align buttons in center horizontally */
-			  align-items: center;       /* Vertically center if needed */
-			  flex-wrap: wrap;           /* 👈 Allows responsive layout (stays horizontal unless screen too small) */
-			  margin-bottom: 30px;
-			  gap: 10px;                 /* Optional: cleaner spacing between buttons */
-			}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pulkit Garg — Energy Analyst &amp; Researcher</title>
+    <meta name="description" content="Portfolio of Pulkit Garg — energy assessment, modelling, and economics research. Currently at TERI, formerly CEEW.">
 
-			.filter-button:hover {
-			background: #3a506b;
-			color: white;
-			}
-			.filter-button.active {
-			background: #3a506b;
-			color: #ffffff;
-			box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
-			}
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,600&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 
-		</style>
-		<!-- Google tag (gtag.js) -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=G-EYL3VQY1G6"></script>
-		<script>
-		  window.dataLayer = window.dataLayer || [];
-		  function gtag(){dataLayer.push(arguments);}
-		  gtag('js', new Date());
-		
-		  gtag('config', 'G-EYL3VQY1G6');
-		  
-		</script>
-	</head>
-	<body class="is-preload">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-		<!-- Wrapper -->
-			<div id="wrapper" class="fade-in">
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EYL3VQY1G6"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-EYL3VQY1G6');
+    </script>
 
-				<!-- Intro -->
-					<div id="intro">
-						<h1>Pulkit's<br />
-						Portfolio</h1>
-						<p>" Welcome to my portfolio! Here, you'll learn about my journey through analytics, 
-							marketing, and my diverse projects combining economics, business, and technology. 
-							Let's connect and create impact together." 
-							
-						<ul class="actions">	
-							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
-						</ul>
-					</div>
+    <style>
+        /* ═══════════════════════════════════════
+           TOKENS
+        ═══════════════════════════════════════ */
+        :root {
+            --bg:        #F7F9FB;
+            --surface:   #FFFFFF;
+            --navy:      #0D1F35;
+            --navy-mid:  #1A3354;
+            --amber:     #D48A0A;
+            --amber-lt:  #FDF3DC;
+            --teal:      #1A9B8C;
+            --teal-lt:   #E5F5F3;
+            --text:      #1A2332;
+            --muted:     #5A6B7A;
+            --border:    #E2E8F0;
+            --shadow-sm: 0 2px 12px rgba(13,31,53,.07);
+            --shadow-md: 0 6px 32px rgba(13,31,53,.11);
+            --shadow-lg: 0 12px 48px rgba(13,31,53,.15);
+            --radius:    12px;
+            --ff-disp:   'Fraunces', Georgia, serif;
+            --ff-body:   'DM Sans', system-ui, sans-serif;
+            --ff-mono:   'DM Mono', monospace;
+        }
 
-				<!-- Header -->
-					<header id="header">
-						<a href="index.html" class="logo">Pulkit Garg</a>
-					</header>
+        /* ═══════════════════════════════════════
+           RESET
+        ═══════════════════════════════════════ */
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+        body { font-family: var(--ff-body); background: var(--bg); color: var(--text); line-height: 1.7; font-size: 16px; }
+        img { display: block; max-width: 100%; }
+        a { text-decoration: none; color: inherit; }
 
-				<!-- Nav -->
-					<nav id="nav">
-						<ul class="links">
-							<li class="active"><a href="index.html">Projects</a></li>
-							
-						</ul>
-						<ul class="icons">
-							<li><a href="https://www.linkedin.com/in/pulkitgarg03/" class="icon brands fa-linkedin"
-								    onclick="gtag('event', 'Click', { 'event_category': 'Social', 'event_label': 'LinkedIn' })">
-								    <span class="label">linkedin</span></a></li>
-							<li><a href="https://github.com/pulkitgarg3" class="icon brands fa-github" 
-								    onclick="gtag('event', 'Click', { 'event_category': 'Social', 'event_label': 'GitHub' })">
-								<span class="label">GitHub</span></a></li>
-						</ul>
-					</nav>
+        /* ═══════════════════════════════════════
+           HELPERS
+        ═══════════════════════════════════════ */
+        .wrap        { max-width: 1240px; margin-inline: auto; padding-inline: 80px; }
+        .eyebrow     { font-family: var(--ff-mono); font-size: 11px; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: var(--teal); margin-bottom: 12px; }
+        .section-h   { font-family: var(--ff-disp); font-size: clamp(28px,3vw,40px); font-weight: 700; color: var(--navy); letter-spacing: -.025em; line-height: 1.15; margin-bottom: 48px; }
+        .grad-line   { height: 3px; background: linear-gradient(90deg, var(--amber), var(--teal)); border: none; margin: 0; }
 
-				<!-- Main -->
-					<div id="main">
-						<!-- Featured Post -->
-							<article class="post featured">
-								<header class="major">
-									<h2><a href="#"> About Me<br />
-									</a></h2>
-									<h3 class="project-title">
-										<span class="project-name">"An Engineer by Heart, an MBA by Choice, a Strategist by Passion"</span>
-									  </h3>
-									  <p class = "about-me" style="text-align: justify; text-justify: inter-word;font: inherit; font-size: 20px; line-height: 1.8; margin-bottom: 10px;"> 
-										Namaste! Pulkit this side, a techno-functional professional at the intersection of data, business, and impact. With an MBA in Business Economics (Analytics & Marketing) 
-										and a background in Electronics & Communication Engineering, I thrive in the powerful middle lane: not purely tech, not purely management, but a blend of both.
-                                                                                I bring a sharp analytical mindset to complex real-world problems, whether it’s modelling the impact of energy poverty or crafting strategies that drive meaningful 
-										growth in rural markets. My expertise lies in econometric modelling, forecasting, market research, and storytelling with data.
-                                                                                Curious by nature, I’m drawn to projects that combine data, policy, sustainability, and innovation — the kind that make decisions smarter and outcomes more meaningful.
-										
-									  </p>	  
-									<a href="profile.html" class="button" 
-										onclick="gtag('event', 'Click', { 'event_category': 'Navigation', 'event_label': 'View Profile' })" 
-										style="margin-top: 5px;">View Profile</a>
-								</header>
-								<a href="profile.html" class="image main"><img src="images/Pulkit.jpg" alt="" /></a>
-								<ul class="actions special" style="margin-bottom: 5px;">
-									<a href="#projects" class="button large scrolly">Explore Projects </a>
-								</ul>
-							</article>
+        .btn-dark {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: var(--navy); color: #fff;
+            padding: 13px 26px; border-radius: 8px;
+            font-weight: 600; font-size: 14px; letter-spacing: .02em;
+            transition: background .2s, transform .15s;
+        }
+        .btn-dark:hover { background: var(--navy-mid); transform: translateY(-1px); }
 
-						<!-- Posts -->
-							<!-- Project Filter Buttons -->
-							<div id="project-filter" style="text-align: center; margin-bottom: 20px;">
-							  <button class="filter-button active" onclick="filterProjects('all')">All</button>
-							  <button class="filter-button" onclick="filterProjects('python')">Python/ML</button>
-							  <button class="filter-button" onclick="filterProjects('research')">Research</button>
-							  <button class="filter-button" onclick="filterProjects('powerbi')">Power BI</button>
-							  <button class="filter-button" onclick="filterProjects('marketing')">Marketing</button>
-							</div>
-							<section id="projects" class="posts" style="margin-top: 3px;">
-								
-								<article data-category="python">
-									<header>
-										<span class="status-label">Completed</span>
-										<h3 class="project-title">
-											<span class="project-category">Python & Machine Learning</span><br />
-											<span class="project-name">Customer Churn Prediction Model </span>
-										  </h3>
-										
-									</header>
-									<a href="https://github.com/pulkitgarg3/Customer-Churn-Prediction-Model" class="image fit"><img src="images/churn.png" alt="" /></a>
-									<div class="project-description">
-										<p>
-											Developed a predictive model to identify high-risk churn customers in the energy sector, leveraging the Random Forest algorithm for accuracy and 
-											reliability. Conducted extensive feature engineering and exploratory data analysis to uncover key predictors of churn. 
-										</p>
-									<div class="project-skills">
-										<strong>Skills:</strong> Python (Pandas, Scikit-learn), Data Analysis, Machine Learning, Random Forest
-									</div>
-									<ul class="actions special">
-										<li><a href="https://github.com/pulkitgarg3/Customer-Churn-Prediction-Model" class="button"
-											    onclick="gtag('event', 'Project Click', { 'event_category': 'Projects', 'event_label': 'Customer Churn Prediction' })">
-											    View Project</a></li>
-									</ul>
-								</article>
-								
-								<article data-category="powerbi">
-									  <header>
-									    <span class="status-label">Completed</span>
-									    <h3 class="project-title">
-									      <span class="project-category">Power BI Dashboard</span><br />
-									      <span class="project-name">United Airlines Flight Delay Analytics</span>
-									    </h3>
-									  </header>
-									  <a href="https://github.com/pulkitgarg3/PowerBI_Portfolio_Pulkit/tree/main/Flights_Delay_Analytics" class="image fit">
-									    <img src="https://raw.githubusercontent.com/pulkitgarg3/PowerBI_Portfolio_Pulkit/main/Flights_Delay_Analytics/screenshots/page1_dashboard_overview.jpg" alt="Dashboard Screenshot" />
-									  </a>
-									  <div class="project-description">
-									    <p>
-									      A 4-page Power BI dashboard analyzing ~766K United Airlines flights across 126 U.S. airports (Apr 2024–Mar 2025). 
-									      Used DAX, Power Query, and custom visuals to uncover key delay causes and recommend strategic actions.
-									    </p>
-									    <div class="project-skills">
-									      <strong>Skills:</strong> Power BI, DAX, Data Visualization, AI Visuals
-									    </div>
-									    <ul class="actions special">
-									      <li><a href="https://github.com/pulkitgarg3/PowerBI_Portfolio_Pulkit/tree/main/Flights_Delay_Analytics" class="button" target="_blank">GitHub</a></li>
-									      <li>
-										  <a class="button" href="https://drive.google.com/file/d/1ATSJSspzRmKAhJ0d1wbY7JwqW_sYy1VV/view?usp=sharing" target="_blank">
-										    <i class="fas fa-file-pdf" style="margin-right: 6px;"></i> View PDF
-										  </a>
-										</li>
+        .btn-ghost {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: transparent; color: var(--navy);
+            padding: 12px 24px; border-radius: 8px;
+            font-weight: 600; font-size: 14px; letter-spacing: .02em;
+            border: 1.5px solid var(--border);
+            transition: border-color .2s, transform .15s;
+        }
+        .btn-ghost:hover { border-color: var(--navy); transform: translateY(-1px); }
 
-									      <!-- Optional: Add this if you host the dashboard on OneDrive, PowerBI service, or an iframe -->
-									      <!-- <li><a href="YOUR_REPORT_LINK_HERE" class="button" target="_blank">Live Report</a></li> -->
-									    </ul>
-									  </div>
-									</article>
-											<article data-category="research">
-									<header>
-										<span class="status-label">Completed</span>
-										<h3 class="project-title">
-											<span class="project-category">Research Project</span><br />
-											<span class="project-name">Impact of Energy Poverty on HDI: A State-Wise Analysis</span>
-										  </h3>
-									</header>
-									<a href="https://github.com/pulkitgarg3/Research-Project-Energy-Poverty-HDI" class="image fit"><img src="images/energy2.png" alt="" /></a>
-									<div class="project-description">
-										<p>
-											Conducted an in-depth analysis of energy poverty's impact on the Human Development Index (HDI) across Indian states using NFHS (3, 4, 5) data 
-											to identify socio-economic disparities and recommend targeted policy interventions.
-										</p>
-									<div class="project-skills">
-										<strong>Skills:</strong> Stata, Econometrics, Data Analysis, Policy Research, Regression Modelling
-									</div>
-									<ul class="actions special">
-										<li><a href="https://github.com/pulkitgarg3/Research-Project-Energy-Poverty-HDI" class="button"
-											    onclick="gtag('event', 'Project Click', { 'event_category': 'Projects', 'event_label': 'Energy Poverty & HDI' })">
-											    View Project</a></li>
-									</ul>
-								</article>
-								
-									<article data-category="research">
-									<header>
-										<span class="status-label">Completed</span>
-										<h3 class="project-title">
-											<span class="project-category">Research Paper</span><br />
-											<span class="project-name">Electric Bus Depot Charging Simulation </span>
-										  </h3>
-										
-									</header>
-									<a href="https://github.com/pulkitgarg3/Electric-Bus-Depot-Charging-Simulation" class="image fit"><img src="images/Electric_bus.jpg" alt="" /></a>
-									<div class="project-description">
-										<p>
-											Developed a discrete-event simulation model using Python and SimPy to optimize electric bus charging operations at a Delhi depot. 
-											Using real-world data from 110 buses over 3 days, the model replicated queueing behavior, SOC transitions, and charging durations 
-											through Monte Carlo simulation. 
-										</p>
-									<div class="project-skills">
-										<strong>Skills:</strong> Python, SimPy, Pandas, Matplotlib, Simulation, Primary Research 
-									</div>
-									<ul class="actions special">
-										<li><a href="https://github.com/pulkitgarg3/Electric-Bus-Depot-Charging-Simulation" class="button"
-											    onclick="gtag('event', 'Project Click', { 'event_category': 'Projects', 'event_label': 'Electric Bus Depot Charging Simulation' })">
-											    View Project</a></li>
-									</ul>
-								</article>
-								
-								<article data-category="python">
-									<header>
-										<span class="status-label">Completed</span>
-										<h3 class="project-title">
-											<span class="project-category">Time Series & Forecasting</span><br />
-											<span class="project-name">Bike Sharing Demand Forecasting using Prophet</span>
-										  </h3>
-									</header>
-									<a href="https://github.com/pulkitgarg3/Bike-Sharing-Demand-Forecasting" class="image fit"><img src="images/bike.png" alt="" /></a>
-									<div class="project-description">
-										<p>
-											This project utilizes Facebook Prophet to forecast bike-sharing demand, incorporating cross-validation,
-											holiday adjustments, and parameter tuning to ensure accurate and reliable predictions.
-										</p>
-									<div class="project-skills">
-										<strong>Skills:</strong> Time Series Analysis, Meta Prophet, Python, Forecasting 
-									</div>
-									<ul class="actions special">
-										<li><a href="https://github.com/pulkitgarg3/Bike-Sharing-Demand-Forecasting" class="button"
-											onclick="gtag('event', 'Project Click', { 'event_category': 'Projects', 'event_label': 'Bike Sharing Forecast' })">
-											View Project</a></li>
-									</ul>
-								</article>
-								
-								<article data-category="research">
-									<header>
-										<span class="status-label">Completed</span>
-										<h3 class="project-title">
-											<span class="project-category">Econometrics</span><br />
-											<span class="project-name">Economic and Social Factors Impacting Infant Mortality Rate (IMR)</span>
-										  </h3>
-									</header>
-									<a href="https://github.com/pulkitgarg3/IMR_Determinants_Econometric_Analysis" class="image fit"><img src="images/IMR.png" alt="" /></a>
-									<div class="project-description">
-										<p>
-											Analyzed socio-economic determinants of Infant Mortality Rate (IMR) across 24 countries, 
-											leveraging a Fixed Effects Model to identify disparities between developed and developing economies.
-										</p>
-									<div class="project-skills">
-										<strong>Skills:</strong> Stata, Econometrics, Data Analysis, Regression Modelling
-									</div>
-									<ul class="actions special">
-										<li><a href="https://github.com/pulkitgarg3/IMR_Determinants_Econometric_Analysis" class="button"
-											onclick="gtag('event', 'Project Click', { 'event_category': 'Projects', 'event_label': 'IMR & Econometrics' })">
-											View Project</a></li>
-									</ul>
-								</article>
-								
-								<article data-category="python">
-									<header>
-										<span class="status-label">Completed</span>
-										<h3 class="project-title">
-											<span class="project-category">Time Series & Forecasting</span><br />
-											<span class="project-name">Greenhouse Gas Emissions Analysis and Forecasting in India</span>
-										  </h3>
-									</header>
-									<a href="https://github.com/pulkitgarg3/GHG-Emission-Forecasting-India" class="image fit"><img src="images/time.jpg" alt="" /></a>
-									<div class="project-description">
-										<p>
-											
-											This project explores and forecasts greenhouse gas (GHG) emissions in India using advanced time series models like SARIMAX, EGARCH 
-											and machine learning techniques. It evaluates the impact of macroeconomic factors and captures volatility trends to provide actionable 
-											insights for policymakers.
-										</p>
-									<div class="project-skills">
-										<strong>Skills:</strong> Time Series Analysis, ARIMA, SARIMAX, ARCH/GARCH, Python, Stata
-									</div>
-									<ul class="actions special">
-										<li><a href="https://github.com/pulkitgarg3/GHG-Emission-Forecasting-India" class="button"
-											onclick="gtag('event', 'Project Click', { 'event_category': 'Projects', 'event_label': 'GHG Emissions Forecast' })">
-											View Project</a></li>
-									</ul>
-								</article>
-								
-								<article data-category="python">
-									<header>
-										<span class="status-label">Completed</span>
-										<h3 class="project-title">
-											<span class="project-category">Financial Analytics & Python Modeling</span><br />
-											<span class="project-name">Stock Market Analysis Using Regression</span>
-										  </h3>
-									</header>
-									<a href="https://github.com/pulkitgarg3/Stock-Market-Analysis-Project" class="image fit"><img src="images/stock_market.jpg" alt="" /></a>
-									<div class="project-description">
-										<p>
-											Designed and analyzed two trading strategies—Simple Trading Strategy and SPY Trading Model—to explore financial market behaviour and trading 
-											insights. Focused on understanding key market trends using Python-based statistical modelling.
-										</p>
-									<div class="project-skills">
-										<strong>Skills:</strong> Python (Pandas, Numpy, Matplotlib), Financial Analysis, Trading Strategy, Statistics
-									</div>
-									<ul class="actions special">
-										<li><a href="https://github.com/pulkitgarg3/Stock-Market-Analysis-Project" class="button"
-											onclick="gtag('event', 'Project Click', { 'event_category': 'Projects', 'event_label': 'Stock Market Analysis' })">
-											View Project</a></li>
-									</ul>
-								</article>
-								
-								<article data-category="marketing">
-									<header>
-										<span class="status-label">Completed</span>
-										<h3 class="project-title">
-											<span class="project-category">Marketing Research</span><br />
-											<span class="project-name">Understanding Consumer Preferences for Green Packaging</span>
-										  </h3>
-									</header>
-									<a href="https://github.com/pulkitgarg3/Eco-Packaging-Impact-MR-Project" class="image fit"><img src="images/green.jpg" alt="" /></a>
-									<div class="project-description">
-										<p>
-											Surveyed to evaluate consumer preferences for sustainable green packaging solutions. Analyzed 
-											responses using SPSS to assess behavioural patterns and provide actionable recommendations for adopting eco-friendly strategies.
-										</p>
-									<div class="project-skills">
-										<strong>Skills:</strong> SPSS, Survey Design, Consumer Behavior Analysis, Marketing Research
-									</div>
-									<ul class="actions special">
-								    	<li><a href="https://github.com/pulkitgarg3/Eco-Packaging-Impact-MR-Project" class="button"
-										onclick="gtag('event', 'Project Click', { 'event_category': 'Projects', 'event_label': 'Green Packaging Research' })">
-										View Project</a></li>
-									</ul>
-								</article>	
-							</section>
+        /* reveal */
+        .rv { opacity: 0; transform: translateY(22px); transition: opacity .6s ease, transform .6s ease; }
+        .rv.in { opacity: 1; transform: none; }
+        .rv.d1 { transition-delay: .1s; }
+        .rv.d2 { transition-delay: .2s; }
+        .rv.d3 { transition-delay: .3s; }
 
+        /* ═══════════════════════════════════════
+           NAVIGATION
+        ═══════════════════════════════════════ */
+        #nav {
+            position: fixed; inset: 0 0 auto;
+            z-index: 999;
+            display: flex; align-items: center; justify-content: space-between;
+            height: 64px; padding-inline: 80px;
+            background: rgba(247,249,251,.92); backdrop-filter: blur(14px);
+            border-bottom: 1px solid var(--border);
+            transition: box-shadow .25s;
+        }
+        #nav.scrolled { box-shadow: var(--shadow-sm); }
 
-					</div>
+        .nav-logo {
+            font-family: var(--ff-disp); font-size: 20px; font-weight: 700;
+            color: var(--navy); letter-spacing: -.03em;
+        }
 
-				<!-- Footer -->
-				
-					<footer id="footer">
-					    <section class="footer-grid">
-					        <div class="footer-item">
-					            <h3>Address</h3>
-					            <p><a href="" style="color: #0056b3; text-decoration: none;">New Delhi, IN</a></p>
-					        </div>
-					        <div class="footer-item">
-					            <h3>Phone</h3>
-					            <p><a href="tel:+919896562000" style="color: #0056b3; text-decoration: none;">+91 9896562000</a></p>
-					        </div>
-					        <div class="footer-item">
-					            <h3>Email</h3>
-					            <p><a href="mailto:pulkitgarg560@gmail.com" style="color: #0056b3; text-decoration: none;">pulkitgarg560@gmail.com</a></p>
-					        </div>
-					        <div class="footer-item">
-					            <h3>Social</h3>
-					            <ul class="social-links">
-					               <li>
-							  <a href="https://www.linkedin.com/in/pulkitgarg03/" class="icon brands fa-linkedin"
-							     style="color: #0056b3; text-decoration: none;"
-							     onclick="gtag('event', 'Click', { 'event_category': 'Social', 'event_label': 'LinkedIn' })">
-							     LinkedIn
-							  </a>
-							</li>
-							
-							<li>
-							  <a href="https://github.com/pulkitgarg3" class="icon brands fa-github"
-							     style="color: #0056b3; text-decoration: none;"
-							     onclick="gtag('event', 'Click', { 'event_category': 'Social', 'event_label': 'GitHub' })">
-							     GitHub
-							  </a>
-							</li>
+        .nav-links { display: flex; align-items: center; gap: 28px; list-style: none; }
+        .nav-links a { font-size: 14px; font-weight: 500; color: var(--muted); transition: color .2s; }
+        .nav-links a:hover { color: var(--navy); }
 
-					            </ul>
-					        </div>
-					    </section>
-					</footer>
-					
+        .nav-resume {
+            font-size: 13px !important; font-weight: 600 !important;
+            color: var(--amber) !important;
+            border: 1.5px solid var(--amber); padding: 5px 14px; border-radius: 6px;
+            transition: background .2s, color .2s !important;
+        }
+        .nav-resume:hover { background: var(--amber) !important; color: #fff !important; }
 
-				<!-- Copyright -->
-					<div id="copyright">
-						<ul><li>&copy; 2025 Pulkit Garg</li><li><a href=""></a></li></ul>
-					</div>
+        /* ═══════════════════════════════════════
+           HERO
+        ═══════════════════════════════════════ */
+        #hero {
+            min-height: 100vh;
+            display: grid;
+            grid-template-columns: 1fr 460px;
+            align-items: center;
+            gap: 72px;
+            padding: 120px 80px 80px;
+            max-width: 1240px;
+            margin-inline: auto;
+        }
 
-			</div>
+        .hero-chip {
+            display: inline-flex; align-items: center; gap: 8px;
+            font-family: var(--ff-mono); font-size: 12px; color: var(--teal);
+            letter-spacing: .05em; margin-bottom: 20px;
+        }
+        .hero-chip::before { content:''; display:block; width:20px; height:1.5px; background:var(--teal); }
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-		
-		<script>
-		  window.addEventListener('DOMContentLoaded', function() {
-		    
-		    // Track Session Duration at multiple intervals
-		    setTimeout(() => gtag('event', 'Session Duration', { 'event_category': 'Engagement', 'event_label': '10 Seconds' }), 10000);
-		    setTimeout(() => gtag('event', 'Session Duration', { 'event_category': 'Engagement', 'event_label': '30 Seconds' }), 30000);
-		    setTimeout(() => gtag('event', 'Session Duration', { 'event_category': 'Engagement', 'event_label': '60 Seconds' }), 60000);
-		    setTimeout(() => gtag('event', 'Session Duration', { 'event_category': 'Engagement', 'event_label': '90 Seconds' }), 90000);
-		
-		    // Scroll Depth Tracking (fires only once per session)
-		    let fiftyScrolled = false;
-		    let ninetyScrolled = false;
-		
-		    window.addEventListener('scroll', function() {
-		      let scrollDepth = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
-		
-		      if (scrollDepth > 50 && !fiftyScrolled) {
-		        gtag('event', 'Scroll', { 'event_category': 'Engagement', 'event_label': '50% Depth' });
-		        fiftyScrolled = true;
-		      }
-		
-		      if (scrollDepth > 90 && !ninetyScrolled) {
-		        gtag('event', 'Scroll', { 'event_category': 'Engagement', 'event_label': '90% Depth' });
-		        ninetyScrolled = true;
-		      }
-		    });
-		
-		    // Track Device Type
-		    let deviceType = /Mobi|Android/i.test(navigator.userAgent) ? 'Mobile' : 'Desktop';
-		    gtag('event', 'Device Type', { 'event_category': 'User', 'event_label': deviceType });
-		
-		  });
-		</script>
-		<script>
-		  function filterProjects(category) {
-		    const buttons = document.querySelectorAll('.filter-button');
-		    buttons.forEach(btn => btn.classList.remove('active'));
-		    
-		    const clicked = Array.from(buttons).find(btn =>
-		      btn.textContent.toLowerCase().includes(category));
-		    if (clicked) clicked.classList.add('active');
-		
-		    const projects = document.querySelectorAll('#projects article');
-		
-		    projects.forEach(project => {
-		      const projectCategory = project.getAttribute('data-category');
-		      if (category === 'all' || projectCategory === category) {
-		        project.style.display = 'block';
-		      } else {
-		        project.style.display = 'none';
-		      }
-		    });
-		  }
-		
-		  // Show all by default
-		  window.addEventListener('DOMContentLoaded', () => filterProjects('all'));
-		</script>
+        .hero-h1 {
+            font-family: var(--ff-disp);
+            font-size: clamp(52px,7vw,88px);
+            font-weight: 700; letter-spacing: -.04em;
+            line-height: 1.0; color: var(--navy);
+            margin-bottom: 6px;
+        }
+        .hero-h1 em { color: var(--amber); font-style: italic; }
 
-	</body>
+        .hero-sub {
+            font-family: var(--ff-disp);
+            font-size: clamp(17px,2vw,22px);
+            font-weight: 300; font-style: italic;
+            color: var(--muted); line-height: 1.5;
+            margin-bottom: 24px;
+        }
+
+        .hero-desc {
+            font-size: 16px; color: var(--text); line-height: 1.85;
+            max-width: 500px; margin-bottom: 36px;
+        }
+
+        .hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; }
+
+        /* energy card */
+        .energy-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            padding: 32px 36px;
+            box-shadow: var(--shadow-md);
+        }
+
+        .ec-label {
+            font-family: var(--ff-mono); font-size: 10px;
+            letter-spacing: .08em; text-transform: uppercase;
+            color: var(--muted); margin-bottom: 12px;
+        }
+
+        #hero-svg { width: 100%; height: 190px; display: block; }
+
+        .ec-stats {
+            display: grid; grid-template-columns: repeat(3,1fr);
+            gap: 12px; margin-top: 20px;
+            padding-top: 18px; border-top: 1px solid var(--border);
+        }
+        .ec-stat { text-align: center; }
+        .ec-num {
+            display: block;
+            font-family: var(--ff-disp); font-size: 30px; font-weight: 700;
+            letter-spacing: -.04em; color: var(--navy);
+        }
+        .ec-unit {
+            font-family: var(--ff-mono); font-size: 10px;
+            letter-spacing: .06em; text-transform: uppercase; color: var(--muted);
+        }
+
+        /* ═══════════════════════════════════════
+           ABOUT
+        ═══════════════════════════════════════ */
+        #about { background: var(--surface); padding: 96px 0; }
+
+        .about-grid {
+            display: grid; grid-template-columns: 1fr 300px;
+            gap: 72px; align-items: start;
+        }
+
+        .about-p { font-size: 16px; line-height: 1.9; color: var(--text); margin-bottom: 18px; }
+        .about-p:last-of-type { margin-bottom: 0; }
+
+        .about-pull {
+            background: var(--amber-lt);
+            border-left: 3px solid var(--amber);
+            padding: 16px 20px;
+            border-radius: 0 8px 8px 0;
+            font-style: italic; color: var(--navy-mid);
+            font-size: 15px; line-height: 1.7;
+            margin: 24px 0;
+        }
+
+        .about-photo {
+            border-radius: 16px; overflow: hidden;
+            aspect-ratio: 3/4; background: var(--teal-lt);
+            box-shadow: var(--shadow-md);
+        }
+        .about-photo img { width: 100%; height: 100%; object-fit: cover; }
+
+        /* ═══════════════════════════════════════
+           EXPERIENCE
+        ═══════════════════════════════════════ */
+        #experience { padding: 96px 0; }
+
+        .exp-list { position: relative; display: flex; flex-direction: column; gap: 0; }
+
+        .exp-list::before {
+            content: '';
+            position: absolute; left: 20px; top: 6px; bottom: 6px;
+            width: 2px;
+            background: linear-gradient(to bottom, var(--amber) 0%, var(--teal) 100%);
+        }
+
+        .exp-row {
+            display: grid;
+            grid-template-columns: 52px 1fr;
+            padding-bottom: 36px;
+        }
+        .exp-row:last-child { padding-bottom: 0; }
+
+        .exp-node { display: flex; padding-top: 8px; justify-content: center; }
+        .exp-dot {
+            width: 13px; height: 13px; border-radius: 50%;
+            background: var(--surface); border: 2.5px solid var(--amber);
+            position: relative; z-index: 1; flex-shrink: 0;
+        }
+        .exp-dot.live { background: var(--amber); box-shadow: 0 0 0 5px var(--amber-lt); }
+
+        .exp-card {
+            background: var(--surface); border: 1px solid var(--border);
+            border-radius: var(--radius); padding: 26px 30px;
+            margin-left: 16px;
+            transition: box-shadow .2s, transform .15s;
+        }
+        .exp-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+
+        .exp-org {
+            font-family: var(--ff-mono); font-size: 11px; font-weight: 500;
+            letter-spacing: .07em; text-transform: uppercase; color: var(--teal);
+            margin-bottom: 5px;
+        }
+
+        .exp-head {
+            display: flex; justify-content: space-between;
+            align-items: flex-start; gap: 16px; margin-bottom: 14px;
+        }
+
+        .exp-title {
+            font-family: var(--ff-disp); font-size: 19px; font-weight: 600;
+            color: var(--navy); letter-spacing: -.015em; line-height: 1.3;
+        }
+
+        .exp-period {
+            font-family: var(--ff-mono); font-size: 11px; white-space: nowrap;
+            padding: 4px 10px; border-radius: 20px;
+            background: var(--bg); color: var(--muted); flex-shrink: 0;
+        }
+        .exp-period.now { background: var(--amber-lt); color: var(--amber); }
+
+        .exp-bullets { list-style: none; display: flex; flex-direction: column; gap: 7px; }
+        .exp-bullets li {
+            position: relative; padding-left: 18px;
+            font-size: 14px; color: var(--text); line-height: 1.7;
+        }
+        .exp-bullets li::before {
+            content: '→'; position: absolute; left: 0;
+            color: var(--amber); font-size: 12px; top: 3px;
+        }
+
+        /* ═══════════════════════════════════════
+           PROJECTS
+        ═══════════════════════════════════════ */
+        #projects { background: var(--surface); padding: 96px 0; }
+
+        .filters { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 36px; }
+
+        .f-btn {
+            display: inline-flex; align-items: center; gap: 6px;
+            padding: 7px 16px; border-radius: 100px;
+            font-size: 13px; font-weight: 500;
+            border: 1.5px solid var(--border);
+            background: transparent; color: var(--muted);
+            cursor: pointer; transition: all .2s; letter-spacing: .01em;
+        }
+        .f-btn:hover { border-color: var(--navy); color: var(--navy); }
+        .f-btn.on { background: var(--navy); border-color: var(--navy); color: #fff; }
+
+        .proj-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 22px;
+        }
+
+        .proj-card {
+            background: var(--bg); border: 1px solid var(--border);
+            border-radius: var(--radius); overflow: hidden;
+            display: flex; flex-direction: column;
+            transition: box-shadow .2s, transform .18s;
+        }
+        .proj-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-3px); }
+        .proj-card.feat { border-color: #D48A0A55; }
+
+        .proj-img { width: 100%; height: 196px; object-fit: cover; }
+        .proj-placeholder {
+            width: 100%; height: 196px;
+            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
+            display: flex; align-items: center; justify-content: center;
+        }
+        .proj-placeholder i { font-size: 36px; color: rgba(255,255,255,.15); }
+
+        .proj-body { padding: 22px 24px; flex: 1; display: flex; flex-direction: column; }
+
+        .proj-meta { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; }
+
+        .proj-type {
+            font-family: var(--ff-mono); font-size: 10px; font-weight: 500;
+            letter-spacing: .07em; text-transform: uppercase; color: var(--teal);
+        }
+
+        .proj-badge {
+            font-family: var(--ff-mono); font-size: 10px;
+            padding: 3px 8px; border-radius: 20px;
+            background: var(--amber-lt); color: var(--amber);
+            letter-spacing: .03em;
+        }
+        .proj-badge.alt { background: var(--teal-lt); color: var(--teal); }
+
+        .proj-name {
+            font-family: var(--ff-disp); font-size: 18px; font-weight: 600;
+            color: var(--navy); letter-spacing: -.015em; line-height: 1.3;
+            margin-bottom: 9px;
+        }
+
+        .proj-desc {
+            font-size: 13px; color: var(--muted); line-height: 1.7;
+            margin-bottom: 14px; flex: 1;
+        }
+
+        .proj-tags { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 18px; }
+        .ptag {
+            font-family: var(--ff-mono); font-size: 10px;
+            padding: 3px 7px; border-radius: 4px;
+            border: 1px solid var(--border);
+            background: var(--surface); color: var(--muted);
+        }
+
+        .proj-links { display: flex; gap: 9px; }
+
+        .btn-proj {
+            display: inline-flex; align-items: center; gap: 5px;
+            font-size: 12px; font-weight: 600;
+            padding: 7px 14px; border-radius: 6px;
+            border: 1.5px solid var(--border);
+            color: var(--navy); transition: all .2s;
+        }
+        .btn-proj:hover { background: var(--navy); color: #fff; border-color: var(--navy); }
+        .btn-proj.p { background: var(--navy); color: #fff; border-color: var(--navy); }
+        .btn-proj.p:hover { background: var(--navy-mid); }
+
+        /* ═══════════════════════════════════════
+           EXPLORING
+        ═══════════════════════════════════════ */
+        #exploring { background: var(--navy); padding: 96px 0; }
+
+        .expl-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
+
+        .expl-eyebrow { font-family: var(--ff-mono); font-size: 11px; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: rgba(255,255,255,.4); margin-bottom: 14px; }
+
+        .expl-h { font-family: var(--ff-disp); font-size: clamp(28px,3vw,40px); font-weight: 700; color: #fff; letter-spacing: -.025em; line-height: 1.2; margin-bottom: 16px; }
+
+        .expl-p { font-size: 15px; color: rgba(255,255,255,.55); line-height: 1.75; }
+
+        .expl-list { list-style: none; display: flex; flex-direction: column; gap: 16px; }
+
+        .expl-item {
+            display: flex; align-items: flex-start; gap: 14px;
+            padding: 18px 22px;
+            background: rgba(255,255,255,.05);
+            border: 1px solid rgba(255,255,255,.09);
+            border-radius: var(--radius);
+        }
+
+        .expl-icon {
+            width: 34px; height: 34px; border-radius: 8px;
+            background: var(--amber);
+            display: flex; align-items: center; justify-content: center;
+            flex-shrink: 0;
+        }
+        .expl-icon i { font-size: 14px; color: var(--navy); }
+
+        .expl-txt { font-size: 14px; color: rgba(255,255,255,.8); line-height: 1.65; }
+        .expl-txt strong { color: #fff; }
+
+        /* ═══════════════════════════════════════
+           SKILLS
+        ═══════════════════════════════════════ */
+        #skills { padding: 96px 0; }
+
+        .skills-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 22px; }
+
+        .skill-col {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 26px 28px;
+        }
+
+        .skill-col-hd {
+            font-family: var(--ff-mono); font-size: 11px; font-weight: 500;
+            letter-spacing: .08em; text-transform: uppercase; color: var(--muted);
+            padding-bottom: 12px; margin-bottom: 18px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .skill-row {
+            display: flex; align-items: center; gap: 10px;
+            font-size: 14px; color: var(--text); font-weight: 500;
+            padding: 5px 0;
+        }
+        .s-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--teal); flex-shrink: 0; }
+        .s-dot.a { background: var(--amber); }
+
+        /* ═══════════════════════════════════════
+           FOOTER
+        ═══════════════════════════════════════ */
+        #footer { background: var(--navy); padding: 64px 0 40px; }
+
+        .footer-top {
+            display: flex; justify-content: space-between;
+            align-items: flex-start; gap: 48px;
+        }
+
+        .f-name {
+            font-family: var(--ff-disp); font-size: 30px; font-weight: 700;
+            color: #fff; letter-spacing: -.03em; margin-bottom: 6px;
+        }
+        .f-role { font-size: 14px; color: rgba(255,255,255,.45); margin-bottom: 22px; }
+
+        .f-contact { display: flex; flex-direction: column; gap: 8px; }
+        .f-link {
+            display: flex; align-items: center; gap: 10px;
+            font-size: 14px; color: rgba(255,255,255,.65);
+            transition: color .2s;
+        }
+        .f-link:hover { color: var(--amber); }
+        .f-link i { width: 16px; text-align: center; opacity: .65; }
+
+        .f-right { display: flex; flex-direction: column; align-items: flex-end; gap: 16px; }
+
+        .f-socials { display: flex; gap: 10px; }
+        .f-social {
+            width: 42px; height: 42px; border-radius: 9px;
+            border: 1.5px solid rgba(255,255,255,.15);
+            display: flex; align-items: center; justify-content: center;
+            color: rgba(255,255,255,.65); font-size: 17px;
+            transition: all .2s;
+        }
+        .f-social:hover { border-color: var(--amber); color: var(--amber); }
+
+        .footer-bottom {
+            display: flex; justify-content: space-between;
+            align-items: center;
+            margin-top: 40px; padding-top: 24px;
+            border-top: 1px solid rgba(255,255,255,.09);
+            font-size: 12px; color: rgba(255,255,255,.3);
+        }
+
+        /* ═══════════════════════════════════════
+           RESPONSIVE
+        ═══════════════════════════════════════ */
+        @media (max-width: 1080px) {
+            .wrap { padding-inline: 48px; }
+            #nav  { padding-inline: 48px; }
+            #hero { grid-template-columns: 1fr; padding: 100px 48px 64px; }
+            .hero-visual { display: none; }
+            .about-grid { grid-template-columns: 1fr; }
+            .about-photo { max-width: 280px; }
+            .expl-grid { grid-template-columns: 1fr; gap: 48px; }
+            .skills-grid { grid-template-columns: 1fr 1fr; }
+        }
+
+        @media (max-width: 768px) {
+            .wrap { padding-inline: 24px; }
+            #nav  { padding-inline: 20px; }
+            .nav-links { display: none; }
+            #hero { padding: 88px 24px 56px; }
+            #about, #experience, #projects, #exploring, #skills { padding: 72px 0; }
+            .proj-grid { grid-template-columns: 1fr; }
+            .skills-grid { grid-template-columns: 1fr; }
+            .footer-top { flex-direction: column; }
+            .f-right { align-items: flex-start; }
+            #footer { padding: 56px 0 36px; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ══════════════════════════ NAV ══════════════════════════ -->
+<nav id="nav">
+    <a href="#" class="nav-logo">Pulkit Garg</a>
+    <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li>
+            <a class="nav-resume" href="assets/Pulkit_Garg_CV.pdf" download
+               onclick="gtag('event','Resume Download',{event_category:'Engagement',event_label:'Nav'})">
+                Resume
+            </a>
+        </li>
+    </ul>
+</nav>
+
+<!-- ══════════════════════════ HERO ══════════════════════════ -->
+<div id="hero">
+    <!-- left -->
+    <div>
+        <div class="hero-chip">New Delhi, India · Open to Opportunities</div>
+        <h1 class="hero-h1">Pulkit<br><em>Garg</em></h1>
+        <p class="hero-sub">Economics · Analytics · Energy Transition</p>
+        <p class="hero-desc">
+            Exploring the intersection of economics, data, and the energy transition.
+            I work in energy assessment and modelling at TERI, using quantitative analysis
+            and systems thinking to understand how economies navigate the shift toward
+            cleaner and more resilient energy systems.
+        </p>
+        <div class="hero-ctas">
+            <a href="#experience" class="btn-dark">
+                <i class="fa-solid fa-arrow-down"></i> See My Work
+            </a>
+            <a href="https://www.linkedin.com/in/pulkitgarg03/" class="btn-ghost" target="_blank"
+               onclick="gtag('event','Click',{event_category:'Social',event_label:'LinkedIn Hero'})">
+                <i class="fa-brands fa-linkedin"></i> LinkedIn
+            </a>
+        </div>
+    </div>
+
+    <!-- right: energy transition card — signature visual element -->
+    <div class="hero-visual">
+        <div class="energy-card">
+            <div class="ec-label">India's Energy Transition — Illustrative Outlook</div>
+            <svg id="hero-svg" viewBox="0 0 390 190" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <!-- grid -->
+                <line x1="0" y1="38"  x2="390" y2="38"  stroke="#E2E8F0" stroke-width="1"/>
+                <line x1="0" y1="95"  x2="390" y2="95"  stroke="#E2E8F0" stroke-width="1"/>
+                <line x1="0" y1="152" x2="390" y2="152" stroke="#E2E8F0" stroke-width="1"/>
+                <!-- year labels -->
+                <text x="2"   y="175" font-family="DM Mono,monospace" font-size="9.5" fill="#8898AA">2010</text>
+                <text x="88"  y="175" font-family="DM Mono,monospace" font-size="9.5" fill="#8898AA">2020</text>
+                <text x="190" y="175" font-family="DM Mono,monospace" font-size="9.5" fill="#1A2332" font-weight="600">2026</text>
+                <text x="278" y="175" font-family="DM Mono,monospace" font-size="9.5" fill="#8898AA">2035</text>
+                <text x="356" y="175" font-family="DM Mono,monospace" font-size="9.5" fill="#8898AA">2047</text>
+                <!-- fossil curve (declining) -->
+                <path id="p-fossil"
+                      d="M 0,42 C 50,44 90,52 155,82 S 275,138 390,155"
+                      fill="none" stroke="#D48A0A" stroke-width="2.5" stroke-linecap="round"
+                      stroke-dasharray="700" stroke-dashoffset="700"/>
+                <!-- clean curve (rising) -->
+                <path id="p-clean"
+                      d="M 0,155 C 50,152 90,134 155,100 S 275,42 390,22"
+                      fill="none" stroke="#1A9B8C" stroke-width="2.5" stroke-linecap="round"
+                      stroke-dasharray="700" stroke-dashoffset="700"/>
+                <!-- "now" marker -->
+                <line x1="196" y1="18" x2="196" y2="158" stroke="#1A2332" stroke-width="1" stroke-dasharray="4,3"/>
+                <text x="200" y="30" font-family="DM Mono,monospace" font-size="9.5" fill="#1A2332" font-weight="500">Now</text>
+                <!-- labels -->
+                <text x="300" y="30"  font-family="DM Sans,sans-serif" font-size="11" fill="#1A9B8C" font-weight="600">Clean Energy ↑</text>
+                <text x="295" y="162" font-family="DM Sans,sans-serif" font-size="11" fill="#D48A0A" font-weight="600">Fossil Fuels ↓</text>
+            </svg>
+            <div class="ec-stats">
+                <div class="ec-stat">
+                    <span class="ec-num" style="color:var(--amber)">2+</span>
+                    <span class="ec-unit">Yrs Research</span>
+                </div>
+                <div class="ec-stat">
+                    <span class="ec-num">7+</span>
+                    <span class="ec-unit">Projects</span>
+                </div>
+                <div class="ec-stat">
+                    <span class="ec-num" style="color:var(--teal)">3</span>
+                    <span class="ec-unit">Organisations</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr class="grad-line">
+
+<!-- ══════════════════════════ ABOUT ══════════════════════════ -->
+<section id="about">
+    <div class="wrap">
+        <div class="eyebrow">About</div>
+        <h2 class="section-h">Who I Am</h2>
+        <div class="about-grid rv">
+            <div>
+                <p class="about-p">
+                    With a background spanning electronics engineering, business economics, and analytics,
+                    I have worked across research, market analysis, forecasting, and strategy — building
+                    a multidisciplinary foundation that I now apply directly to energy systems and transition policy.
+                </p>
+                <p class="about-p">
+                    My recent work focuses on energy assessment and modelling at TERI, exploring how economies
+                    navigate the shift toward cleaner and more resilient energy systems. Before this, I worked
+                    with CEEW's power markets team, analysing India's ancillary services market and the economics
+                    of re-backdown and energy arbitrage for renewable generators.
+                </p>
+                <div class="about-pull">
+                    "I enjoy turning complex questions into structured insights — using data, economic reasoning,
+                    and analytical thinking to support better decision-making across business and public policy."
+                </div>
+                <p class="about-p">
+                    Outside work, you'll find me on a badminton court, planning my next trip, or following
+                    new developments in energy markets, economics, and emerging technologies.
+                </p>
+                <div style="margin-top:28px">
+                    <a href="assets/Pulkit_Garg_CV.pdf" class="btn-dark" download
+                       onclick="gtag('event','Resume Download',{event_category:'Engagement',event_label:'About'})">
+                        <i class="fa-solid fa-download"></i> Download Resume
+                    </a>
+                </div>
+            </div>
+            <div class="about-photo">
+                <img src="images/Pulkit_Linkedin2.png" alt="Pulkit Garg">
+            </div>
+        </div>
+    </div>
+</section>
+
+<hr class="grad-line">
+
+<!-- ══════════════════════════ EXPERIENCE ══════════════════════════ -->
+<section id="experience">
+    <div class="wrap">
+        <div class="eyebrow">Experience</div>
+        <h2 class="section-h">Where I've Worked</h2>
+        <div class="exp-list">
+
+            <!-- TERI -->
+            <div class="exp-row rv">
+                <div class="exp-node"><div class="exp-dot live"></div></div>
+                <div class="exp-card">
+                    <div class="exp-org">TERI — The Energy and Resources Institute</div>
+                    <div class="exp-head">
+                        <div class="exp-title">Project Associate · Energy Assessment &amp; Modelling</div>
+                        <div class="exp-period now">Apr 2026 – Present</div>
+                    </div>
+                    <ul class="exp-bullets">
+                        <li>Supporting research on energy transition pathways and economy-wide decarbonisation assessment for India.</li>
+                        <li>Conducting quantitative modelling and scenario analysis to evaluate policy options across energy sectors.</li>
+                        <li>Working with interdisciplinary teams to translate analytical findings into actionable insights for policymakers and stakeholders.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- CEEW -->
+            <div class="exp-row rv d1">
+                <div class="exp-node"><div class="exp-dot"></div></div>
+                <div class="exp-card">
+                    <div class="exp-org">CEEW — Council on Energy, Environment and Water</div>
+                    <div class="exp-head">
+                        <div class="exp-title">Research Intern · Power Market</div>
+                        <div class="exp-period">Jan 2026 – Apr 2026</div>
+                    </div>
+                    <ul class="exp-bullets">
+                        <li>Contributed to energy transition research on India's evolving power markets, with focus on ancillary services and grid balancing.</li>
+                        <li>Analysed the economics of TRAS Down ancillary services and re-backdown mechanisms, examining arbitrage opportunities and implications for renewable energy integration.</li>
+                        <li>Conducted data analysis, policy review, and stakeholder engagement to support evidence-based assessments of emerging power market challenges.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- ITC -->
+            <div class="exp-row rv d2">
+                <div class="exp-node"><div class="exp-dot"></div></div>
+                <div class="exp-card">
+                    <div class="exp-org">ITC Ltd.</div>
+                    <div class="exp-head">
+                        <div class="exp-title">Marketing Research Intern</div>
+                        <div class="exp-period">Summer 2024</div>
+                    </div>
+                    <ul class="exp-bullets">
+                        <li>Conducted strategic market research and competitor analysis for the Mom's Magic brand across rural markets in India.</li>
+                        <li>Generated field insights from 50+ retailer surveys; contributed to a rural distribution scheme that drove a 60% regional sales uplift.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- HFCL -->
+            <div class="exp-row rv d3">
+                <div class="exp-node"><div class="exp-dot"></div></div>
+                <div class="exp-card">
+                    <div class="exp-org">HFCL</div>
+                    <div class="exp-head">
+                        <div class="exp-title">5G R&amp;D Intern</div>
+                        <div class="exp-period">2023</div>
+                    </div>
+                    <ul class="exp-bullets">
+                        <li>Contributed to 5G Macro Radio Unit integration and hardware optimisation; improved monitoring system reliability by 20% through BMC hardware testing.</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<hr class="grad-line">
+
+<!-- ══════════════════════════ PROJECTS ══════════════════════════ -->
+<section id="projects">
+    <div class="wrap">
+        <div class="eyebrow">Projects</div>
+        <h2 class="section-h">Selected Work</h2>
+
+        <div class="filters">
+            <button class="f-btn on"        onclick="fpj('all',this)">All Projects</button>
+            <button class="f-btn"           onclick="fpj('energy',this)">Energy &amp; Policy</button>
+            <button class="f-btn"           onclick="fpj('analytics',this)">Analytics &amp; ML</button>
+            <button class="f-btn"           onclick="fpj('powerbi',this)">Power BI</button>
+        </div>
+
+        <div class="proj-grid" id="pgrid">
+
+            <!-- Electric Bus Depot -->
+            <div class="proj-card feat" data-cat="energy">
+                <img class="proj-img" src="images/Electric_bus.jpg" alt="Electric Bus Depot Charging Simulation" loading="lazy">
+                <div class="proj-body">
+                    <div class="proj-meta">
+                        <span class="proj-type">Research · Simulation</span>
+                        <span class="proj-badge">Featured</span>
+                    </div>
+                    <div class="proj-name">Electric Bus Depot Charging Simulation</div>
+                    <p class="proj-desc">
+                        Discrete-event simulation using Python &amp; SimPy to optimise EV charging operations at a Delhi depot.
+                        Real-world data from 110 buses; Monte Carlo simulation for SOC transitions and queueing behaviour.
+                    </p>
+                    <div class="proj-tags">
+                        <span class="ptag">Python</span><span class="ptag">SimPy</span>
+                        <span class="ptag">Monte Carlo</span><span class="ptag">Primary Research</span>
+                    </div>
+                    <div class="proj-links">
+                        <a href="https://github.com/pulkitgarg3/Electric-Bus-Depot-Charging-Simulation"
+                           class="btn-proj p" target="_blank"
+                           onclick="gtag('event','Project Click',{event_category:'Projects',event_label:'Electric Bus'})">
+                            <i class="fa-brands fa-github"></i> View Project
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CEEW TRAS Down -->
+            <div class="proj-card feat" data-cat="energy">
+                <div class="proj-placeholder"><i class="fa-solid fa-bolt-lightning"></i></div>
+                <div class="proj-body">
+                    <div class="proj-meta">
+                        <span class="proj-type">Power Markets · Policy</span>
+                        <span class="proj-badge">Featured</span>
+                    </div>
+                    <div class="proj-name">Re-Backdown &amp; Energy Arbitrage in India's Ancillary Services Market</div>
+                    <p class="proj-desc">
+                        Analysed India's TRAS Down framework and re-backdown mechanism at CEEW, examining arbitrage economics
+                        for renewable generators and market design implications for grid stability.
+                    </p>
+                    <div class="proj-tags">
+                        <span class="ptag">Power Markets</span><span class="ptag">Policy Analysis</span>
+                        <span class="ptag">Energy Economics</span><span class="ptag">Data Analysis</span>
+                    </div>
+                    <div class="proj-links">
+                        <a href="https://www.linkedin.com/posts/pulkitgarg03_re-backdown-and-energy-arbitrage-in-india-ugcPost-7461803336304967680-g7E0/"
+                           class="btn-proj p" target="_blank"
+                           onclick="gtag('event','Project Click',{event_category:'Projects',event_label:'CEEW TRAS'})">
+                            <i class="fa-brands fa-linkedin"></i> View on LinkedIn
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Energy Poverty & HDI -->
+            <div class="proj-card feat" data-cat="energy">
+                <img class="proj-img" src="images/energy2.png" alt="Energy Poverty HDI" loading="lazy">
+                <div class="proj-body">
+                    <div class="proj-meta">
+                        <span class="proj-type">Econometrics · Policy</span>
+                        <span class="proj-badge">Featured</span>
+                    </div>
+                    <div class="proj-name">Impact of Energy Poverty on HDI — State-Wise Analysis</div>
+                    <p class="proj-desc">
+                        Econometric analysis of energy poverty's impact on India's HDI across states using NFHS (3, 4, 5) data,
+                        identifying socio-economic disparities and recommending targeted policy interventions.
+                    </p>
+                    <div class="proj-tags">
+                        <span class="ptag">Stata</span><span class="ptag">Econometrics</span>
+                        <span class="ptag">Regression</span><span class="ptag">Policy Research</span>
+                    </div>
+                    <div class="proj-links">
+                        <a href="https://github.com/pulkitgarg3/Research-Project-Energy-Poverty-HDI"
+                           class="btn-proj p" target="_blank"
+                           onclick="gtag('event','Project Click',{event_category:'Projects',event_label:'Energy Poverty HDI'})">
+                            <i class="fa-brands fa-github"></i> View Project
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- GHG Emissions -->
+            <div class="proj-card" data-cat="energy">
+                <img class="proj-img" src="images/time.jpg" alt="GHG Forecasting" loading="lazy">
+                <div class="proj-body">
+                    <div class="proj-meta">
+                        <span class="proj-type">Time Series · Forecasting</span>
+                    </div>
+                    <div class="proj-name">GHG Emissions Forecasting — India</div>
+                    <p class="proj-desc">
+                        Forecasts India's GHG emissions using SARIMAX and EGARCH models, capturing macroeconomic
+                        drivers and volatility trends for climate policymakers.
+                    </p>
+                    <div class="proj-tags">
+                        <span class="ptag">SARIMAX</span><span class="ptag">ARCH/GARCH</span>
+                        <span class="ptag">Python</span><span class="ptag">Stata</span>
+                    </div>
+                    <div class="proj-links">
+                        <a href="https://github.com/pulkitgarg3/GHG-Emission-Forecasting-India"
+                           class="btn-proj p" target="_blank"
+                           onclick="gtag('event','Project Click',{event_category:'Projects',event_label:'GHG Forecasting'})">
+                            <i class="fa-brands fa-github"></i> View Project
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- United Airlines -->
+            <div class="proj-card" data-cat="powerbi">
+                <img class="proj-img"
+                     src="https://raw.githubusercontent.com/pulkitgarg3/PowerBI_Portfolio_Pulkit/main/Flights_Delay_Analytics/screenshots/page1_dashboard_overview.jpg"
+                     alt="United Airlines Dashboard" loading="lazy">
+                <div class="proj-body">
+                    <div class="proj-meta">
+                        <span class="proj-type">Power BI · Dashboard</span>
+                        <span class="proj-badge alt">Analytics</span>
+                    </div>
+                    <div class="proj-name">United Airlines Flight Delay Analytics</div>
+                    <p class="proj-desc">
+                        4-page Power BI dashboard analysing ~766K flights across 126 U.S. airports.
+                        DAX and Power Query to surface delay patterns and strategic recommendations.
+                    </p>
+                    <div class="proj-tags">
+                        <span class="ptag">Power BI</span><span class="ptag">DAX</span>
+                        <span class="ptag">Data Visualisation</span>
+                    </div>
+                    <div class="proj-links">
+                        <a href="https://github.com/pulkitgarg3/PowerBI_Portfolio_Pulkit/tree/main/Flights_Delay_Analytics"
+                           class="btn-proj p" target="_blank"
+                           onclick="gtag('event','Project Click',{event_category:'Projects',event_label:'United Airlines'})">
+                            <i class="fa-brands fa-github"></i> GitHub
+                        </a>
+                        <a href="https://drive.google.com/file/d/1ATSJSspzRmKAhJ0d1wbY7JwqW_sYy1VV/view?usp=sharing"
+                           class="btn-proj" target="_blank">
+                            <i class="fa-solid fa-file-pdf"></i> PDF
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bike Sharing -->
+            <div class="proj-card" data-cat="analytics">
+                <img class="proj-img" src="images/bike.png" alt="Bike Sharing Forecast" loading="lazy">
+                <div class="proj-body">
+                    <div class="proj-meta">
+                        <span class="proj-type">Forecasting · Time Series</span>
+                        <span class="proj-badge alt">Analytics</span>
+                    </div>
+                    <div class="proj-name">Bike Sharing Demand Forecasting</div>
+                    <p class="proj-desc">
+                        Facebook Prophet model with cross-validation, holiday adjustments, and parameter tuning
+                        to forecast bike-sharing demand across seasonal patterns.
+                    </p>
+                    <div class="proj-tags">
+                        <span class="ptag">Prophet</span><span class="ptag">Python</span>
+                        <span class="ptag">Time Series</span>
+                    </div>
+                    <div class="proj-links">
+                        <a href="https://github.com/pulkitgarg3/Bike-Sharing-Demand-Forecasting"
+                           class="btn-proj p" target="_blank"
+                           onclick="gtag('event','Project Click',{event_category:'Projects',event_label:'Bike Sharing'})">
+                            <i class="fa-brands fa-github"></i> View Project
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Churn -->
+            <div class="proj-card" data-cat="analytics">
+                <img class="proj-img" src="images/churn.png" alt="Customer Churn" loading="lazy">
+                <div class="proj-body">
+                    <div class="proj-meta">
+                        <span class="proj-type">Machine Learning · Python</span>
+                        <span class="proj-badge alt">Analytics</span>
+                    </div>
+                    <div class="proj-name">Customer Churn Prediction Model</div>
+                    <p class="proj-desc">
+                        Random Forest model identifying high-risk churn customers in the energy sector,
+                        with feature engineering and EDA to surface key predictors.
+                    </p>
+                    <div class="proj-tags">
+                        <span class="ptag">Scikit-learn</span><span class="ptag">Random Forest</span>
+                        <span class="ptag">EDA</span><span class="ptag">Python</span>
+                    </div>
+                    <div class="proj-links">
+                        <a href="https://github.com/pulkitgarg3/Customer-Churn-Prediction-Model"
+                           class="btn-proj p" target="_blank"
+                           onclick="gtag('event','Project Click',{event_category:'Projects',event_label:'Churn'})">
+                            <i class="fa-brands fa-github"></i> View Project
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<hr class="grad-line">
+
+<!-- ══════════════════════════ EXPLORING ══════════════════════════ -->
+<section id="exploring">
+    <div class="wrap">
+        <div class="expl-grid">
+            <div>
+                <div class="expl-eyebrow">What I'm Exploring</div>
+                <div class="expl-h">Where I'm<br>Headed Next</div>
+                <p class="expl-p">
+                    Research isn't just about what I've done. These are the questions
+                    I'm actively working through right now.
+                </p>
+            </div>
+            <ul class="expl-list">
+                <li class="expl-item rv">
+                    <div class="expl-icon"><i class="fa-solid fa-chart-line"></i></div>
+                    <span class="expl-txt">
+                        <strong>Energy system modelling and long-term transition pathways</strong> — understanding
+                        how national energy systems restructure under decarbonisation targets.
+                    </span>
+                </li>
+                <li class="expl-item rv d1">
+                    <div class="expl-icon"><i class="fa-solid fa-scale-balanced"></i></div>
+                    <span class="expl-txt">
+                        <strong>The interaction between economics, policy, and decarbonisation</strong> — how
+                        regulatory design and market mechanisms shape the pace and equity of clean energy transitions.
+                    </span>
+                </li>
+                <li class="expl-item rv d2">
+                    <div class="expl-icon"><i class="fa-solid fa-database"></i></div>
+                    <span class="expl-txt">
+                        <strong>Analytical methods for evidence-based decision-making</strong> — applying
+                        econometrics, simulation, and data modelling to complex policy and business challenges.
+                    </span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<hr class="grad-line">
+
+<!-- ══════════════════════════ SKILLS ══════════════════════════ -->
+<section id="skills">
+    <div class="wrap">
+        <div class="eyebrow">Skills</div>
+        <h2 class="section-h">What I Work With</h2>
+        <div class="skills-grid">
+            <div class="skill-col rv">
+                <div class="skill-col-hd">Domains</div>
+                <div class="skill-row"><div class="s-dot a"></div>Energy Transition &amp; Systems</div>
+                <div class="skill-row"><div class="s-dot a"></div>Energy Economics</div>
+                <div class="skill-row"><div class="s-dot a"></div>Policy Analysis</div>
+                <div class="skill-row"><div class="s-dot a"></div>Power Market Research</div>
+                <div class="skill-row"><div class="s-dot a"></div>Economic Research</div>
+            </div>
+            <div class="skill-col rv d1">
+                <div class="skill-col-hd">Methods</div>
+                <div class="skill-row"><div class="s-dot"></div>Econometrics &amp; Regression</div>
+                <div class="skill-row"><div class="s-dot"></div>Time Series &amp; Forecasting</div>
+                <div class="skill-row"><div class="s-dot"></div>Scenario Analysis</div>
+                <div class="skill-row"><div class="s-dot"></div>Discrete-Event Simulation</div>
+                <div class="skill-row"><div class="s-dot"></div>Machine Learning</div>
+            </div>
+            <div class="skill-col rv d2">
+                <div class="skill-col-hd">Tools</div>
+                <div class="skill-row"><div class="s-dot"></div>Python (Pandas, Scikit-learn, SimPy)</div>
+                <div class="skill-row"><div class="s-dot"></div>Power BI &amp; DAX</div>
+                <div class="skill-row"><div class="s-dot"></div>Stata</div>
+                <div class="skill-row"><div class="s-dot"></div>SQL</div>
+                <div class="skill-row"><div class="s-dot"></div>Excel &amp; SPSS</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ══════════════════════════ FOOTER ══════════════════════════ -->
+<footer id="footer">
+    <div class="wrap">
+        <div class="footer-top">
+            <div>
+                <div class="f-name">Pulkit Garg</div>
+                <div class="f-role">Energy Analyst · Researcher · Modeller</div>
+                <div class="f-contact">
+                    <a href="mailto:pulkitgarg560@gmail.com" class="f-link">
+                        <i class="fa-solid fa-envelope"></i> pulkitgarg560@gmail.com
+                    </a>
+                    <a href="tel:+919896562000" class="f-link">
+                        <i class="fa-solid fa-phone"></i> +91 98965 62000
+                    </a>
+                    <span class="f-link">
+                        <i class="fa-solid fa-location-dot"></i> New Delhi, India
+                    </span>
+                </div>
+            </div>
+            <div class="f-right">
+                <div class="f-socials">
+                    <a href="https://www.linkedin.com/in/pulkitgarg03/" class="f-social" target="_blank"
+                       onclick="gtag('event','Click',{event_category:'Social',event_label:'LinkedIn'})">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/pulkitgarg3" class="f-social" target="_blank"
+                       onclick="gtag('event','Click',{event_category:'Social',event_label:'GitHub'})">
+                        <i class="fa-brands fa-github"></i>
+                    </a>
+                </div>
+                <a href="assets/Pulkit_Garg_CV.pdf" class="btn-dark" download
+                   onclick="gtag('event','Resume Download',{event_category:'Engagement',event_label:'Footer'})">
+                    <i class="fa-solid fa-download"></i> Download Resume
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>© 2026 Pulkit Garg</span>
+            <span>New Delhi, India · Open to global opportunities</span>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // ── nav shadow on scroll ──────────────────────────────────────
+    const NAV = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+        NAV.classList.toggle('scrolled', window.scrollY > 30);
+    }, { passive: true });
+
+    // ── energy curve draw animation ───────────────────────────────
+    window.addEventListener('load', () => {
+        const f = document.getElementById('p-fossil');
+        const c = document.getElementById('p-clean');
+        if (!f || !c) return;
+        requestAnimationFrame(() => {
+            f.style.transition = 'stroke-dashoffset 1.8s cubic-bezier(.4,0,.2,1)';
+            c.style.transition = 'stroke-dashoffset 1.8s cubic-bezier(.4,0,.2,1) .35s';
+            f.style.strokeDashoffset = '0';
+            c.style.strokeDashoffset  = '0';
+        });
+    });
+
+    // ── scroll reveal ─────────────────────────────────────────────
+    const rvObs = new IntersectionObserver(entries => {
+        entries.forEach(e => {
+            if (e.isIntersecting) { e.target.classList.add('in'); rvObs.unobserve(e.target); }
+        });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.rv').forEach(el => rvObs.observe(el));
+
+    // ── project filter ────────────────────────────────────────────
+    function fpj(cat, btn) {
+        document.querySelectorAll('.f-btn').forEach(b => b.classList.remove('on'));
+        btn.classList.add('on');
+        document.querySelectorAll('#pgrid .proj-card').forEach(card => {
+            card.style.display = (cat === 'all' || card.dataset.cat === cat) ? '' : 'none';
+        });
+    }
+
+    // ── analytics ─────────────────────────────────────────────────
+    window.addEventListener('DOMContentLoaded', () => {
+        [10000, 30000, 60000].forEach((t, i) => {
+            setTimeout(() => gtag('event','Session Duration',{event_category:'Engagement',event_label:[10,30,60][i]+' Seconds'}), t);
+        });
+        let f50=false, f90=false;
+        window.addEventListener('scroll', () => {
+            const d = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+            if (d>50 && !f50) { gtag('event','Scroll',{event_category:'Engagement',event_label:'50% Depth'}); f50=true; }
+            if (d>90 && !f90) { gtag('event','Scroll',{event_category:'Engagement',event_label:'90% Depth'}); f90=true; }
+        }, { passive: true });
+        gtag('event','Device Type',{event_category:'User',event_label:/Mobi|Android/i.test(navigator.userAgent)?'Mobile':'Desktop'});
+    });
+</script>
+
+</body>
 </html>
