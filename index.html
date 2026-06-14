@@ -6,6 +6,26 @@
     <title>Pulkit Garg — Energy Economist &amp; Transition Researcher</title>
     <meta name="description" content="Portfolio of Pulkit Garg — energy assessment, modelling, and decarbonisation research. Currently at TERI, formerly CEEW.">
 
+    <!-- ── Favicon (inline SVG — no external file needed) ── -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%230D1F35'/><text x='50%25' y='53%25' dominant-baseline='middle' text-anchor='middle' font-family='Georgia,serif' font-size='26' font-weight='700' fill='%23D48A0A'>PG</text></svg>">
+    <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%230D1F35'/><text x='50%25' y='53%25' dominant-baseline='middle' text-anchor='middle' font-family='Georgia,serif' font-size='26' font-weight='700' fill='%23D48A0A'>PG</text></svg>">
+
+    <!-- ── Open Graph (LinkedIn, WhatsApp, Slack previews) ── -->
+    <meta property="og:type"         content="website">
+    <meta property="og:url"          content="https://pulkitgarg3.github.io/Pulkit-Portfolio/">
+    <meta property="og:title"        content="Pulkit Garg — Energy Economist &amp; Transition Researcher">
+    <meta property="og:description"  content="Energy assessment and modelling researcher at TERI. Former CEEW power markets analyst. Specialising in decarbonisation pathways, scenario analysis, and policy economics.">
+    <meta property="og:image"        content="https://pulkitgarg3.github.io/Pulkit-Portfolio/images/Pulkit_Linkedin2.png">
+    <meta property="og:image:width"  content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale"       content="en_GB">
+
+    <!-- ── Twitter / X Card ── -->
+    <meta name="twitter:card"        content="summary_large_image">
+    <meta name="twitter:title"       content="Pulkit Garg — Energy Economist &amp; Transition Researcher">
+    <meta name="twitter:description" content="Energy assessment and modelling researcher at TERI. Former CEEW power markets analyst. Specialising in decarbonisation pathways and policy economics.">
+    <meta name="twitter:image"       content="https://pulkitgarg3.github.io/Pulkit-Portfolio/images/Pulkit_Linkedin2.png">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,600&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -109,6 +129,24 @@
             transition: background .2s, color .2s !important;
         }
         .nav-resume:hover { background: var(--amber) !important; color: #fff !important; }
+
+        /* ── Hamburger button (mobile only) ── */
+        .hamburger {
+            display: none;
+            flex-direction: column; justify-content: center; gap: 5px;
+            background: none; border: none; cursor: pointer;
+            padding: 6px; border-radius: 6px;
+            transition: background .15s;
+        }
+        .hamburger:hover { background: var(--border); }
+        .hamburger span {
+            display: block; width: 22px; height: 2px;
+            background: var(--navy); border-radius: 2px;
+            transition: transform .25s ease, opacity .2s ease;
+        }
+        .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+        .hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+        .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
         /* ═══════════════════════════════════════
            HERO
@@ -518,31 +556,109 @@
         /* ═══════════════════════════════════════
            RESPONSIVE
         ═══════════════════════════════════════ */
+        /* ── Tablet (≤1080px) ── */
         @media (max-width: 1080px) {
-            .wrap { padding-inline: 48px; }
-            #nav  { padding-inline: 48px; }
-            #hero { grid-template-columns: 1fr; padding: 100px 48px 64px; }
+            .wrap  { padding-inline: 48px; }
+            #nav   { padding-inline: 48px; }
+            #hero  { grid-template-columns: 1fr; padding: 100px 48px 64px; }
             .hero-visual { display: none; }
-            .about-grid { grid-template-columns: 1fr; }
-            .about-photo { max-width: 280px; }
-            .expl-grid { grid-template-columns: 1fr; gap: 48px; }
+            /* hero stands alone — add a subtle bottom accent */
+            .hero-desc { max-width: 600px; }
+
+            .about-grid { grid-template-columns: 1fr; gap: 36px; }
+            .about-photo { max-width: 260px; }
+
+            .expl-grid   { grid-template-columns: 1fr; gap: 40px; }
             .skills-grid { grid-template-columns: 1fr 1fr; }
         }
 
+        /* ── Mobile (≤768px) ── */
         @media (max-width: 768px) {
-            .wrap { padding-inline: 24px; }
-            #nav  { padding-inline: 20px; }
-            .nav-links { display: none; }
-            #hero { padding: 88px 24px 56px; }
-            .hero-h1 { font-size: 42px; white-space: normal; }
-            #about, #experience, #projects, #exploring, #skills { padding: 72px 0; }
-            .proj-grid { grid-template-columns: 1fr; }
+            .wrap { padding-inline: 20px; }
+            #nav  { padding-inline: 16px; }
+
+            /* ─ hamburger: show; desktop links: slide-down overlay ─ */
+            .hamburger { display: flex; }
+            .nav-links {
+                position: fixed; top: 64px; left: 0; right: 0; z-index: 998;
+                flex-direction: column; gap: 0;
+                background: rgba(247,249,251,.99);
+                backdrop-filter: blur(20px);
+                border-bottom: 1px solid var(--border);
+                box-shadow: var(--shadow-md);
+                padding: 8px 0 20px;
+                transform: translateY(-110%);
+                transition: transform .3s cubic-bezier(.4,0,.2,1);
+                display: flex !important; /* keep in DOM for transition */
+            }
+            .nav-links.open { transform: translateY(0); }
+            .nav-links li   { width: 100%; }
+            .nav-links a    {
+                display: block; padding: 14px 20px;
+                font-size: 15px; color: var(--text);
+                border-bottom: 1px solid var(--border);
+            }
+            .nav-links li:last-child a { border-bottom: none; }
+            .nav-resume {
+                border: none !important; border-radius: 0 !important;
+                padding: 14px 20px !important; font-size: 15px !important;
+                color: var(--amber) !important; background: var(--amber-lt) !important;
+            }
+            .nav-resume:hover { background: var(--amber) !important; color: #fff !important; }
+
+            /* ─ hero ─ */
+            #hero { padding: 84px 20px 52px; }
+            .hero-h1 { font-size: 40px; white-space: normal; letter-spacing: .01em; }
+            .hero-sub { font-size: 14px; }
+            .hero-desc { font-size: 15px; }
+            .hero-chips { gap: 8px; }
+            .hero-chip  { font-size: 10px; padding: 4px 9px; }
+
+            /* ─ sections ─ */
+            #about, #experience, #projects, #exploring, #skills { padding: 64px 0; }
+            .section-h { margin-bottom: 32px; }
+
+            /* ─ about ─ */
+            .about-grid  { gap: 28px; }
+            .about-photo { max-width: 200px; }
+            .about-p     { font-size: 15px; }
+
+            /* ─ experience ─ */
+            .exp-card    { padding: 20px; margin-left: 10px; }
+            .exp-head    { flex-direction: column; gap: 6px; align-items: flex-start; }
+            .exp-bg-note { margin-left: 0; margin-top: 16px; font-size: 12px; }
+
+            /* ─ projects ─ */
+            .proj-grid   { grid-template-columns: 1fr; }
+            .filters     { gap: 6px; }
+            .f-btn       { font-size: 12px; padding: 6px 12px; }
+
+            /* ─ exploring ─ */
+            .expl-h      { font-size: 26px; }
+            .expl-item   { padding: 14px 16px; gap: 10px; }
+            .expl-icon   { width: 30px; height: 30px; flex-shrink: 0; }
+            .expl-txt    { font-size: 13px; }
+
+            /* ─ skills ─ */
             .skills-grid { grid-template-columns: 1fr; }
-            .footer-top { flex-direction: column; }
-            .f-right { align-items: flex-start; }
-            #footer { padding: 56px 0 36px; }
-            .arc-track { grid-template-columns: 1fr; gap: 8px; }
-            .arc-arrow { display: none; }
+            .skill-col   { padding: 20px; }
+
+            /* ─ footer ─ */
+            .footer-top  { flex-direction: column; gap: 32px; }
+            .f-right     { align-items: flex-start; }
+            #footer      { padding: 48px 0 32px; }
+            .footer-bottom { flex-direction: column; gap: 6px; align-items: flex-start; }
+
+            /* ─ arc card (hidden at 1080, but just in case) ─ */
+            .arc-track   { grid-template-columns: 1fr; gap: 8px; }
+            .arc-arrow   { display: none; }
+        }
+
+        /* ── Very small phones (≤380px) ── */
+        @media (max-width: 380px) {
+            .hero-h1   { font-size: 34px; }
+            .hero-ctas { flex-direction: column; }
+            .hero-ctas a { justify-content: center; }
         }
     </style>
 </head>
@@ -551,18 +667,24 @@
 <!-- ══════════════════════════ NAV ══════════════════════════ -->
 <nav id="nav">
     <a href="#" class="nav-logo">Pulkit Garg</a>
-    <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#experience">Experience</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#skills">Skills</a></li>
+
+    <ul class="nav-links" id="nav-links">
+        <li><a href="#about"      onclick="closeMenu()">About</a></li>
+        <li><a href="#experience" onclick="closeMenu()">Experience</a></li>
+        <li><a href="#projects"   onclick="closeMenu()">Projects</a></li>
+        <li><a href="#skills"     onclick="closeMenu()">Skills</a></li>
         <li>
             <a class="nav-resume" href="assets/Pulkit_Garg_CV.pdf" download
-               onclick="gtag('event','Resume Download',{event_category:'Engagement',event_label:'Nav'})">
+               onclick="gtag('event','Resume Download',{event_category:'Engagement',event_label:'Nav'});closeMenu()">
                 Resume
             </a>
         </li>
     </ul>
+
+    <!-- mobile only -->
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+    </button>
 </nav>
 
 <!-- ══════════════════════════ HERO ══════════════════════════ -->
@@ -789,33 +911,7 @@
 
         <div class="proj-grid" id="pgrid">
 
-            <!-- Electric Bus Depot -->
-            <div class="proj-card feat" data-cat="energy">
-                <img class="proj-img" src="images/Electric_bus.jpg" alt="Electric Bus Depot Charging Simulation" loading="lazy">
-                <div class="proj-body">
-                    <div class="proj-meta">
-                        <span class="proj-type">Research · Simulation</span>
-                        <span class="proj-badge">Featured</span>
-                    </div>
-                    <div class="proj-name">Electric Bus Depot Charging Simulation</div>
-                    <p class="proj-desc">
-                        Discrete-event simulation using Python &amp; SimPy to optimise EV charging operations at a Delhi depot.
-                        Real-world data from 110 buses; Monte Carlo simulation for SOC transitions and queueing behaviour.
-                    </p>
-                    <div class="proj-tags">
-                        <span class="ptag">Python</span><span class="ptag">SimPy</span>
-                        <span class="ptag">Monte Carlo</span><span class="ptag">Primary Research</span>
-                    </div>
-                    <div class="proj-links">
-                        <a href="https://github.com/pulkitgarg3/Electric-Bus-Depot-Charging-Simulation" class="btn-proj p" target="_blank"
-                           onclick="gtag('event','Project Click',{event_category:'Projects',event_label:'Electric Bus'})">
-                            <i class="fa-brands fa-github"></i> View Project
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- CEEW TRAS Down -->
+            <!-- CEEW TRAS Down — FIRST -->
             <div class="proj-card feat" data-cat="energy">
                 <div class="proj-placeholder"><i class="fa-solid fa-bolt-lightning"></i></div>
                 <div class="proj-body">
@@ -837,6 +933,32 @@
                            class="btn-proj p" target="_blank"
                            onclick="gtag('event','Project Click',{event_category:'Projects',event_label:'CEEW TRAS'})">
                             <i class="fa-brands fa-linkedin"></i> View on LinkedIn
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Electric Bus Depot -->
+            <div class="proj-card feat" data-cat="energy">
+                <img class="proj-img" src="images/Electric_bus.jpg" alt="Electric Bus Depot Charging Simulation" loading="lazy">
+                <div class="proj-body">
+                    <div class="proj-meta">
+                        <span class="proj-type">Research · Simulation</span>
+                        <span class="proj-badge">Featured</span>
+                    </div>
+                    <div class="proj-name">Electric Bus Depot Charging Simulation</div>
+                    <p class="proj-desc">
+                        Discrete-event simulation using Python &amp; SimPy to optimise EV charging operations at a Delhi depot.
+                        Real-world data from 110 buses; Monte Carlo simulation for SOC transitions and queueing behaviour.
+                    </p>
+                    <div class="proj-tags">
+                        <span class="ptag">Python</span><span class="ptag">SimPy</span>
+                        <span class="ptag">Monte Carlo</span><span class="ptag">Primary Research</span>
+                    </div>
+                    <div class="proj-links">
+                        <a href="https://github.com/pulkitgarg3/Electric-Bus-Depot-Charging-Simulation" class="btn-proj p" target="_blank"
+                           onclick="gtag('event','Project Click',{event_category:'Projects',event_label:'Electric Bus'})">
+                            <i class="fa-brands fa-github"></i> View Project
                         </a>
                     </div>
                 </div>
@@ -1118,6 +1240,20 @@
     // nav shadow
     const NAV = document.getElementById('nav');
     window.addEventListener('scroll', () => NAV.classList.toggle('scrolled', window.scrollY > 30), { passive: true });
+
+    // mobile menu
+    function toggleMenu() {
+        document.getElementById('nav-links').classList.toggle('open');
+        document.getElementById('hamburger').classList.toggle('open');
+    }
+    function closeMenu() {
+        document.getElementById('nav-links').classList.remove('open');
+        document.getElementById('hamburger').classList.remove('open');
+    }
+    // close on outside tap
+    document.addEventListener('click', e => {
+        if (!NAV.contains(e.target)) closeMenu();
+    });
 
     // scroll reveal
     const rvObs = new IntersectionObserver(entries => {
