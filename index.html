@@ -3,18 +3,14 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pulkit Garg — Energy Analyst &amp; Researcher</title>
-    <meta name="description" content="Portfolio of Pulkit Garg — energy assessment, modelling, and economics research. Currently at TERI, formerly CEEW.">
+    <title>Pulkit Garg — Energy Economist &amp; Transition Researcher</title>
+    <meta name="description" content="Portfolio of Pulkit Garg — energy assessment, modelling, and decarbonisation research. Currently at TERI, formerly CEEW.">
 
-    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,600&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
-
-    <!-- Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-EYL3VQY1G6"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -48,22 +44,19 @@
             --ff-mono:   'DM Mono', monospace;
         }
 
-        /* ═══════════════════════════════════════
-           RESET
-        ═══════════════════════════════════════ */
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
         html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
         body { font-family: var(--ff-body); background: var(--bg); color: var(--text); line-height: 1.7; font-size: 16px; }
-        img { display: block; max-width: 100%; }
-        a { text-decoration: none; color: inherit; }
+        img  { display: block; max-width: 100%; }
+        a    { text-decoration: none; color: inherit; }
 
         /* ═══════════════════════════════════════
            HELPERS
         ═══════════════════════════════════════ */
-        .wrap        { max-width: 1240px; margin-inline: auto; padding-inline: 80px; }
-        .eyebrow     { font-family: var(--ff-mono); font-size: 11px; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: var(--teal); margin-bottom: 12px; }
-        .section-h   { font-family: var(--ff-disp); font-size: clamp(28px,3vw,40px); font-weight: 700; color: var(--navy); letter-spacing: -.025em; line-height: 1.15; margin-bottom: 48px; }
-        .grad-line   { height: 3px; background: linear-gradient(90deg, var(--amber), var(--teal)); border: none; margin: 0; }
+        .wrap      { max-width: 1240px; margin-inline: auto; padding-inline: 80px; }
+        .eyebrow   { font-family: var(--ff-mono); font-size: 11px; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: var(--teal); margin-bottom: 12px; }
+        .section-h { font-family: var(--ff-disp); font-size: clamp(28px,3vw,40px); font-weight: 700; color: var(--navy); letter-spacing: -.025em; line-height: 1.15; margin-bottom: 48px; }
+        .grad-line { height: 3px; background: linear-gradient(90deg, var(--amber), var(--teal)); border: none; margin: 0; }
 
         .btn-dark {
             display: inline-flex; align-items: center; gap: 8px;
@@ -84,7 +77,6 @@
         }
         .btn-ghost:hover { border-color: var(--navy); transform: translateY(-1px); }
 
-        /* reveal */
         .rv { opacity: 0; transform: translateY(22px); transition: opacity .6s ease, transform .6s ease; }
         .rv.in { opacity: 1; transform: none; }
         .rv.d1 { transition-delay: .1s; }
@@ -95,20 +87,16 @@
            NAVIGATION
         ═══════════════════════════════════════ */
         #nav {
-            position: fixed; inset: 0 0 auto;
-            z-index: 999;
+            position: fixed; inset: 0 0 auto; z-index: 999;
             display: flex; align-items: center; justify-content: space-between;
             height: 64px; padding-inline: 80px;
-            background: rgba(247,249,251,.92); backdrop-filter: blur(14px);
+            background: rgba(247,249,251,.93); backdrop-filter: blur(14px);
             border-bottom: 1px solid var(--border);
             transition: box-shadow .25s;
         }
         #nav.scrolled { box-shadow: var(--shadow-sm); }
 
-        .nav-logo {
-            font-family: var(--ff-disp); font-size: 20px; font-weight: 700;
-            color: var(--navy); letter-spacing: -.03em;
-        }
+        .nav-logo { font-family: var(--ff-disp); font-size: 19px; font-weight: 700; color: var(--navy); letter-spacing: -.03em; }
 
         .nav-links { display: flex; align-items: center; gap: 28px; list-style: none; }
         .nav-links a { font-size: 14px; font-weight: 500; color: var(--muted); transition: color .2s; }
@@ -136,28 +124,42 @@
             margin-inline: auto;
         }
 
-        .hero-chip {
-            display: inline-flex; align-items: center; gap: 8px;
-            font-family: var(--ff-mono); font-size: 12px; color: var(--teal);
-            letter-spacing: .05em; margin-bottom: 20px;
+        /* location chips — NO pseudo-element hyphen */
+        .hero-chips {
+            display: flex; align-items: center; gap: 10px;
+            margin-bottom: 22px; flex-wrap: wrap;
         }
-        .hero-chip::before { content:''; display:block; width:20px; height:1.5px; background:var(--teal); }
+        .hero-chip {
+            display: inline-flex; align-items: center; gap: 6px;
+            font-family: var(--ff-mono); font-size: 11px; font-weight: 500;
+            letter-spacing: .06em; text-transform: uppercase;
+            padding: 5px 11px; border-radius: 20px;
+            border: 1px solid var(--border); color: var(--muted);
+            background: var(--surface);
+        }
+        .hero-chip.highlight { border-color: var(--teal); color: var(--teal); background: var(--teal-lt); }
+        .hero-chip i { font-size: 10px; }
 
+        /* name — one line, all caps */
         .hero-h1 {
             font-family: var(--ff-disp);
-            font-size: clamp(52px,7vw,88px);
-            font-weight: 700; letter-spacing: -.04em;
-            line-height: 1.0; color: var(--navy);
-            margin-bottom: 6px;
+            font-size: clamp(52px, 7vw, 84px);
+            font-weight: 700;
+            letter-spacing: .02em;
+            text-transform: uppercase;
+            line-height: 1.0;
+            color: var(--navy);
+            margin-bottom: 10px;
+            white-space: nowrap;
         }
-        .hero-h1 em { color: var(--amber); font-style: italic; }
+        .hero-h1 span { color: var(--amber); }
 
         .hero-sub {
             font-family: var(--ff-disp);
-            font-size: clamp(17px,2vw,22px);
+            font-size: clamp(15px,1.8vw,20px);
             font-weight: 300; font-style: italic;
             color: var(--muted); line-height: 1.5;
-            margin-bottom: 24px;
+            margin-bottom: 22px;
         }
 
         .hero-desc {
@@ -167,37 +169,71 @@
 
         .hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; }
 
-        /* energy card */
-        .energy-card {
+        /* ─── Career Arc Card ─── */
+        .arc-card {
             background: var(--surface);
             border: 1px solid var(--border);
             border-radius: 18px;
-            padding: 32px 36px;
+            padding: 32px 30px 28px;
             box-shadow: var(--shadow-md);
         }
 
-        .ec-label {
+        .arc-header {
+            display: flex; align-items: center; justify-content: space-between;
+            margin-bottom: 28px;
+        }
+        .arc-label {
             font-family: var(--ff-mono); font-size: 10px;
-            letter-spacing: .08em; text-transform: uppercase;
-            color: var(--muted); margin-bottom: 12px;
+            letter-spacing: .09em; text-transform: uppercase; color: var(--muted);
+        }
+        .arc-tagline {
+            font-family: var(--ff-disp); font-size: 13px;
+            font-style: italic; color: var(--navy-mid); font-weight: 600;
         }
 
-        #hero-svg { width: 100%; height: 190px; display: block; }
+        .arc-track {
+            display: grid; grid-template-columns: 1fr 28px 1fr 28px 1fr 28px 1fr;
+            align-items: start; gap: 0;
+            margin-bottom: 24px;
+        }
 
-        .ec-stats {
-            display: grid; grid-template-columns: repeat(3,1fr);
-            gap: 12px; margin-top: 20px;
-            padding-top: 18px; border-top: 1px solid var(--border);
+        .arc-stop { display: flex; flex-direction: column; align-items: center; text-align: center; }
+
+        .arc-icon {
+            width: 44px; height: 44px; border-radius: 12px;
+            background: var(--bg); border: 1.5px solid var(--border);
+            display: flex; align-items: center; justify-content: center;
+            margin-bottom: 10px; flex-shrink: 0;
+            transition: all .2s;
         }
-        .ec-stat { text-align: center; }
-        .ec-num {
-            display: block;
-            font-family: var(--ff-disp); font-size: 30px; font-weight: 700;
-            letter-spacing: -.04em; color: var(--navy);
+        .arc-icon i { font-size: 16px; color: var(--muted); }
+        .arc-icon.now { background: var(--amber); border-color: var(--amber); box-shadow: 0 0 0 5px var(--amber-lt); }
+        .arc-icon.now i { color: var(--navy); }
+
+        .arc-role { font-size: 12px; font-weight: 600; color: var(--navy); line-height: 1.3; margin-bottom: 3px; }
+        .arc-org  { font-family: var(--ff-mono); font-size: 10px; color: var(--muted); letter-spacing: .04em; }
+        .arc-now-badge {
+            display: inline-block; margin-top: 6px;
+            font-family: var(--ff-mono); font-size: 9px; font-weight: 500;
+            padding: 2px 7px; border-radius: 10px;
+            background: var(--amber-lt); color: var(--amber);
+            letter-spacing: .04em;
         }
-        .ec-unit {
-            font-family: var(--ff-mono); font-size: 10px;
-            letter-spacing: .06em; text-transform: uppercase; color: var(--muted);
+
+        .arc-arrow {
+            display: flex; align-items: flex-start; justify-content: center;
+            padding-top: 14px; color: var(--border); font-size: 18px; font-weight: 300;
+        }
+
+        .arc-divider { border: none; border-top: 1px solid var(--border); margin: 0 0 18px; }
+
+        .arc-quote {
+            font-family: var(--ff-disp); font-size: 14px; font-style: italic;
+            color: var(--navy); text-align: center; line-height: 1.5;
+            padding: 14px 16px;
+            background: var(--amber-lt);
+            border-radius: 8px;
+            border-left: 3px solid var(--amber);
         }
 
         /* ═══════════════════════════════════════
@@ -205,13 +241,9 @@
         ═══════════════════════════════════════ */
         #about { background: var(--surface); padding: 96px 0; }
 
-        .about-grid {
-            display: grid; grid-template-columns: 1fr 300px;
-            gap: 72px; align-items: start;
-        }
+        .about-grid { display: grid; grid-template-columns: 1fr 300px; gap: 72px; align-items: start; }
 
         .about-p { font-size: 16px; line-height: 1.9; color: var(--text); margin-bottom: 18px; }
-        .about-p:last-of-type { margin-bottom: 0; }
 
         .about-pull {
             background: var(--amber-lt);
@@ -223,11 +255,7 @@
             margin: 24px 0;
         }
 
-        .about-photo {
-            border-radius: 16px; overflow: hidden;
-            aspect-ratio: 3/4; background: var(--teal-lt);
-            box-shadow: var(--shadow-md);
-        }
+        .about-photo { border-radius: 16px; overflow: hidden; aspect-ratio: 3/4; background: var(--teal-lt); box-shadow: var(--shadow-md); }
         .about-photo img { width: 100%; height: 100%; object-fit: cover; }
 
         /* ═══════════════════════════════════════
@@ -236,19 +264,12 @@
         #experience { padding: 96px 0; }
 
         .exp-list { position: relative; display: flex; flex-direction: column; gap: 0; }
-
         .exp-list::before {
-            content: '';
-            position: absolute; left: 20px; top: 6px; bottom: 6px;
-            width: 2px;
-            background: linear-gradient(to bottom, var(--amber) 0%, var(--teal) 100%);
+            content: ''; position: absolute; left: 20px; top: 6px; bottom: 6px;
+            width: 2px; background: linear-gradient(to bottom, var(--amber) 0%, var(--teal) 100%);
         }
 
-        .exp-row {
-            display: grid;
-            grid-template-columns: 52px 1fr;
-            padding-bottom: 36px;
-        }
+        .exp-row { display: grid; grid-template-columns: 52px 1fr; padding-bottom: 36px; }
         .exp-row:last-child { padding-bottom: 0; }
 
         .exp-node { display: flex; padding-top: 8px; justify-content: center; }
@@ -266,6 +287,7 @@
             transition: box-shadow .2s, transform .15s;
         }
         .exp-card:hover { box-shadow: var(--shadow-md); transform: translateY(-2px); }
+        .exp-card.compact { padding: 20px 26px; }
 
         .exp-org {
             font-family: var(--ff-mono); font-size: 11px; font-weight: 500;
@@ -277,6 +299,7 @@
             display: flex; justify-content: space-between;
             align-items: flex-start; gap: 16px; margin-bottom: 14px;
         }
+        .exp-head.tight { margin-bottom: 10px; }
 
         .exp-title {
             font-family: var(--ff-disp); font-size: 19px; font-weight: 600;
@@ -295,10 +318,19 @@
             position: relative; padding-left: 18px;
             font-size: 14px; color: var(--text); line-height: 1.7;
         }
-        .exp-bullets li::before {
-            content: '→'; position: absolute; left: 0;
-            color: var(--amber); font-size: 12px; top: 3px;
+        .exp-bullets li::before { content: '→'; position: absolute; left: 0; color: var(--amber); font-size: 12px; top: 3px; }
+
+        .exp-note { font-size: 14px; color: var(--muted); line-height: 1.65; }
+
+        /* Earlier background note */
+        .exp-bg-note {
+            display: flex; align-items: center; gap: 12px;
+            padding: 14px 20px; margin-left: 68px;
+            background: var(--surface); border: 1px dashed var(--border);
+            border-radius: var(--radius); margin-top: 8px;
+            font-size: 13px; color: var(--muted); line-height: 1.6;
         }
+        .exp-bg-note i { color: var(--border); flex-shrink: 0; }
 
         /* ═══════════════════════════════════════
            PROJECTS
@@ -318,11 +350,7 @@
         .f-btn:hover { border-color: var(--navy); color: var(--navy); }
         .f-btn.on { background: var(--navy); border-color: var(--navy); color: #fff; }
 
-        .proj-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
-            gap: 22px;
-        }
+        .proj-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 22px; }
 
         .proj-card {
             background: var(--bg); border: 1px solid var(--border);
@@ -353,21 +381,16 @@
         .proj-badge {
             font-family: var(--ff-mono); font-size: 10px;
             padding: 3px 8px; border-radius: 20px;
-            background: var(--amber-lt); color: var(--amber);
-            letter-spacing: .03em;
+            background: var(--amber-lt); color: var(--amber); letter-spacing: .03em;
         }
         .proj-badge.alt { background: var(--teal-lt); color: var(--teal); }
 
         .proj-name {
             font-family: var(--ff-disp); font-size: 18px; font-weight: 600;
-            color: var(--navy); letter-spacing: -.015em; line-height: 1.3;
-            margin-bottom: 9px;
+            color: var(--navy); letter-spacing: -.015em; line-height: 1.3; margin-bottom: 9px;
         }
 
-        .proj-desc {
-            font-size: 13px; color: var(--muted); line-height: 1.7;
-            margin-bottom: 14px; flex: 1;
-        }
+        .proj-desc { font-size: 13px; color: var(--muted); line-height: 1.7; margin-bottom: 14px; flex: 1; }
 
         .proj-tags { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 18px; }
         .ptag {
@@ -398,9 +421,7 @@
         .expl-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
 
         .expl-eyebrow { font-family: var(--ff-mono); font-size: 11px; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: rgba(255,255,255,.4); margin-bottom: 14px; }
-
         .expl-h { font-family: var(--ff-disp); font-size: clamp(28px,3vw,40px); font-weight: 700; color: #fff; letter-spacing: -.025em; line-height: 1.2; margin-bottom: 16px; }
-
         .expl-p { font-size: 15px; color: rgba(255,255,255,.55); line-height: 1.75; }
 
         .expl-list { list-style: none; display: flex; flex-direction: column; gap: 16px; }
@@ -452,29 +473,27 @@
         }
         .s-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--teal); flex-shrink: 0; }
         .s-dot.a { background: var(--amber); }
+        .s-dot.g { background: var(--border); }
+
+        .s-learning {
+            font-family: var(--ff-mono); font-size: 9px; font-weight: 500;
+            padding: 1px 6px; border-radius: 4px;
+            background: var(--teal-lt); color: var(--teal);
+            letter-spacing: .03em; margin-left: auto;
+        }
 
         /* ═══════════════════════════════════════
            FOOTER
         ═══════════════════════════════════════ */
         #footer { background: var(--navy); padding: 64px 0 40px; }
 
-        .footer-top {
-            display: flex; justify-content: space-between;
-            align-items: flex-start; gap: 48px;
-        }
+        .footer-top { display: flex; justify-content: space-between; align-items: flex-start; gap: 48px; }
 
-        .f-name {
-            font-family: var(--ff-disp); font-size: 30px; font-weight: 700;
-            color: #fff; letter-spacing: -.03em; margin-bottom: 6px;
-        }
+        .f-name { font-family: var(--ff-disp); font-size: 30px; font-weight: 700; color: #fff; letter-spacing: -.03em; margin-bottom: 6px; }
         .f-role { font-size: 14px; color: rgba(255,255,255,.45); margin-bottom: 22px; }
 
         .f-contact { display: flex; flex-direction: column; gap: 8px; }
-        .f-link {
-            display: flex; align-items: center; gap: 10px;
-            font-size: 14px; color: rgba(255,255,255,.65);
-            transition: color .2s;
-        }
+        .f-link { display: flex; align-items: center; gap: 10px; font-size: 14px; color: rgba(255,255,255,.65); transition: color .2s; }
         .f-link:hover { color: var(--amber); }
         .f-link i { width: 16px; text-align: center; opacity: .65; }
 
@@ -485,14 +504,12 @@
             width: 42px; height: 42px; border-radius: 9px;
             border: 1.5px solid rgba(255,255,255,.15);
             display: flex; align-items: center; justify-content: center;
-            color: rgba(255,255,255,.65); font-size: 17px;
-            transition: all .2s;
+            color: rgba(255,255,255,.65); font-size: 17px; transition: all .2s;
         }
         .f-social:hover { border-color: var(--amber); color: var(--amber); }
 
         .footer-bottom {
-            display: flex; justify-content: space-between;
-            align-items: center;
+            display: flex; justify-content: space-between; align-items: center;
             margin-top: 40px; padding-top: 24px;
             border-top: 1px solid rgba(255,255,255,.09);
             font-size: 12px; color: rgba(255,255,255,.3);
@@ -517,12 +534,15 @@
             #nav  { padding-inline: 20px; }
             .nav-links { display: none; }
             #hero { padding: 88px 24px 56px; }
+            .hero-h1 { font-size: 42px; white-space: normal; }
             #about, #experience, #projects, #exploring, #skills { padding: 72px 0; }
             .proj-grid { grid-template-columns: 1fr; }
             .skills-grid { grid-template-columns: 1fr; }
             .footer-top { flex-direction: column; }
             .f-right { align-items: flex-start; }
             #footer { padding: 56px 0 36px; }
+            .arc-track { grid-template-columns: 1fr; gap: 8px; }
+            .arc-arrow { display: none; }
         }
     </style>
 </head>
@@ -547,17 +567,24 @@
 
 <!-- ══════════════════════════ HERO ══════════════════════════ -->
 <div id="hero">
-    <!-- left -->
+
+    <!-- LEFT ─── text -->
     <div>
-        <div class="hero-chip"> New Delhi, India · Open to Opportunities</div>
-        <h1 class="hero-h1">Pulkit<em>Garg</em></h1>
-        <p class="hero-sub">Economics · Analytics · Energy Transition</p>
+        <div class="hero-chips">
+            <span class="hero-chip"><i class="fa-solid fa-location-dot"></i> New Delhi, India</span>
+            <span class="hero-chip highlight"><i class="fa-solid fa-circle" style="font-size:7px"></i> Open to Opportunities</span>
+        </div>
+
+        <h1 class="hero-h1">PULKIT <span>GARG</span></h1>
+
+        <p class="hero-sub">Energy Transition Research &nbsp;·&nbsp; Modelling &nbsp;·&nbsp; Policy Economics</p>
+
         <p class="hero-desc">
-            Exploring the intersection of economics, data, and the energy transition.
-            I work in energy assessment and modelling at TERI, using quantitative analysis
-            and systems thinking to understand how economies navigate the shift toward
-            cleaner and more resilient energy systems.
+            Energy economist and researcher specialising in transition modelling and
+            decarbonisation analysis. Currently at TERI's Energy Assessment &amp; Modelling team,
+            working on economy-wide pathways and policy scenarios for India's clean energy future.
         </p>
+
         <div class="hero-ctas">
             <a href="#experience" class="btn-dark">
                 <i class="fa-solid fa-arrow-down"></i> See My Work
@@ -569,54 +596,66 @@
         </div>
     </div>
 
-    <!-- right: energy transition card — signature visual element -->
+    <!-- RIGHT ─── career arc card -->
     <div class="hero-visual">
-        <div class="energy-card">
-            <div class="ec-label">India's Energy Transition — Illustrative Outlook</div>
-            <svg id="hero-svg" viewBox="0 0 390 190" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                <!-- grid -->
-                <line x1="0" y1="38"  x2="390" y2="38"  stroke="#E2E8F0" stroke-width="1"/>
-                <line x1="0" y1="95"  x2="390" y2="95"  stroke="#E2E8F0" stroke-width="1"/>
-                <line x1="0" y1="152" x2="390" y2="152" stroke="#E2E8F0" stroke-width="1"/>
-                <!-- year labels -->
-                <text x="2"   y="175" font-family="DM Mono,monospace" font-size="9.5" fill="#8898AA">2010</text>
-                <text x="88"  y="175" font-family="DM Mono,monospace" font-size="9.5" fill="#8898AA">2020</text>
-                <text x="190" y="175" font-family="DM Mono,monospace" font-size="9.5" fill="#1A2332" font-weight="600">2026</text>
-                <text x="278" y="175" font-family="DM Mono,monospace" font-size="9.5" fill="#8898AA">2035</text>
-                <text x="356" y="175" font-family="DM Mono,monospace" font-size="9.5" fill="#8898AA">2047</text>
-                <!-- fossil curve (declining) -->
-                <path id="p-fossil"
-                      d="M 0,42 C 50,44 90,52 155,82 S 275,138 390,155"
-                      fill="none" stroke="#D48A0A" stroke-width="2.5" stroke-linecap="round"
-                      stroke-dasharray="700" stroke-dashoffset="700"/>
-                <!-- clean curve (rising) -->
-                <path id="p-clean"
-                      d="M 0,155 C 50,152 90,134 155,100 S 275,42 390,22"
-                      fill="none" stroke="#1A9B8C" stroke-width="2.5" stroke-linecap="round"
-                      stroke-dasharray="700" stroke-dashoffset="700"/>
-                <!-- "now" marker -->
-                <line x1="196" y1="18" x2="196" y2="158" stroke="#1A2332" stroke-width="1" stroke-dasharray="4,3"/>
-                <text x="200" y="30" font-family="DM Mono,monospace" font-size="9.5" fill="#1A2332" font-weight="500">Now</text>
-                <!-- labels -->
-                <text x="300" y="30"  font-family="DM Sans,sans-serif" font-size="11" fill="#1A9B8C" font-weight="600">Clean Energy ↑</text>
-                <text x="295" y="162" font-family="DM Sans,sans-serif" font-size="11" fill="#D48A0A" font-weight="600">Fossil Fuels ↓</text>
-            </svg>
-            <div class="ec-stats">
-                <div class="ec-stat">
-                    <span class="ec-num" style="color:var(--amber)">2+</span>
-                    <span class="ec-unit">Yrs Research</span>
+        <div class="arc-card">
+            <div class="arc-header">
+                <span class="arc-label">Career Arc</span>
+                <span class="arc-tagline">Three disciplines, one direction.</span>
+            </div>
+
+            <div class="arc-track">
+
+                <div class="arc-stop">
+                    <div class="arc-icon">
+                        <i class="fa-solid fa-microchip"></i>
+                    </div>
+                    <div class="arc-role">Engineering</div>
+                    <div class="arc-org">ECE · HFCL</div>
                 </div>
-                <div class="ec-stat">
-                    <span class="ec-num">7+</span>
-                    <span class="ec-unit">Projects</span>
+
+                <div class="arc-arrow">→</div>
+
+                <div class="arc-stop">
+                    <div class="arc-icon">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <div class="arc-role">Economics</div>
+                    <div class="arc-org">MBA · ITC</div>
                 </div>
-                <div class="ec-stat">
-                    <span class="ec-num" style="color:var(--teal)">3</span>
-                    <span class="ec-unit">Organisations</span>
+
+                <div class="arc-arrow">→</div>
+
+                <div class="arc-stop">
+                    <div class="arc-icon">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+                    <div class="arc-role">Power Markets</div>
+                    <div class="arc-org">CEEW</div>
                 </div>
+
+                <div class="arc-arrow">→</div>
+
+                <div class="arc-stop">
+                    <div class="arc-icon now">
+                        <i class="fa-solid fa-leaf"></i>
+                    </div>
+                    <div class="arc-role">Energy Modelling</div>
+                    <div class="arc-org">TERI</div>
+                    <div class="arc-now-badge">Now →</div>
+                </div>
+
+            </div>
+
+            <hr class="arc-divider">
+
+            <div class="arc-quote">
+                "The energy transition needs people who understand both the grid
+                and the incentives that power it."
             </div>
         </div>
     </div>
+
 </div>
 
 <hr class="grad-line">
@@ -630,8 +669,9 @@
             <div>
                 <p class="about-p">
                     With a background spanning electronics engineering, business economics, and analytics,
-                    I have worked across research, market analysis, forecasting, and strategy — building
-                    a multidisciplinary foundation that I now apply directly to energy systems and transition policy.
+                    I have built a multidisciplinary foundation that I now apply directly to energy systems
+                    and transition policy — moving from understanding how systems are built, to understanding
+                    how they transform.
                 </p>
                 <p class="about-p">
                     My recent work focuses on energy assessment and modelling at TERI, exploring how economies
@@ -641,11 +681,11 @@
                 </p>
                 <div class="about-pull">
                     "I enjoy turning complex questions into structured insights — using data, economic reasoning,
-                    and analytical thinking to support better decision-making across business and public policy."
+                    and analytical thinking to support better decision-making across energy and public policy."
                 </div>
                 <p class="about-p">
                     Outside work, you'll find me on a badminton court, planning my next trip, or following
-                    new developments in energy markets, economics, and emerging technologies.
+                    developments in energy markets, decarbonisation policy, and economic modelling methods.
                 </p>
                 <div style="margin-top:28px">
                     <a href="assets/Pulkit_Garg_CV.pdf" class="btn-dark" download
@@ -670,7 +710,7 @@
         <h2 class="section-h">Where I've Worked</h2>
         <div class="exp-list">
 
-            <!-- TERI -->
+            <!-- TERI — hero role -->
             <div class="exp-row rv">
                 <div class="exp-node"><div class="exp-dot live"></div></div>
                 <div class="exp-card">
@@ -680,8 +720,8 @@
                         <div class="exp-period now">Apr 2026 – Present</div>
                     </div>
                     <ul class="exp-bullets">
-                        <li>Supporting research on energy transition pathways and economy-wide decarbonisation assessment for India.</li>
-                        <li>Conducting quantitative modelling and scenario analysis to evaluate policy options across energy sectors.</li>
+                        <li>Supporting research on energy transition pathways and economy-wide decarbonisation assessment for India's long-term energy future.</li>
+                        <li>Conducting quantitative modelling and scenario analysis to evaluate policy options, decarbonisation costs, and transition pathways across energy sectors.</li>
                         <li>Working with interdisciplinary teams to translate analytical findings into actionable insights for policymakers and stakeholders.</li>
                     </ul>
                 </div>
@@ -697,45 +737,38 @@
                         <div class="exp-period">Jan 2026 – Apr 2026</div>
                     </div>
                     <ul class="exp-bullets">
-                        <li>Contributed to energy transition research on India's evolving power markets, with focus on ancillary services and grid balancing.</li>
-                        <li>Analysed the economics of TRAS Down ancillary services and re-backdown mechanisms, examining arbitrage opportunities and implications for renewable energy integration.</li>
-                        <li>Conducted data analysis, policy review, and stakeholder engagement to support evidence-based assessments of emerging power market challenges.</li>
+                        <li>Contributed to energy transition research on India's evolving power markets, with focus on ancillary services, grid balancing, and renewable integration economics.</li>
+                        <li>Analysed the economics of TRAS Down ancillary services and re-backdown mechanisms, examining arbitrage opportunities and implications for power market design.</li>
+                        <li>Conducted data analysis, policy review, and stakeholder engagement to support evidence-based assessments of emerging energy market challenges.</li>
                     </ul>
                 </div>
             </div>
 
-            <!-- ITC -->
+            <!-- ITC — compact, no bullets -->
             <div class="exp-row rv d2">
                 <div class="exp-node"><div class="exp-dot"></div></div>
-                <div class="exp-card">
+                <div class="exp-card compact">
                     <div class="exp-org">ITC Ltd.</div>
-                    <div class="exp-head">
-                        <div class="exp-title">Marketing Research Intern</div>
+                    <div class="exp-head tight">
+                        <div class="exp-title" style="font-size:17px">Marketing Research Intern</div>
                         <div class="exp-period">Summer 2024</div>
                     </div>
-                    <ul class="exp-bullets">
-                        <li>Conducted strategic market research and competitor analysis for the Mom's Magic brand across rural markets in India.</li>
-                        <li>Generated field insights from 50+ retailer surveys; contributed to a rural distribution scheme that drove a 60% regional sales uplift.</li>
-                    </ul>
-                </div>
-            </div>
-
-            <!-- HFCL -->
-            <div class="exp-row rv d3">
-                <div class="exp-node"><div class="exp-dot"></div></div>
-                <div class="exp-card">
-                    <div class="exp-org">HFCL</div>
-                    <div class="exp-head">
-                        <div class="exp-title">5G R&amp;D Intern</div>
-                        <div class="exp-period">2023</div>
-                    </div>
-                    <ul class="exp-bullets">
-                        <li>Contributed to 5G Macro Radio Unit integration and hardware optimisation; improved monitoring system reliability by 20% through BMC hardware testing.</li>
-                    </ul>
+                    <p class="exp-note">
+                        Rural market research and retailer analysis for the Mom's Magic brand. Contributed to a
+                        distribution strategy that drove a 60% regional sales uplift — grounding the analytical
+                        toolkit in commercial and market realities.
+                    </p>
                 </div>
             </div>
 
         </div>
+
+        <!-- Earlier background footnote — HFCL acknowledged without a full card -->
+        <div class="exp-bg-note rv d3">
+            <i class="fa-solid fa-circle-info"></i>
+            <span>Prior to the above: 5G R&amp;D Intern at HFCL (2023), where hardware testing and system integration established the technical foundations behind the analytical work.</span>
+        </div>
+
     </div>
 </section>
 
@@ -748,10 +781,10 @@
         <h2 class="section-h">Selected Work</h2>
 
         <div class="filters">
-            <button class="f-btn on"        onclick="fpj('all',this)">All Projects</button>
-            <button class="f-btn"           onclick="fpj('energy',this)">Energy &amp; Policy</button>
-            <button class="f-btn"           onclick="fpj('analytics',this)">Analytics &amp; ML</button>
-            <button class="f-btn"           onclick="fpj('powerbi',this)">Power BI</button>
+            <button class="f-btn on"  onclick="fpj('all',this)">All Projects</button>
+            <button class="f-btn"     onclick="fpj('energy',this)">Energy &amp; Policy</button>
+            <button class="f-btn"     onclick="fpj('analytics',this)">Analytics &amp; ML</button>
+            <button class="f-btn"     onclick="fpj('powerbi',this)">Power BI</button>
         </div>
 
         <div class="proj-grid" id="pgrid">
@@ -774,8 +807,7 @@
                         <span class="ptag">Monte Carlo</span><span class="ptag">Primary Research</span>
                     </div>
                     <div class="proj-links">
-                        <a href="https://github.com/pulkitgarg3/Electric-Bus-Depot-Charging-Simulation"
-                           class="btn-proj p" target="_blank"
+                        <a href="https://github.com/pulkitgarg3/Electric-Bus-Depot-Charging-Simulation" class="btn-proj p" target="_blank"
                            onclick="gtag('event','Project Click',{event_category:'Projects',event_label:'Electric Bus'})">
                             <i class="fa-brands fa-github"></i> View Project
                         </a>
@@ -793,8 +825,8 @@
                     </div>
                     <div class="proj-name">Re-Backdown &amp; Energy Arbitrage in India's Ancillary Services Market</div>
                     <p class="proj-desc">
-                        Analysed India's TRAS Down framework and re-backdown mechanism at CEEW, examining arbitrage economics
-                        for renewable generators and market design implications for grid stability.
+                        Analysed India's TRAS Down ancillary services framework at CEEW — examining re-backdown economics,
+                        arbitrage opportunities for renewable generators, and implications for power market design and grid stability.
                     </p>
                     <div class="proj-tags">
                         <span class="ptag">Power Markets</span><span class="ptag">Policy Analysis</span>
@@ -820,16 +852,15 @@
                     </div>
                     <div class="proj-name">Impact of Energy Poverty on HDI — State-Wise Analysis</div>
                     <p class="proj-desc">
-                        Econometric analysis of energy poverty's impact on India's HDI across states using NFHS (3, 4, 5) data,
-                        identifying socio-economic disparities and recommending targeted policy interventions.
+                        Econometric analysis of energy poverty's impact on India's HDI across states using NFHS
+                        (3, 4, 5) panel data, identifying socio-economic disparities and recommending targeted policy interventions.
                     </p>
                     <div class="proj-tags">
                         <span class="ptag">Stata</span><span class="ptag">Econometrics</span>
-                        <span class="ptag">Regression</span><span class="ptag">Policy Research</span>
+                        <span class="ptag">Fixed Effects</span><span class="ptag">Policy Research</span>
                     </div>
                     <div class="proj-links">
-                        <a href="https://github.com/pulkitgarg3/Research-Project-Energy-Poverty-HDI"
-                           class="btn-proj p" target="_blank"
+                        <a href="https://github.com/pulkitgarg3/Research-Project-Energy-Poverty-HDI" class="btn-proj p" target="_blank"
                            onclick="gtag('event','Project Click',{event_category:'Projects',event_label:'Energy Poverty HDI'})">
                             <i class="fa-brands fa-github"></i> View Project
                         </a>
@@ -847,15 +878,14 @@
                     <div class="proj-name">GHG Emissions Forecasting — India</div>
                     <p class="proj-desc">
                         Forecasts India's GHG emissions using SARIMAX and EGARCH models, capturing macroeconomic
-                        drivers and volatility trends for climate policymakers.
+                        drivers and volatility trends to deliver insights relevant for climate policymakers.
                     </p>
                     <div class="proj-tags">
                         <span class="ptag">SARIMAX</span><span class="ptag">ARCH/GARCH</span>
                         <span class="ptag">Python</span><span class="ptag">Stata</span>
                     </div>
                     <div class="proj-links">
-                        <a href="https://github.com/pulkitgarg3/GHG-Emission-Forecasting-India"
-                           class="btn-proj p" target="_blank"
+                        <a href="https://github.com/pulkitgarg3/GHG-Emission-Forecasting-India" class="btn-proj p" target="_blank"
                            onclick="gtag('event','Project Click',{event_category:'Projects',event_label:'GHG Forecasting'})">
                             <i class="fa-brands fa-github"></i> View Project
                         </a>
@@ -888,8 +918,7 @@
                            onclick="gtag('event','Project Click',{event_category:'Projects',event_label:'United Airlines'})">
                             <i class="fa-brands fa-github"></i> GitHub
                         </a>
-                        <a href="https://drive.google.com/file/d/1ATSJSspzRmKAhJ0d1wbY7JwqW_sYy1VV/view?usp=sharing"
-                           class="btn-proj" target="_blank">
+                        <a href="https://drive.google.com/file/d/1ATSJSspzRmKAhJ0d1wbY7JwqW_sYy1VV/view?usp=sharing" class="btn-proj" target="_blank">
                             <i class="fa-solid fa-file-pdf"></i> PDF
                         </a>
                     </div>
@@ -907,15 +936,14 @@
                     <div class="proj-name">Bike Sharing Demand Forecasting</div>
                     <p class="proj-desc">
                         Facebook Prophet model with cross-validation, holiday adjustments, and parameter tuning
-                        to forecast bike-sharing demand across seasonal patterns.
+                        to forecast bike-sharing demand accurately across seasonal patterns.
                     </p>
                     <div class="proj-tags">
                         <span class="ptag">Prophet</span><span class="ptag">Python</span>
                         <span class="ptag">Time Series</span>
                     </div>
                     <div class="proj-links">
-                        <a href="https://github.com/pulkitgarg3/Bike-Sharing-Demand-Forecasting"
-                           class="btn-proj p" target="_blank"
+                        <a href="https://github.com/pulkitgarg3/Bike-Sharing-Demand-Forecasting" class="btn-proj p" target="_blank"
                            onclick="gtag('event','Project Click',{event_category:'Projects',event_label:'Bike Sharing'})">
                             <i class="fa-brands fa-github"></i> View Project
                         </a>
@@ -941,8 +969,7 @@
                         <span class="ptag">EDA</span><span class="ptag">Python</span>
                     </div>
                     <div class="proj-links">
-                        <a href="https://github.com/pulkitgarg3/Customer-Churn-Prediction-Model"
-                           class="btn-proj p" target="_blank"
+                        <a href="https://github.com/pulkitgarg3/Customer-Churn-Prediction-Model" class="btn-proj p" target="_blank"
                            onclick="gtag('event','Project Click',{event_category:'Projects',event_label:'Churn'})">
                             <i class="fa-brands fa-github"></i> View Project
                         </a>
@@ -964,8 +991,8 @@
                 <div class="expl-eyebrow">What I'm Exploring</div>
                 <div class="expl-h">Where I'm<br>Headed Next</div>
                 <p class="expl-p">
-                    Research isn't just about what I've done. These are the questions
-                    I'm actively working through right now.
+                    Research isn't just about what I've done — it's about what problems I'm
+                    actively working through and where I'm building depth.
                 </p>
             </div>
             <ul class="expl-list">
@@ -973,21 +1000,24 @@
                     <div class="expl-icon"><i class="fa-solid fa-chart-line"></i></div>
                     <span class="expl-txt">
                         <strong>Energy system modelling and long-term transition pathways</strong> — understanding
-                        how national energy systems restructure under decarbonisation targets.
+                        how national energy systems restructure under decarbonisation targets, including CGE and
+                        bottom-up modelling frameworks.
                     </span>
                 </li>
                 <li class="expl-item rv d1">
                     <div class="expl-icon"><i class="fa-solid fa-scale-balanced"></i></div>
                     <span class="expl-txt">
-                        <strong>The interaction between economics, policy, and decarbonisation</strong> — how
-                        regulatory design and market mechanisms shape the pace and equity of clean energy transitions.
+                        <strong>The economics of decarbonisation policy</strong> — how carbon pricing,
+                        regulatory design, and market mechanisms shape the pace, cost, and equity of
+                        clean energy transitions.
                     </span>
                 </li>
                 <li class="expl-item rv d2">
-                    <div class="expl-icon"><i class="fa-solid fa-database"></i></div>
+                    <div class="expl-icon"><i class="fa-solid fa-gears"></i></div>
                     <span class="expl-txt">
-                        <strong>Analytical methods for evidence-based decision-making</strong> — applying
-                        econometrics, simulation, and data modelling to complex policy and business challenges.
+                        <strong>Advanced analytical methods for energy research</strong> — developing
+                        proficiency in GAMS-based optimisation and computable general equilibrium modelling
+                        to work on frontier energy economics problems.
                     </span>
                 </li>
             </ul>
@@ -1003,30 +1033,40 @@
         <div class="eyebrow">Skills</div>
         <h2 class="section-h">What I Work With</h2>
         <div class="skills-grid">
+
             <div class="skill-col rv">
                 <div class="skill-col-hd">Domains</div>
-                <div class="skill-row"><div class="s-dot a"></div>Energy Transition &amp; Systems</div>
-                <div class="skill-row"><div class="s-dot a"></div>Energy Economics</div>
-                <div class="skill-row"><div class="s-dot a"></div>Policy Analysis</div>
-                <div class="skill-row"><div class="s-dot a"></div>Power Market Research</div>
+                <div class="skill-row"><div class="s-dot a"></div>Energy System Modelling</div>
+                <div class="skill-row"><div class="s-dot a"></div>Energy Transition &amp; Decarbonisation</div>
+                <div class="skill-row"><div class="s-dot a"></div>Power Market Analysis</div>
+                <div class="skill-row"><div class="s-dot a"></div>Policy &amp; Regulatory Economics</div>
                 <div class="skill-row"><div class="s-dot a"></div>Economic Research</div>
             </div>
+
             <div class="skill-col rv d1">
                 <div class="skill-col-hd">Methods</div>
-                <div class="skill-row"><div class="s-dot"></div>Econometrics &amp; Regression</div>
+                <div class="skill-row"><div class="s-dot"></div>Econometrics &amp; Regression Analysis</div>
+                <div class="skill-row"><div class="s-dot"></div>
+                    CGE / Economic Modelling
+                    <span class="s-learning">developing</span>
+                </div>
                 <div class="skill-row"><div class="s-dot"></div>Time Series &amp; Forecasting</div>
-                <div class="skill-row"><div class="s-dot"></div>Scenario Analysis</div>
+                <div class="skill-row"><div class="s-dot"></div>Scenario &amp; Pathway Analysis</div>
                 <div class="skill-row"><div class="s-dot"></div>Discrete-Event Simulation</div>
-                <div class="skill-row"><div class="s-dot"></div>Machine Learning</div>
             </div>
+
             <div class="skill-col rv d2">
                 <div class="skill-col-hd">Tools</div>
                 <div class="skill-row"><div class="s-dot"></div>Python (Pandas, Scikit-learn, SimPy)</div>
-                <div class="skill-row"><div class="s-dot"></div>Power BI &amp; DAX</div>
+                <div class="skill-row"><div class="s-dot"></div>
+                    GAMS
+                    <span class="s-learning">developing</span>
+                </div>
                 <div class="skill-row"><div class="s-dot"></div>Stata</div>
-                <div class="skill-row"><div class="s-dot"></div>SQL</div>
-                <div class="skill-row"><div class="s-dot"></div>Excel &amp; SPSS</div>
+                <div class="skill-row"><div class="s-dot"></div>Power BI &amp; DAX</div>
+                <div class="skill-row"><div class="s-dot"></div>SQL &amp; Excel</div>
             </div>
+
         </div>
     </div>
 </section>
@@ -1037,7 +1077,7 @@
         <div class="footer-top">
             <div>
                 <div class="f-name">Pulkit Garg</div>
-                <div class="f-role">Energy Analyst · Researcher · Modeller</div>
+                <div class="f-role">Energy Economist · Transition Researcher · Modeller</div>
                 <div class="f-contact">
                     <a href="mailto:pulkitgarg560@gmail.com" class="f-link">
                         <i class="fa-solid fa-envelope"></i> pulkitgarg560@gmail.com
@@ -1069,40 +1109,23 @@
         </div>
         <div class="footer-bottom">
             <span>© 2026 Pulkit Garg</span>
-            <span>New Delhi, India · Open to global opportunities</span>
+            <span>New Delhi, India &nbsp;·&nbsp; Open to global opportunities</span>
         </div>
     </div>
 </footer>
 
 <script>
-    // ── nav shadow on scroll ──────────────────────────────────────
+    // nav shadow
     const NAV = document.getElementById('nav');
-    window.addEventListener('scroll', () => {
-        NAV.classList.toggle('scrolled', window.scrollY > 30);
-    }, { passive: true });
+    window.addEventListener('scroll', () => NAV.classList.toggle('scrolled', window.scrollY > 30), { passive: true });
 
-    // ── energy curve draw animation ───────────────────────────────
-    window.addEventListener('load', () => {
-        const f = document.getElementById('p-fossil');
-        const c = document.getElementById('p-clean');
-        if (!f || !c) return;
-        requestAnimationFrame(() => {
-            f.style.transition = 'stroke-dashoffset 1.8s cubic-bezier(.4,0,.2,1)';
-            c.style.transition = 'stroke-dashoffset 1.8s cubic-bezier(.4,0,.2,1) .35s';
-            f.style.strokeDashoffset = '0';
-            c.style.strokeDashoffset  = '0';
-        });
-    });
-
-    // ── scroll reveal ─────────────────────────────────────────────
+    // scroll reveal
     const rvObs = new IntersectionObserver(entries => {
-        entries.forEach(e => {
-            if (e.isIntersecting) { e.target.classList.add('in'); rvObs.unobserve(e.target); }
-        });
+        entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); rvObs.unobserve(e.target); } });
     }, { threshold: 0.12 });
     document.querySelectorAll('.rv').forEach(el => rvObs.observe(el));
 
-    // ── project filter ────────────────────────────────────────────
+    // project filter
     function fpj(cat, btn) {
         document.querySelectorAll('.f-btn').forEach(b => b.classList.remove('on'));
         btn.classList.add('on');
@@ -1111,9 +1134,9 @@
         });
     }
 
-    // ── analytics ─────────────────────────────────────────────────
+    // analytics
     window.addEventListener('DOMContentLoaded', () => {
-        [10000, 30000, 60000].forEach((t, i) => {
+        [10000,30000,60000].forEach((t,i) => {
             setTimeout(() => gtag('event','Session Duration',{event_category:'Engagement',event_label:[10,30,60][i]+' Seconds'}), t);
         });
         let f50=false, f90=false;
