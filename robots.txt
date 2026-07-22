@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://pulkitgarg3.github.io/Pulkit-Portfolio/sitemap.xml
