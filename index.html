@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pulkit Garg - Energy Economics & Modelling</title>
     <meta name="description" content="Research professional working at the intersection of energy economics, quantitative modelling, and energy transition. Currently at TERI, formerly CEEW.">
+    <link rel="canonical" href="https://pulkitgarg3.github.io/Pulkit-Portfolio/">
+    <meta name="theme-color" content="#0D1F35">
 
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%230D1F35'/><text x='50%25' y='53%25' dominant-baseline='middle' text-anchor='middle' font-family='Georgia,serif' font-size='26' font-weight='700' fill='%23D48A0A'>PG</text></svg>">
     <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%230D1F35'/><text x='50%25' y='53%25' dominant-baseline='middle' text-anchor='middle' font-family='Georgia,serif' font-size='26' font-weight='700' fill='%23D48A0A'>PG</text></svg>">
@@ -26,6 +28,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,600&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
+    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-EYL3VQY1G6"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -34,14 +37,15 @@
       gtag('config', 'G-EYL3VQY1G6');
     </script>
 
+    <!-- Microsoft Clarity -->
     <script type="text/javascript">
     (function(c,l,a,r,i,t,y){
         c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
         t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "xqzszgkvfw");
-</script>
-    
+    </script>
+
     <style>
         :root {
             --bg:        #F7F9FB;
@@ -198,82 +202,36 @@
         .btn-proj.p { background: var(--navy); color: #fff; border-color: var(--navy); }
         .btn-proj.p:hover { background: var(--navy-mid); }
 
-        /* WRITING — compact light strip */
+        /* WRITING */
         #writing   { background: var(--surface); padding: 52px 0; }
         .ws-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 28px; flex-wrap: wrap; gap: 12px; }
-        .ws-left   {}
         .ws-eyebrow { font-family: var(--ff-mono); font-size: 11px; font-weight: 500; letter-spacing: .1em; text-transform: uppercase; color: var(--teal); margin-bottom: 6px; }
         .ws-title  { font-family: var(--ff-disp); font-size: clamp(22px,2.5vw,30px); font-weight: 700; color: var(--navy); letter-spacing: -.02em; line-height: 1.2; }
-        .ws-substack-btn {
-            display: inline-flex; align-items: center; gap: 7px;
-            font-size: 13px; font-weight: 600;
-            padding: 8px 16px; border-radius: 8px;
-            background: #FF6719; color: #fff;
-            transition: opacity .2s, transform .15s;
-        }
+        .ws-substack-btn { display: inline-flex; align-items: center; gap: 7px; font-size: 13px; font-weight: 600; padding: 8px 16px; border-radius: 8px; background: #FF6719; color: #fff; transition: opacity .2s, transform .15s; }
         .ws-substack-btn:hover { opacity: .88; transform: translateY(-1px); }
-
         .ws-wrap   { position: relative; }
         .ws-track  { display: flex; gap: 14px; overflow-x: auto; padding-bottom: 6px; scrollbar-width: none; }
         .ws-track::-webkit-scrollbar { display: none; }
-
-        .ws-arrow  {
-            position: absolute; top: 50%; transform: translateY(-50%);
-            width: 36px; height: 36px; border-radius: 50%;
-            background: var(--surface); border: 1.5px solid var(--border);
-            color: var(--navy); font-size: 14px; cursor: pointer;
-            display: flex; align-items: center; justify-content: center;
-            transition: box-shadow .2s, background .2s; z-index: 5;
-            box-shadow: var(--shadow-sm);
-        }
+        .ws-arrow  { position: absolute; top: 50%; transform: translateY(-50%); width: 36px; height: 36px; border-radius: 50%; background: var(--surface); border: 1.5px solid var(--border); color: var(--navy); font-size: 14px; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: box-shadow .2s, background .2s; z-index: 5; box-shadow: var(--shadow-sm); }
         .ws-arrow:hover { background: var(--navy); color: #fff; box-shadow: var(--shadow-md); }
         .ws-arrow.l { left: -18px; }
         .ws-arrow.r { right: -18px; }
-
-        .ws-card {
-            flex: 0 0 230px; background: var(--bg);
-            border: 1px solid var(--border); border-radius: var(--radius);
-            overflow: hidden; transition: box-shadow .2s, transform .18s;
-        }
+        .ws-card { flex: 0 0 230px; background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; transition: box-shadow .2s, transform .18s; }
         .ws-card:hover { box-shadow: var(--shadow-md); transform: translateY(-3px); }
-
-        .ws-thumb {
-            height: 100px; display: flex; align-items: center;
-            justify-content: center; position: relative;
-        }
+        .ws-thumb { height: 100px; display: flex; align-items: center; justify-content: center; position: relative; }
         .ws-thumb i { font-size: 30px; color: rgba(255,255,255,.22); }
-        .ws-plat {
-            position: absolute; bottom: 8px; left: 10px;
-            display: inline-flex; align-items: center; gap: 4px;
-            font-family: var(--ff-mono); font-size: 9px; font-weight: 500;
-            letter-spacing: .04em; text-transform: uppercase;
-            padding: 2px 7px; border-radius: 8px;
-            background: rgba(0,0,0,.35); color: rgba(255,255,255,.85);
-        }
+        .ws-plat { position: absolute; bottom: 8px; left: 10px; display: inline-flex; align-items: center; gap: 4px; font-family: var(--ff-mono); font-size: 9px; font-weight: 500; letter-spacing: .04em; text-transform: uppercase; padding: 2px 7px; border-radius: 8px; background: rgba(0,0,0,.35); color: rgba(255,255,255,.85); }
         .wt-epi    { background: linear-gradient(135deg, #0D1F35, #0D7252); }
         .wt-fin    { background: linear-gradient(135deg, #0D1F35, #7B4A0A); }
         .wt-coal   { background: linear-gradient(135deg, #0D1F35, #3D3030); }
         .wt-energy { background: linear-gradient(135deg, #0D1F35, #1A4A8C); }
-
         .ws-body   { padding: 14px 16px 16px; }
         .ws-status { font-family: var(--ff-mono); font-size: 9px; letter-spacing: .07em; text-transform: uppercase; color: var(--amber); margin-bottom: 5px; }
         .ws-name   { font-family: var(--ff-disp); font-size: 14px; font-weight: 600; color: var(--navy); line-height: 1.35; margin-bottom: 10px; }
-        .ws-link   {
-            display: inline-flex; align-items: center; gap: 5px;
-            font-size: 11px; font-weight: 600; color: var(--teal);
-            border: 1px solid var(--teal); padding: 4px 10px;
-            border-radius: 5px; transition: all .2s;
-        }
+        .ws-link   { display: inline-flex; align-items: center; gap: 5px; font-size: 11px; font-weight: 600; color: var(--teal); border: 1px solid var(--teal); padding: 4px 10px; border-radius: 5px; transition: all .2s; }
         .ws-link:hover { background: var(--teal); color: #fff; }
         .ws-link.soon  { color: var(--muted); border-color: var(--border); pointer-events: none; }
-
-        /* Substack icon in nav */
-        .nav-substack {
-            display: inline-flex; align-items: center; justify-content: center;
-            width: 28px; height: 28px; border-radius: 6px;
-            background: #FF6719; color: #fff;
-            transition: opacity .2s;
-        }
+        .nav-substack { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: 6px; background: #FF6719; color: #fff; transition: opacity .2s; }
         .nav-substack:hover { opacity: .85; }
         .nav-substack svg { width: 14px; height: 14px; }
 
@@ -350,25 +308,20 @@
             .nav-links li:last-child a { border-bottom: none; }
             .nav-resume { border: none !important; border-radius: 0 !important; padding: 14px 20px !important; font-size: 15px !important; color: var(--amber) !important; background: var(--amber-lt) !important; }
             .nav-resume:hover { background: var(--amber) !important; color: #fff !important; }
-
             #hero { padding: 84px 20px 52px; }
             .hero-h1  { font-size: 40px; white-space: normal; }
             .hero-sub { font-size: 13px; }
             .hero-desc { font-size: 15px; }
             .hero-chips { gap: 8px; }
             .hero-chip  { font-size: 10px; padding: 4px 9px; }
-
             #about, #experience, #projects, #interests, #skills { padding: 64px 0; }
             #writing { padding: 40px 0; }
             .ws-arrow  { display: none; }
             .ws-card   { flex: 0 0 200px; }
-
             .interests-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
             .interest-card  { padding: 16px; gap: 10px; }
-
             .skills-grid { grid-template-columns: 1fr; }
             .skill-col   { padding: 20px; }
-
             .footer-top  { flex-direction: column; gap: 32px; }
             .f-right     { align-items: flex-start; }
             #footer      { padding: 48px 0 32px; }
@@ -399,7 +352,7 @@
                onclick="gtag('event','resume_click',{event_category:'Engagement',event_label:'Nav'});closeMenu()">Resume</a></li>
         <li>
             <a class="nav-substack" href="https://pulkitgarg3.substack.com" target="_blank" rel="noopener noreferrer"
-               title="Substack" onclick="gtag('event','substack_click',{event_category:'Social',event_label:'Substack'})">
+               title="Substack" onclick="gtag('event','substack_click',{event_category:'Social',event_label:'Substack Nav'})">
                 <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                     <path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 17.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"/>
                 </svg>
@@ -431,7 +384,7 @@
         <div class="hero-ctas">
             <a href="#experience" class="btn-dark"><i class="fa-solid fa-arrow-down"></i> Explore My Work</a>
             <a href="https://www.linkedin.com/in/pulkitgarg03/" class="btn-ghost" target="_blank"
-               onclick="gtag('event','Click',{event_category:'Social',event_label:'LinkedIn Hero'})">
+               onclick="gtag('event','linkedin_click',{event_category:'Social',event_label:'LinkedIn Hero'})">
                 <i class="fa-brands fa-linkedin"></i> LinkedIn
             </a>
         </div>
@@ -471,62 +424,39 @@
             </div>
             <hr class="arc-divider">
             <div class="arc-motto">
-                "Energy is the currency of the universe; economics is how we budget it."
+                Energy is the currency of the universe; economics is how we budget it.
             </div>
+            <div class="arc-motto-label">Personal Approach</div>
         </div>
     </div>
 </div>
 
 <hr class="grad-line">
 
-<!-- WRITING STRIP — compact, light, above About -->
+<!-- WRITING STRIP -->
 <section id="writing">
     <div class="wrap">
         <div class="ws-header">
-            <div class="ws-left">
+            <div>
                 <div class="ws-eyebrow">Writing &amp; Insights</div>
                 <div class="ws-title">Research Beyond Work</div>
             </div>
             <a href="https://pulkitgarg3.substack.com" class="ws-substack-btn" target="_blank" rel="noopener noreferrer"
-               onclick="gtag('event','Click',{event_category:'Social',event_label:'Substack Header'})">
+               onclick="gtag('event','substack_click',{event_category:'Social',event_label:'Substack Header'})">
                 <svg viewBox="0 0 24 24" fill="currentColor" width="14" height="14"><path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 17.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"/></svg>
                 Follow on Substack
             </a>
         </div>
-
         <div class="ws-wrap">
             <button class="ws-arrow l" onclick="scrollWS(-1)" aria-label="Scroll left"><i class="fa-solid fa-chevron-left"></i></button>
-
             <div class="ws-track" id="ws-track">
-
-                <div class="ws-card">
-                    <div class="ws-thumb wt-coal">
-                        <i class="fa-solid fa-industry"></i>
-                        <span class="ws-plat"><i class="fa-brands fa-linkedin-in"></i> LinkedIn</span>
-                    </div>
-                    <div class="ws-body">
-                        <div class="ws-status">Coming Soon</div>
-                        <div class="ws-name">Coal Phase-Down vs Phase-Out: What's in a Word?</div>
-                        <span class="ws-link soon"><i class="fa-solid fa-clock"></i> Publishing Soon</span>
-                    </div>
-                </div>
-
-                <div class="ws-card">
-                    <div class="ws-thumb wt-fin">
-                        <i class="fa-solid fa-hand-holding-dollar"></i>
-                        <span class="ws-plat"><i class="fa-brands fa-linkedin-in"></i> LinkedIn</span>
-                    </div>
-                    <div class="ws-body">
-                        <div class="ws-status">Coming Soon</div>
-                        <div class="ws-name">Climate Finance: Promises, Gaps, and What Actually Counts</div>
-                        <span class="ws-link soon"><i class="fa-solid fa-clock"></i> Publishing Soon</span>
-                    </div>
-                </div>
-
                 <div class="ws-card">
                     <div class="ws-thumb wt-epi">
                         <i class="fa-solid fa-earth-asia"></i>
-                        <span class="ws-plat"><i class="fa-brands fa-linkedin-in"></i> LinkedIn</span>
+                        <span class="ws-plat">
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="9" height="9" style="margin-right:2px"><path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 17.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"/></svg>
+                            Substack
+                        </span>
                     </div>
                     <div class="ws-body">
                         <div class="ws-status">Coming Soon</div>
@@ -534,7 +464,34 @@
                         <span class="ws-link soon"><i class="fa-solid fa-clock"></i> Publishing Soon</span>
                     </div>
                 </div>
-
+                <div class="ws-card">
+                    <div class="ws-thumb wt-coal">
+                        <i class="fa-solid fa-industry"></i>
+                        <span class="ws-plat">
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="9" height="9" style="margin-right:2px"><path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 17.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"/></svg>
+                            Substack
+                        </span>
+                    </div>
+                    <div class="ws-body">
+                        <div class="ws-status">Coming Soon</div>
+                        <div class="ws-name">India's Coal Debate Is Asking the Wrong Question</div>
+                        <span class="ws-link soon"><i class="fa-solid fa-clock"></i> Publishing Soon</span>
+                    </div>
+                </div>
+                <div class="ws-card">
+                    <div class="ws-thumb wt-fin">
+                        <i class="fa-solid fa-hand-holding-dollar"></i>
+                        <span class="ws-plat">
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="9" height="9" style="margin-right:2px"><path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 17.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"/></svg>
+                            Substack
+                        </span>
+                    </div>
+                    <div class="ws-body">
+                        <div class="ws-status">Coming Soon</div>
+                        <div class="ws-name">Climate Finance: Promises, Gaps, and What Actually Counts</div>
+                        <span class="ws-link soon"><i class="fa-solid fa-clock"></i> Publishing Soon</span>
+                    </div>
+                </div>
                 <div class="ws-card">
                     <div class="ws-thumb wt-energy">
                         <i class="fa-solid fa-bolt"></i>
@@ -549,9 +506,7 @@
                         <span class="ws-link soon"><i class="fa-solid fa-clock"></i> Publishing Soon</span>
                     </div>
                 </div>
-
             </div>
-
             <button class="ws-arrow r" onclick="scrollWS(1)" aria-label="Scroll right"><i class="fa-solid fa-chevron-right"></i></button>
         </div>
     </div>
@@ -609,7 +564,6 @@
         <h2 class="section-h">Where I've Worked</h2>
         <div class="exp-list">
 
-            <!-- TERI -->
             <div class="exp-row rv">
                 <div class="exp-node"><div class="exp-dot live"></div></div>
                 <div class="exp-card">
@@ -626,7 +580,6 @@
                 </div>
             </div>
 
-            <!-- CEEW -->
             <div class="exp-row rv d1">
                 <div class="exp-node"><div class="exp-dot"></div></div>
                 <div class="exp-card">
@@ -648,7 +601,6 @@
                 </div>
             </div>
 
-            <!-- ITC -->
             <div class="exp-row rv d2">
                 <div class="exp-node"><div class="exp-dot"></div></div>
                 <div class="exp-card compact">
@@ -689,7 +641,6 @@
         </div>
         <div class="proj-grid" id="pgrid">
 
-            <!-- 1. CEEW Climate Risk -->
             <div class="proj-card feat" data-cat="energy">
                 <svg viewBox="0 0 400 196" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:196px;display:block;flex-shrink:0">
                     <rect width="400" height="196" fill="#0D1F35"/>
@@ -706,12 +657,9 @@
                     <rect x="290" y="48"  width="28" height="107" fill="#D48A0A" rx="2"/>
                     <rect x="333" y="35"  width="28" height="120" fill="#D48A0A" rx="2"/>
                     <polyline points="89,40 132,52 175,70 218,90 261,112 304,130 347,145" fill="none" stroke="#1A9B8C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                    <circle cx="89"  cy="40"  r="4" fill="#1A9B8C"/>
-                    <circle cx="132" cy="52"  r="4" fill="#1A9B8C"/>
-                    <circle cx="175" cy="70"  r="4" fill="#1A9B8C"/>
-                    <circle cx="218" cy="90"  r="4" fill="#1A9B8C"/>
-                    <circle cx="261" cy="112" r="4" fill="#1A9B8C"/>
-                    <circle cx="304" cy="130" r="4" fill="#1A9B8C"/>
+                    <circle cx="89"  cy="40"  r="4" fill="#1A9B8C"/><circle cx="132" cy="52"  r="4" fill="#1A9B8C"/>
+                    <circle cx="175" cy="70"  r="4" fill="#1A9B8C"/><circle cx="218" cy="90"  r="4" fill="#1A9B8C"/>
+                    <circle cx="261" cy="112" r="4" fill="#1A9B8C"/><circle cx="304" cy="130" r="4" fill="#1A9B8C"/>
                     <circle cx="347" cy="145" r="4" fill="#1A9B8C"/>
                     <text x="15" y="100" font-family="DM Sans,sans-serif" font-size="9" fill="rgba(255,255,255,.5)" transform="rotate(-90,15,100)">Output</text>
                     <text x="190" y="175" font-family="DM Sans,sans-serif" font-size="9" fill="rgba(255,255,255,.5)">Temperature Exposure</text>
@@ -721,135 +669,89 @@
                     <text x="174" y="17" font-family="DM Sans,sans-serif" font-size="9" fill="rgba(255,255,255,.7)">Labour Productivity</text>
                 </svg>
                 <div class="proj-body">
-                    <div class="proj-meta">
-                        <span class="proj-type">Econometrics &middot; Climate Risk</span>
-                        <span class="proj-badge">Featured</span>
-                    </div>
+                    <div class="proj-meta"><span class="proj-type">Econometrics &middot; Climate Risk</span><span class="proj-badge">Featured</span></div>
                     <div class="proj-name">Climate Risk &amp; Industrial Productivity</div>
                     <p class="proj-desc">Panel econometric analysis of heat exposure on industrial output, labour productivity, and energy consumption. Used plant-level ASI data and temperature indicators; built and harmonised a large unbalanced factory-year panel.</p>
-                    <div class="proj-tags">
-                        <span class="ptag">Stata</span><span class="ptag">Panel Data</span>
-                        <span class="ptag">ASI Data</span><span class="ptag">Climate Risk</span>
-                    </div>
-                    <div class="proj-links">
-                        <span class="btn-proj" style="cursor:default;opacity:.65">CEEW Research &middot; 2026</span>
-                    </div>
+                    <div class="proj-tags"><span class="ptag">Stata</span><span class="ptag">Panel Data</span><span class="ptag">ASI Data</span><span class="ptag">Climate Risk</span></div>
+                    <div class="proj-links"><span class="btn-proj" style="cursor:default;opacity:.65">CEEW Research &middot; 2026</span></div>
                 </div>
             </div>
 
-            <!-- 2. CEEW RE Curtailment -->
             <div class="proj-card feat" data-cat="energy">
                 <img class="proj-img" src="images/frequency_response.png" alt="Grid frequency and ancillary services" loading="lazy">
                 <div class="proj-body">
-                    <div class="proj-meta">
-                        <span class="proj-type">Power Markets &middot; Grid Analysis</span>
-                        <span class="proj-badge">Featured</span>
-                    </div>
+                    <div class="proj-meta"><span class="proj-type">Power Markets &middot; Grid Analysis</span><span class="proj-badge">Featured</span></div>
                     <div class="proj-name">RE Integration, Curtailment &amp; Ancillary Services</div>
                     <p class="proj-desc">Assessed solar and wind curtailment across states using plant-level generation data. Evaluated TRAS Down ancillary services, re-backdown compensation mechanisms, and energy storage arbitrage under India's evolving power markets.</p>
-                    <div class="proj-tags">
-                        <span class="ptag">Power Markets</span><span class="ptag">Data Analysis</span>
-                        <span class="ptag">Policy Analysis</span><span class="ptag">TRAS</span>
-                    </div>
+                    <div class="proj-tags"><span class="ptag">Power Markets</span><span class="ptag">Data Analysis</span><span class="ptag">Policy Analysis</span><span class="ptag">TRAS</span></div>
                     <div class="proj-links">
                         <a href="https://www.linkedin.com/posts/pulkitgarg03_re-backdown-and-energy-arbitrage-in-india-ugcPost-7461803336304967680-g7E0/"
                            class="btn-proj p" target="_blank"
-                           onclick="gtag('event','Project Click',{event_category:'Projects',event_label:'CEEW RE'})">
+                           onclick="gtag('event','project_click',{event_category:'Projects',event_label:'CEEW RE'})">
                             <i class="fa-brands fa-linkedin"></i> View on LinkedIn
                         </a>
                     </div>
                 </div>
             </div>
 
-            <!-- 3. Electric Bus -->
             <div class="proj-card feat" data-cat="energy">
                 <img class="proj-img" src="images/Electric_bus.jpg" alt="Electric Bus Depot" loading="lazy">
                 <div class="proj-body">
-                    <div class="proj-meta">
-                        <span class="proj-type">Research &middot; Simulation</span>
-                        <span class="proj-badge">Featured</span>
-                    </div>
+                    <div class="proj-meta"><span class="proj-type">Research &middot; Simulation</span><span class="proj-badge">Featured</span></div>
                     <div class="proj-name">E-Bus Depot Simulation: Optimising Urban Charging</div>
                     <p class="proj-desc">Modelled a real-world e-bus depot (110 buses, 21 chargers) using Monte Carlo simulations, validated through field visits and stakeholder interviews, to recommend optimal urban EV charging infrastructure.</p>
-                    <div class="proj-tags">
-                        <span class="ptag">Python</span><span class="ptag">SimPy</span>
-                        <span class="ptag">Monte Carlo</span><span class="ptag">Primary Research</span>
-                    </div>
+                    <div class="proj-tags"><span class="ptag">Python</span><span class="ptag">SimPy</span><span class="ptag">Monte Carlo</span><span class="ptag">Primary Research</span></div>
                     <div class="proj-links">
-                        <a href="https://github.com/pulkitgarg3/Electric-Bus-Depot-Charging-Simulation"
-                           class="btn-proj p" target="_blank"
-                           onclick="gtag('event','Project Click',{event_category:'Projects',event_label:'Electric Bus'})">
+                        <a href="https://github.com/pulkitgarg3/Electric-Bus-Depot-Charging-Simulation" class="btn-proj p" target="_blank"
+                           onclick="gtag('event','project_click',{event_category:'Projects',event_label:'Electric Bus'})">
                             <i class="fa-brands fa-github"></i> View Project
                         </a>
                     </div>
                 </div>
             </div>
 
-            <!-- 4. Energy Poverty & HDI -->
             <div class="proj-card feat" data-cat="energy">
                 <img class="proj-img" src="images/energy2.png" alt="Energy Poverty HDI" loading="lazy">
                 <div class="proj-body">
-                    <div class="proj-meta">
-                        <span class="proj-type">Econometrics &middot; Policy</span>
-                        <span class="proj-badge">Featured</span>
-                    </div>
+                    <div class="proj-meta"><span class="proj-type">Econometrics &middot; Policy</span><span class="proj-badge">Featured</span></div>
                     <div class="proj-name">Impact of Energy Poverty on HDI</div>
                     <p class="proj-desc">Constructed a Multidimensional Energy Poverty Index (MEPI) from NFHS data using PCA-based weights. Modelled MEPI's impact on HDI via panel regression; identified state clusters highlighting regional disparities.</p>
-                    <div class="proj-tags">
-                        <span class="ptag">Stata</span><span class="ptag">PCA</span>
-                        <span class="ptag">Panel Regression</span><span class="ptag">Policy</span>
-                    </div>
+                    <div class="proj-tags"><span class="ptag">Stata</span><span class="ptag">PCA</span><span class="ptag">Panel Regression</span><span class="ptag">Policy</span></div>
                     <div class="proj-links">
-                        <a href="https://github.com/pulkitgarg3/Research-Project-Energy-Poverty-HDI"
-                           class="btn-proj p" target="_blank"
-                           onclick="gtag('event','Project Click',{event_category:'Projects',event_label:'Energy Poverty'})">
+                        <a href="https://github.com/pulkitgarg3/Research-Project-Energy-Poverty-HDI" class="btn-proj p" target="_blank"
+                           onclick="gtag('event','project_click',{event_category:'Projects',event_label:'Energy Poverty'})">
                             <i class="fa-brands fa-github"></i> View Project
                         </a>
                     </div>
                 </div>
             </div>
 
-            <!-- 5. GHG -->
             <div class="proj-card" data-cat="energy">
                 <img class="proj-img" src="images/time.jpg" alt="GHG Forecasting" loading="lazy">
                 <div class="proj-body">
-                    <div class="proj-meta">
-                        <span class="proj-type">Time Series &middot; Forecasting</span>
-                    </div>
+                    <div class="proj-meta"><span class="proj-type">Time Series &middot; Forecasting</span></div>
                     <div class="proj-name">GHG Emissions Forecasting — India</div>
                     <p class="proj-desc">Forecasts India's GHG emissions using SARIMAX and EGARCH models, capturing macroeconomic drivers and volatility trends for climate policy insight.</p>
-                    <div class="proj-tags">
-                        <span class="ptag">SARIMAX</span><span class="ptag">ARCH/GARCH</span>
-                        <span class="ptag">Python</span><span class="ptag">Stata</span>
-                    </div>
+                    <div class="proj-tags"><span class="ptag">SARIMAX</span><span class="ptag">ARCH/GARCH</span><span class="ptag">Python</span><span class="ptag">Stata</span></div>
                     <div class="proj-links">
-                        <a href="https://github.com/pulkitgarg3/GHG-Emission-Forecasting-India"
-                           class="btn-proj p" target="_blank"
-                           onclick="gtag('event','Project Click',{event_category:'Projects',event_label:'GHG'})">
+                        <a href="https://github.com/pulkitgarg3/GHG-Emission-Forecasting-India" class="btn-proj p" target="_blank"
+                           onclick="gtag('event','project_click',{event_category:'Projects',event_label:'GHG'})">
                             <i class="fa-brands fa-github"></i> View Project
                         </a>
                     </div>
                 </div>
             </div>
 
-            <!-- 6. United Airlines -->
             <div class="proj-card" data-cat="powerbi">
                 <img class="proj-img" src="https://raw.githubusercontent.com/pulkitgarg3/PowerBI_Portfolio_Pulkit/main/Flights_Delay_Analytics/screenshots/page1_dashboard_overview.jpg" alt="United Airlines Dashboard" loading="lazy">
                 <div class="proj-body">
-                    <div class="proj-meta">
-                        <span class="proj-type">Power BI &middot; Dashboard</span>
-                        <span class="proj-badge alt">Analytics</span>
-                    </div>
+                    <div class="proj-meta"><span class="proj-type">Power BI &middot; Dashboard</span><span class="proj-badge alt">Analytics</span></div>
                     <div class="proj-name">United Airlines Flight Delay Analytics</div>
                     <p class="proj-desc">4-page Power BI dashboard analysing 766K flights across 126 U.S. airports. DAX and Power Query to surface delay patterns and strategic recommendations.</p>
-                    <div class="proj-tags">
-                        <span class="ptag">Power BI</span><span class="ptag">DAX</span>
-                        <span class="ptag">Data Visualisation</span>
-                    </div>
+                    <div class="proj-tags"><span class="ptag">Power BI</span><span class="ptag">DAX</span><span class="ptag">Data Visualisation</span></div>
                     <div class="proj-links">
-                        <a href="https://github.com/pulkitgarg3/PowerBI_Portfolio_Pulkit/tree/main/Flights_Delay_Analytics"
-                           class="btn-proj p" target="_blank"
-                           onclick="gtag('event','Project Click',{event_category:'Projects',event_label:'Airlines'})">
+                        <a href="https://github.com/pulkitgarg3/PowerBI_Portfolio_Pulkit/tree/main/Flights_Delay_Analytics" class="btn-proj p" target="_blank"
+                           onclick="gtag('event','project_click',{event_category:'Projects',event_label:'Airlines'})">
                             <i class="fa-brands fa-github"></i> GitHub
                         </a>
                         <a href="https://drive.google.com/file/d/1ATSJSspzRmKAhJ0d1wbY7JwqW_sYy1VV/view?usp=sharing" class="btn-proj" target="_blank">
@@ -859,45 +761,32 @@
                 </div>
             </div>
 
-            <!-- 7. Bike Sharing -->
             <div class="proj-card" data-cat="analytics">
                 <img class="proj-img" src="images/bike.png" alt="Bike Sharing" loading="lazy">
                 <div class="proj-body">
-                    <div class="proj-meta">
-                        <span class="proj-type">Forecasting &middot; Time Series</span>
-                        <span class="proj-badge alt">Analytics</span>
-                    </div>
+                    <div class="proj-meta"><span class="proj-type">Forecasting &middot; Time Series</span><span class="proj-badge alt">Analytics</span></div>
                     <div class="proj-name">Bike Sharing Demand Forecasting</div>
                     <p class="proj-desc">Facebook Prophet model with cross-validation and holiday adjustments to forecast bike-sharing demand across seasonal patterns.</p>
-                    <div class="proj-tags">
-                        <span class="ptag">Prophet</span><span class="ptag">Python</span><span class="ptag">Time Series</span>
-                    </div>
+                    <div class="proj-tags"><span class="ptag">Prophet</span><span class="ptag">Python</span><span class="ptag">Time Series</span></div>
                     <div class="proj-links">
                         <a href="https://github.com/pulkitgarg3/Bike-Sharing-Demand-Forecasting" class="btn-proj p" target="_blank"
-                           onclick="gtag('event','Project Click',{event_category:'Projects',event_label:'Bike'})">
+                           onclick="gtag('event','project_click',{event_category:'Projects',event_label:'Bike'})">
                             <i class="fa-brands fa-github"></i> View Project
                         </a>
                     </div>
                 </div>
             </div>
 
-            <!-- 8. Churn -->
             <div class="proj-card" data-cat="analytics">
                 <img class="proj-img" src="images/churn.png" alt="Customer Churn" loading="lazy">
                 <div class="proj-body">
-                    <div class="proj-meta">
-                        <span class="proj-type">Machine Learning &middot; Python</span>
-                        <span class="proj-badge alt">Analytics</span>
-                    </div>
+                    <div class="proj-meta"><span class="proj-type">Machine Learning &middot; Python</span><span class="proj-badge alt">Analytics</span></div>
                     <div class="proj-name">Customer Churn Prediction Model</div>
                     <p class="proj-desc">Random Forest model identifying high-risk churn customers in the energy sector, with feature engineering and EDA to surface key predictors.</p>
-                    <div class="proj-tags">
-                        <span class="ptag">Scikit-learn</span><span class="ptag">Random Forest</span>
-                        <span class="ptag">EDA</span><span class="ptag">Python</span>
-                    </div>
+                    <div class="proj-tags"><span class="ptag">Scikit-learn</span><span class="ptag">Random Forest</span><span class="ptag">EDA</span><span class="ptag">Python</span></div>
                     <div class="proj-links">
                         <a href="https://github.com/pulkitgarg3/Customer-Churn-Prediction-Model" class="btn-proj p" target="_blank"
-                           onclick="gtag('event','Project Click',{event_category:'Projects',event_label:'Churn'})">
+                           onclick="gtag('event','project_click',{event_category:'Projects',event_label:'Churn'})">
                             <i class="fa-brands fa-github"></i> View Project
                         </a>
                     </div>
@@ -916,30 +805,12 @@
         <div class="int-eyebrow">Areas of Interest</div>
         <h2 class="int-h">What Excites Me</h2>
         <div class="interests-grid">
-            <div class="interest-card rv">
-                <div class="interest-icon"><i class="fa-solid fa-bolt"></i></div>
-                <span class="interest-txt">Energy Transition Strategy &amp; Modelling</span>
-            </div>
-            <div class="interest-card rv d1">
-                <div class="interest-icon t"><i class="fa-solid fa-leaf"></i></div>
-                <span class="interest-txt">Decarbonisation &amp; Climate Policy</span>
-            </div>
-            <div class="interest-card rv d2">
-                <div class="interest-icon"><i class="fa-solid fa-chart-area"></i></div>
-                <span class="interest-txt">Energy Markets &amp; Systems</span>
-            </div>
-            <div class="interest-card rv d3">
-                <div class="interest-icon t"><i class="fa-solid fa-earth-asia"></i></div>
-                <span class="interest-txt">Sustainability &amp; Climate Advisory</span>
-            </div>
-            <div class="interest-card rv">
-                <div class="interest-icon n"><i class="fa-solid fa-building-columns"></i></div>
-                <span class="interest-txt">International Energy &amp; Development Policy</span>
-            </div>
-            <div class="interest-card rv d1">
-                <div class="interest-icon n"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
-                <span class="interest-txt">Data-Driven Decision Support</span>
-            </div>
+            <div class="interest-card rv"><div class="interest-icon"><i class="fa-solid fa-bolt"></i></div><span class="interest-txt">Energy Transition Strategy &amp; Modelling</span></div>
+            <div class="interest-card rv d1"><div class="interest-icon t"><i class="fa-solid fa-leaf"></i></div><span class="interest-txt">Decarbonisation &amp; Climate Policy</span></div>
+            <div class="interest-card rv d2"><div class="interest-icon"><i class="fa-solid fa-chart-area"></i></div><span class="interest-txt">Energy Markets &amp; Systems</span></div>
+            <div class="interest-card rv d3"><div class="interest-icon t"><i class="fa-solid fa-earth-asia"></i></div><span class="interest-txt">Sustainability &amp; Climate Advisory</span></div>
+            <div class="interest-card rv"><div class="interest-icon n"><i class="fa-solid fa-building-columns"></i></div><span class="interest-txt">International Energy &amp; Development Policy</span></div>
+            <div class="interest-card rv d1"><div class="interest-icon n"><i class="fa-solid fa-magnifying-glass-chart"></i></div><span class="interest-txt">Data-Driven Decision Support</span></div>
         </div>
     </div>
 </section>
@@ -988,7 +859,8 @@
                 <div class="f-name">Pulkit Garg</div>
                 <div class="f-role">Energy Economics &middot; Quantitative Analysis &amp; Modelling &middot; Energy Transition</div>
                 <div class="f-contact">
-                    <a href="mailto:pulkitgarg560@gmail.com" class="f-link">
+                    <a href="mailto:pulkitgarg560@gmail.com" class="f-link"
+                       onclick="gtag('event','email_click',{event_category:'Contact',event_label:'Footer Email'})">
                         <i class="fa-solid fa-envelope"></i> pulkitgarg560@gmail.com
                     </a>
                     <a href="tel:+919896562000" class="f-link">
@@ -1000,77 +872,14 @@
             <div class="f-right">
                 <div class="f-socials">
                     <a href="https://www.linkedin.com/in/pulkitgarg03/" class="f-social" target="_blank"
-                       onclick="gtag('event','linkedin_lick',{event_category:'Social',event_label:'LinkedIn'})">
+                       onclick="gtag('event','linkedin_click',{event_category:'Social',event_label:'LinkedIn Footer'})">
                         <i class="fa-brands fa-linkedin-in"></i>
                     </a>
                     <a href="https://github.com/pulkitgarg3" class="f-social" target="_blank"
-                       onclick="gtag('event','github_click',{event_category:'Social',event_label:'GitHub'})">
+                       onclick="gtag('event','github_click',{event_category:'Social',event_label:'GitHub Footer'})">
                         <i class="fa-brands fa-github"></i>
                     </a>
                     <a href="https://pulkitgarg3.substack.com" class="f-social" target="_blank"
                        style="background:#FF6719;border-color:#FF6719;color:#fff"
-                       onclick="gtag('event','substack_click',{event_category:'Social',event_label:'Substack'})">
-                        <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 17.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"/></svg>
-                    </a>
-                </div>
-                <a href="assets/Pulkit_Garg_CV.pdf" class="btn-dark" target="_blank" rel="noopener noreferrer"
-                   onclick="gtag('event','resume_click',{event_category:'Engagement',event_label:'Footer'})">
-                    <i class="fa-solid fa-file-pdf"></i> View Resume
-                </a>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <span>&copy; 2026 Pulkit Garg</span>
-            <span>New Delhi, India &middot; Open to global opportunities</span>
-        </div>
-    </div>
-</footer>
-
-<script>
-    const NAV = document.getElementById('nav');
-    window.addEventListener('scroll', () => NAV.classList.toggle('scrolled', window.scrollY > 30), { passive: true });
-
-    function toggleMenu() {
-        document.getElementById('nav-links').classList.toggle('open');
-        document.getElementById('hamburger').classList.toggle('open');
-    }
-    function closeMenu() {
-        document.getElementById('nav-links').classList.remove('open');
-        document.getElementById('hamburger').classList.remove('open');
-    }
-    document.addEventListener('click', e => { if (!NAV.contains(e.target)) closeMenu(); });
-
-    const rvObs = new IntersectionObserver(entries => {
-        entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); rvObs.unobserve(e.target); } });
-    }, { threshold: 0.12 });
-    document.querySelectorAll('.rv').forEach(el => rvObs.observe(el));
-
-    function fpj(cat, btn) {
-        document.querySelectorAll('.f-btn').forEach(b => b.classList.remove('on'));
-        btn.classList.add('on');
-        document.querySelectorAll('#pgrid .proj-card').forEach(card => {
-            card.style.display = (cat === 'all' || card.dataset.cat === cat) ? '' : 'none';
-        });
-    }
-
-    function scrollWS(dir) {
-        const t = document.getElementById('ws-track');
-        t.scrollBy({ left: dir * 260, behavior: 'smooth' });
-    }
-
-    window.addEventListener('DOMContentLoaded', () => {
-        [10000,30000,60000].forEach((t,i) => {
-            setTimeout(() => gtag('event','Session Duration',{event_category:'Engagement',event_label:[10,30,60][i]+' Seconds'}), t);
-        });
-        let f50=false, f90=false;
-        window.addEventListener('scroll', () => {
-            const d = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
-            if (d>50 && !f50) { gtag('event','Scroll',{event_category:'Engagement',event_label:'50% Depth'}); f50=true; }
-            if (d>90 && !f90) { gtag('event','Scroll',{event_category:'Engagement',event_label:'90% Depth'}); f90=true; }
-        }, { passive: true });
-        gtag('event','Device Type',{event_category:'User',event_label:/Mobi|Android/i.test(navigator.userAgent)?'Mobile':'Desktop'});
-    });
-</script>
-
-</body>
-</html>
+                       onclick="gtag('event','substack_click',{event_category:'Social',event_label:'Substack Footer'})">
+                        <svg viewBox="0 0 24 24" fill="currentColor" w
