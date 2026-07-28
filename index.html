@@ -231,8 +231,8 @@
         .ws-link   { display: inline-flex; align-items: center; gap: 5px; font-size: 11px; font-weight: 600; color: var(--teal); border: 1px solid var(--teal); padding: 4px 10px; border-radius: 5px; transition: all .2s; }
         .ws-link:hover { background: var(--teal); color: #fff; }
         .ws-link.soon  { color: var(--muted); border-color: var(--border); pointer-events: none; }
-        .nav-substack { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: 6px; background: #FF6719; color: #fff; transition: opacity .2s; }
-        .nav-substack:hover { opacity: .85; }
+        .nav-substack { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; border-radius: 6px; color: var(--muted); transition: color .2s; }
+        .nav-substack:hover { color: var(--navy); }
         .nav-substack svg { width: 14px; height: 14px; }
 
         /* INTERESTS */
@@ -880,6 +880,5 @@
                         <i class="fa-brands fa-github"></i>
                     </a>
                     <a href="https://pulkitgarg3.substack.com" class="f-social" target="_blank"
-                       style="background:#FF6719;border-color:#FF6719;color:#fff"
                        onclick="gtag('event','substack_click',{event_category:'Social',event_label:'Substack Footer'})">
                         <svg viewBox="0 0 24 24" fill="currentColor" w
