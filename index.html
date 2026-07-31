@@ -426,6 +426,7 @@
             <div class="arc-motto">
                 Energy is the currency of the universe; economics is how we budget it.
             </div>
+            <div class="arc-motto-label">Personal Approach</div>
         </div>
     </div>
 </div>
@@ -880,4 +881,71 @@
                     </a>
                     <a href="https://pulkitgarg3.substack.com" class="f-social" target="_blank"
                        onclick="gtag('event','substack_click',{event_category:'Social',event_label:'Substack Footer'})">
-                        <svg viewBox="0 0 24 24" fill="currentColor" w
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 17.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"/></svg>
+                    </a>
+                </div>
+                <a href="assets/Pulkit_Garg_CV.pdf" class="btn-dark" target="_blank" rel="noopener noreferrer"
+                   onclick="gtag('event','resume_click',{event_category:'Engagement',event_label:'Footer'})">
+                    <i class="fa-solid fa-file-pdf"></i> View Resume
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>&copy; 2026 Pulkit Garg</span>
+            <span>New Delhi, India &middot; Open to global opportunities</span>
+        </div>
+    </div>
+</footer>
+
+<script>
+    const NAV = document.getElementById('nav');
+    window.addEventListener('scroll', () => NAV.classList.toggle('scrolled', window.scrollY > 30), { passive: true });
+
+    function toggleMenu() {
+        document.getElementById('nav-links').classList.toggle('open');
+        document.getElementById('hamburger').classList.toggle('open');
+    }
+    function closeMenu() {
+        document.getElementById('nav-links').classList.remove('open');
+        document.getElementById('hamburger').classList.remove('open');
+    }
+    document.addEventListener('click', e => { if (!NAV.contains(e.target)) closeMenu(); });
+
+    const rvObs = new IntersectionObserver(entries => {
+        entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); rvObs.unobserve(e.target); } });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.rv').forEach(el => rvObs.observe(el));
+
+    setTimeout(() => {
+        document.querySelectorAll('.rv').forEach(el => el.classList.add('in'));
+    }, 1500);
+
+    function fpj(cat, btn) {
+        document.querySelectorAll('.f-btn').forEach(b => b.classList.remove('on'));
+        btn.classList.add('on');
+        document.querySelectorAll('#pgrid .proj-card').forEach(card => {
+            card.style.display = (cat === 'all' || card.dataset.cat === cat) ? '' : 'none';
+        });
+    }
+
+    function scrollWS(dir) {
+        const t = document.getElementById('ws-track');
+        t.scrollBy({ left: dir * 260, behavior: 'smooth' });
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+        [10000,30000,60000].forEach((t,i) => {
+            setTimeout(() => gtag('event','session_duration',{event_category:'Engagement',event_label:[10,30,60][i]+'_seconds'}), t);
+        });
+        let f50=false, f90=false;
+        window.addEventListener('scroll', () => {
+            const d = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+            if (d>50 && !f50) { gtag('event','scroll_depth',{event_category:'Engagement',event_label:'50_percent'}); f50=true; }
+            if (d>90 && !f90) { gtag('event','scroll_depth',{event_category:'Engagement',event_label:'90_percent'}); f90=true; }
+        }, { passive: true });
+        gtag('event','device_type',{event_category:'User',event_label:/Mobi|Android/i.test(navigator.userAgent)?'mobile':'desktop'});
+    });
+</script>
+
+</body>
+</html>
